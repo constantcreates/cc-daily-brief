@@ -238,76 +238,75 @@ function render(d){
   document.getElementById("sOverview").innerHTML='<div class="card fade-in d2"><div class="section-title">&#x1f4ca; Today\'s Overview</div><div style="font-size:13px;line-height:1.8;color:rgba(240,237,216,.8)">'+d.overview+'</div></div>';
 
   // ALERTS
-  document.getElementById("sAlerts").innerHTML='<div class="card fade-in d3"><div class="section-title">&#x26a0;&#xfe0f; Critical Alerts</div><div class="alert-container">'+d.alerts.map(function(a){return '<div class="alert-item" style="border-left-color:'+a.color+'"><div class="alert-title">'+a.icon+' '+a.title+'</div><div class="alert-desc">'+a.desc+'</div><a href="'+a.linkUrl+'" target="_blank" style="font-size:11px;font-weight:600">&rarr; '+a.linkText+'</a></div>';}).join('')+'</div></div>';
+  document.getElementById("sAlerts").innerHTML='<div class="card fade-in d3"><div class="section-title">&#x26a0;&#xfe0f; Critical Alerts</div><div class="alert-container">'+d.alerts.map(function(a){return '<div class="alert-item" style="border-left-color:'+a.color+'"><div class="alert-title">'+a.title+'</div><div class="alert-desc">'+a.description+'</div></div>';}).join('')+'</div></div>';
 
   // SCHEDULE + REVENUE
-  var schedHtml=d.schedule.events.map(function(e){return '<div class="cal-item" style="border-left:3px solid '+e.color+'"><div class="cal-title"><a href="'+e.url+'" target="_blank">'+e.icon+' '+e.time+': '+e.title+'</a></div></div>';}).join('');
+  var schedHtml=d.schedule.events.map(function(e){return '<div class="cal-item" style="border-left:3px solid '+e.color+'"><div class="cal-title">'+e.time+': '+e.title+'</div></div>';}).join('');
   var tipHtml='<div class="cal-item" style="background:rgba(200,217,160,.08)"><div class="cal-title" style="max-width:100%;white-space:normal;font-size:11px;color:var(--sage)">&#x1f4a1; '+d.schedule.dayTip+'</div></div>';
   var weekHtml=d.schedule.weekHighlights.map(function(w){var p=w.indexOf(':');return '<div>&bull; <strong>'+w.substring(0,p)+':</strong>'+w.substring(p+1)+'</div>';}).join('');
   var asanaHtml=d.schedule.asanaTasks?'<div style="margin-top:16px;padding:10px;background:rgba(239,68,68,.06);border-radius:8px;border:1px solid rgba(239,68,68,.15)"><div style="font-size:11px;color:#fca5a5;font-weight:600">&#x1f4cb; Asana Tasks Due (Migrate to Notion)</div><div style="font-size:10px;color:rgba(240,237,216,.6);margin-top:4px;line-height:1.6">'+d.schedule.asanaTasks+'</div></div>':'';
 
   var r=d.revenue;
-  var collHtml=r.collectedItems.map(function(c){return '<div><span style="color:'+c.color+'">'+c.label+':</span> '+c.amount+'</div>';}).join('');
-  var outHtml=r.outstanding.map(function(o,i){return '<div style="color:rgba(240,237,216,.7)">'+(i+1)+'. '+o+'</div>';}).join('');
+  var metricsHtml=renderMetrics(r.metrics,4);
+  var investHtml=r.outstandingInvoices.map(function(o,i){return '<div style="color:rgba(240,237,216,.7);margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(74,102,80,.2)"><div style="font-weight:600;font-size:12px">'+o.client+'</div><div style="font-size:11px;color:var(--sage);margin-top:2px">'+o.amount+' — '+o.item+'</div><div style="font-size:10px;color:rgba(240,237,216,.5);margin-top:2px">'+o.status+' ('+o.dueDate+')</div></div>';}).join('');
+  var chargesHtml=r.recentCharges.map(function(c){return '<div style="display:flex;justify-content:space-between;font-size:10px;color:rgba(240,237,216,.6);padding:6px 0;border-bottom:1px solid rgba(74,102,80,.15)"><span>'+c.vendor+'</span><span style="color:var(--cream);font-weight:500">'+c.amount+'</span></div>';}).join('');
+  var fastCashHtml=r.fastestCashPaths.map(function(f){return '<div style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(74,102,80,.2)"><div style="font-weight:600;font-size:11px;color:var(--white)">'+f.rank+'. '+f.action+'</div><div style="font-size:10px;color:var(--sage);margin-top:3px">'+f.amount+' • '+f.timeline+' • '+f.effort+'</div></div>';}).join('');
 
-  document.getElementById("sScheduleRevenue").innerHTML='<div class="grid-2"><div class="card fade-in d4"><div class="section-title">&#x1f4c5; Today\'s Schedule</div><div style="display:flex;flex-direction:column;gap:8px">'+schedHtml+tipHtml+'</div><div style="margin-top:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:16px"><div style="font-size:12px;font-weight:600;color:var(--white);margin-bottom:10px">This Week Highlights</div><div style="display:flex;flex-direction:column;gap:6px;font-size:11px;color:rgba(240,237,216,.7)">'+weekHtml+'</div></div>'+asanaHtml+'</div><div class="card card-accent fade-in d4"><div class="section-title">&#x1f4b0; Revenue & Collections</div><div style="margin-bottom:20px"><div style="font-size:11px;color:rgba(240,237,216,.6);margin-bottom:4px;font-weight:500">MARCH GOAL: $'+r.goal.toLocaleString()+'</div><div class="progress-wrap"><div class="progress-header"><span style="font-weight:600">$'+r.collected.toLocaleString()+' collected ('+r.percent+'%)</span><span style="color:var(--sage)">$'+r.remaining.toLocaleString()+' remaining</span></div><div class="progress-bar"><div class="progress-fill" style="width:'+r.percent+'%;background:'+r.progressColor+'"></div></div><div class="progress-footer"><span>'+r.daysLeft+' days remaining in March</span><span>Need ~$'+r.dailyNeed+'/day</span></div></div></div><div style="margin-bottom:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:rgba(240,237,216,.6);margin-bottom:6px;font-weight:500">COLLECTED THIS MONTH</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px">'+collHtml+'</div></div><div style="margin-bottom:16px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:#fca5a5;font-weight:600;margin-bottom:8px">OUTSTANDING / PENDING</div><div style="display:flex;flex-direction:column;gap:6px;font-size:11px">'+outHtml+'</div></div><div style="margin-bottom:16px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:rgba(240,237,216,.6);font-weight:600;margin-bottom:8px">RECENT TOOL CHARGES (Last 7 Days)</div><div style="font-size:10px;color:rgba(240,237,216,.5)">'+r.toolCharges+'</div></div><div style="padding:12px;background:rgba(200,217,160,.08);border-radius:10px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">&#x1f4a1; FASTEST CASH PATHS</div><div style="font-size:11px;line-height:1.6;color:rgba(240,237,216,.7)">'+r.fastCash+'</div></div></div></div>';
+  document.getElementById("sScheduleRevenue").innerHTML='<div class="grid-2"><div class="card fade-in d4"><div class="section-title">&#x1f4c5; Today\'s Schedule</div><div style="display:flex;flex-direction:column;gap:8px">'+schedHtml+tipHtml+'</div><div style="margin-top:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:16px"><div style="font-size:12px;font-weight:600;color:var(--white);margin-bottom:10px">This Week Highlights</div><div style="display:flex;flex-direction:column;gap:6px;font-size:11px;color:rgba(240,237,216,.7)">'+weekHtml+'</div></div>'+asanaHtml+'</div><div class="card card-accent fade-in d4"><div class="section-title">&#x1f4b0; Revenue & Collections</div>'+metricsHtml+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:rgba(240,237,216,.6);font-weight:600;margin-bottom:8px">OUTSTANDING INVOICES</div><div style="font-size:11px;color:rgba(240,237,216,.7)">'+investHtml+'</div></div><div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:rgba(240,237,216,.6);font-weight:600;margin-bottom:6px">RECENT CHARGES</div><div>'+chargesHtml+'</div></div><div style="margin-top:16px;padding:12px;background:rgba(200,217,160,.08);border-radius:10px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">&#x1f4a1; FASTEST CASH PATHS</div><div style="font-size:11px;line-height:1.6">'+fastCashHtml+'</div></div></div></div>';
 
   // Q2 CAMPAIGN
   var q=d.q2Campaign;
   var vertHtml=q.verticals.map(function(v){
-    var border=v.isNew?'border:1px solid rgba(200,217,160,.2);':'';
-    var nameExtra=v.isNew?' <span style="font-size:8px;color:#fcd34d">NEW</span>':'';
-    var sub=v.isNew?v.detail||'Imported today':v.detail;
-    return '<div style="padding:10px;background:rgba(26,36,40,.4);border-radius:10px;text-align:center;'+border+'"><div style="font-size:10px;color:'+(v.isNew?'var(--sage)':'rgba(240,237,216,.5)')+';text-transform:uppercase;letter-spacing:.08em">'+v.name+nameExtra+'</div><div style="font-size:16px;font-weight:700;color:var(--white);margin:4px 0">'+v.count+'</div><div style="font-size:10px;color:var(--sage)">'+sub+'</div></div>';
+    var border='border:1px solid rgba(200,217,160,.2);';
+    var nameExtra='';
+    var sub=v.status==='existing'?'Established':'New batch';
+    return '<div style="padding:10px;background:rgba(26,36,40,.4);border-radius:10px;text-align:center;'+border+'"><div style="font-size:10px;color:rgba(240,237,216,.5);text-transform:uppercase;letter-spacing:.08em">'+v.name+'</div><div style="font-size:16px;font-weight:700;color:var(--white);margin:4px 0">'+v.status+'</div><div style="font-size:10px;color:var(--sage)">'+sub+'</div></div>';
   }).join('');
   document.getElementById("sQ2").innerHTML='<div class="card card-accent fade-in d5"><div class="section-title">&#x1f680; Q2 Quick Launch Campaign &mdash; $999 Websites</div>'+renderMetrics(q.metrics,5)+'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px">'+vertHtml+'</div><div style="margin-top:16px;padding:12px;background:rgba(200,217,160,.08);border-radius:10px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:4px">NEXT STEPS</div><div style="font-size:11px;color:rgba(240,237,216,.7);line-height:1.6">'+q.nextSteps+'</div></div></div>';
 
   // LEADS
   var l=d.leads;
   var leadCards=l.cards.map(function(c){
-    var links=(c.links||[]).map(function(lk){return '<a href="'+lk.url+'" target="_blank" class="lead-link lead-link-'+lk.class+'">&rarr; '+lk.text+'</a>';}).join('');
-    var scoreStyle=c.scoreStyle?' style="'+c.scoreStyle+'"':'';
-    return '<div class="lead-card" style="border-left:3px solid '+(c.borderColor||'rgba(74,102,80,.15)')+'"><div class="lead-header"><div><div class="lead-name">'+c.name+'</div><div class="lead-loc">'+c.location+'</div></div><span class="lead-score"'+scoreStyle+'>'+c.score+'</span></div><div class="lead-reason">'+c.reason+'</div>'+(links?'<div class="lead-links">'+links+'</div>':'')+'</div>';
+    var links=(c.links||[]).map(function(lk){return '<a href="'+lk.url+'" target="_blank" class="lead-link lead-link-primary">&rarr; '+lk.text+'</a>';}).join('');
+    return '<div class="lead-card" style="border-left:3px solid '+(c.borderColor||'rgba(74,102,80,.15)')+'"><div class="lead-header"><div><div class="lead-name">'+c.name+'</div><div class="lead-loc">'+c.location+'</div></div><span class="lead-score">'+c.score+'</span></div><div class="lead-reason">'+c.reason+'</div>'+(links?'<div class="lead-links">'+links+'</div>':'')+'</div>';
   }).join('');
   document.getElementById("sLeads").innerHTML='<div class="card fade-in d5"><div class="section-title">&#x1f3af; Lead Pipeline &mdash; Active Warm Leads</div>'+renderMetrics(l.metrics,4)+'<div style="margin-top:20px">'+leadCards+'</div></div>';
 
   // BLOG + SEO
   var b=d.blog;
   var s=d.seo;
-  var pubHtml=b.published.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
-  var dftHtml=b.drafts.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
+  var pubHtml=b.published.map(function(p){return '&bull; "'+p.title+'"';}).join('<br>');
+  var dftHtml=b.drafts.map(function(p){return '&bull; "'+p.title+'"';}).join('<br>');
   var queHtml=b.queued.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
-  var kwHtml=s.topKeywords.map(function(k,i){return (i+1)+'. '+k;}).join('<br>');
-  document.getElementById("sBlogSeo").innerHTML='<div class="grid-2"><div class="card fade-in d6"><div class="section-title">&#x1f4dd; Blog & Content</div><div style="margin-bottom:20px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Published ('+b.published.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+pubHtml+'</div></div><div style="margin-bottom:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Drafts ('+b.drafts.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+dftHtml+'</div></div><div style="border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Queued ('+b.queued.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7)">'+queHtml+'</div></div><div style="margin-top:16px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;font-size:11px;color:var(--sage)">&#x1f4cc; '+b.note+'</div></div><div class="card card-accent fade-in d6"><div class="section-title">&#x1f50d; SEO & Search Performance</div>'+renderMetrics(s.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">TOP KEYWORDS</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.8">'+kwHtml+'</div></div><div style="margin-top:12px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600">&#x2728; Semrush: 8 New SEO Optimization Ideas</div><div style="font-size:10px;color:rgba(240,237,216,.6);margin-top:4px">'+s.semrushNote+'</div></div><div style="margin-top:8px;font-size:10px;color:rgba(240,237,216,.4)">&#x26a1; '+s.dataNote+'</div></div></div>';
+  var kwHtml=s.topKeywords.map(function(k,i){return (i+1)+'. '+k.keyword;}).join('<br>');
+  document.getElementById("sBlogSeo").innerHTML='<div class="grid-2"><div class="card fade-in d6"><div class="section-title">&#x1f4dd; Blog & Content</div><div style="margin-bottom:20px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Published ('+b.published.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+pubHtml+'</div></div><div style="margin-bottom:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Drafts ('+b.drafts.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+dftHtml+'</div></div><div style="border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Queued ('+b.queued.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7)">'+queHtml+'</div></div><div style="margin-top:16px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;font-size:11px;color:var(--sage)">'+b.note+'</div></div><div class="card card-accent fade-in d6"><div class="section-title">&#x1f50d; SEO & Search Performance</div>'+renderMetrics(s.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">TOP KEYWORDS</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.8">'+kwHtml+'</div></div><div style="margin-top:12px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600">&#x2728; Semrush Insights</div><div style="font-size:10px;color:rgba(240,237,216,.6);margin-top:4px">'+s.semrushNote+'</div></div><div style="margin-top:8px;font-size:10px;color:rgba(240,237,216,.4)">&#x26a1; '+s.dataNote+'</div></div></div>';
 
   // SUBSCRIPTIONS + AUTHORITY
   var subHtml=d.subscriptions.map(function(t){
-    var alertSpan=t.alert?' &mdash; <span style="color:'+t.alertColor+';font-size:10px">'+t.alert+'</span>':'';
-    return '<div style="padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid '+t.borderColor+'"><div style="font-size:12px;font-weight:600;color:var(--white)">'+t.name+alertSpan+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:4px">'+t.desc+'</div></div>';
+    var alertSpan=t.priority==='high'?' <span style="color:#fcd34d;font-size:10px">KEY</span>':'';
+    return '<div style="padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid '+('high'===t.priority?'#fcd34d':'rgba(200,217,160,.3)')+'"><div style="font-size:12px;font-weight:600;color:var(--white)">'+t.name+' '+alertSpan+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:2px">'+t.notes+'</div></div>';
   }).join('');
   var au=d.authority;
-  var socHtml=au.socialLinks.map(function(sl){return '<a href="'+sl.url+'" target="_blank" style="font-size:10px;padding:4px 10px;border-radius:999px;background:rgba('+sl.color+',.12);color:rgba('+sl.color+',1);border:1px solid rgba('+sl.color+',.2);text-decoration:none">'+sl.name+'</a>';}).join('');
-  document.getElementById("sSubsAuth").innerHTML='<div class="grid-2"><div class="card fade-in d7"><div class="section-title">&#x1f4e7; Subscriptions & Tools</div><div style="display:flex;flex-direction:column;gap:10px">'+subHtml+'</div></div><div class="card card-accent fade-in d7"><div class="section-title">&#x2b50; Authority & Audience</div>'+renderMetrics(au.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid #fbbf24"><div style="font-size:11px;font-weight:600;color:var(--white);margin-bottom:6px">&#x1f680; GROWTH OPPORTUNITIES</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.6">'+au.growthOpps+'</div></div><div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">'+socHtml+'</div></div></div>';
+  document.getElementById("sSubsAuth").innerHTML='<div class="grid-2"><div class="card fade-in d7"><div class="section-title">&#x1f4e7; Subscriptions & Tools</div><div style="display:flex;flex-direction:column;gap:10px">'+subHtml+'</div></div><div class="card card-accent fade-in d7"><div class="section-title">&#x2b50; Authority & Audience</div>'+renderMetrics(au.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid #fbbf24"><div style="font-size:11px;font-weight:600;color:var(--white);margin-bottom:6px">&#x1f680; GROWTH OPPORTUNITIES</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.6">'+au.growthOpps+'</div></div></div></div>';
 
   // EMAIL
   var em=d.email;
   document.getElementById("sEmail").innerHTML='<div class="card fade-in d7"><div class="section-title">&#x1f4ec; Email Status</div>'+renderMetrics(em.metrics,4)+'<div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+em.summary+'</div></div>';
 
   // OPPORTUNITIES
-  var oppHtml=d.opportunities.map(function(o){return '<div class="opp-card '+o.cardClass+'"><span class="badge '+o.badgeClass+'" style="display:inline-block">'+o.priority+'</span><div class="opp-title">'+o.title+'</div><div class="opp-desc">'+o.desc+'</div></div>';}).join('');
+  var oppHtml=d.opportunities.map(function(o){return '<div class="opp-card '+o.class+'"><span class="badge badge-red" style="display:inline-block;background:rgba(239,68,68,.15);color:#fca5a5">'+o.priority+'</span><div class="opp-title">'+o.title+'</div><div class="opp-desc">'+o.description+'</div></div>';}).join('');
   document.getElementById("sOpps").innerHTML='<div class="card fade-in d8"><div class="section-title">&#x1f4a1; Strategic Growth Suggestions</div><div class="grid-3">'+oppHtml+'</div></div>';
 
   // ACTIONS
   var actHtml=d.actions.map(function(a,i){
-    var tagStyle=a.tagStyle?' style="'+a.tagStyle+'"':'';
-    var valSpan=a.value?'<span style="font-size:10px;color:var(--sage);font-weight:600">'+a.value+'</span>':'';
-    return '<div class="action-item" onclick="toggleAction(this,\''+a.id+'\')"><div class="action-check" id="'+a.id+'">'+(i+1)+'</div><div><div class="action-text">'+a.text+'</div><div class="action-meta"><span class="action-meta-tag"'+tagStyle+'>'+a.tag+'</span><span class="action-time">'+a.time+'</span>'+valSpan+'</div></div></div>';
+    var timeStr=a.timeEstimate||'';
+    return '<div class="action-item" onclick="toggleAction(this,\''+a.id+'\')"><div class="action-check" id="'+a.id+'">'+(i+1)+'</div><div><div class="action-text">'+a.title+'</div><div class="action-meta"><span class="action-meta-tag">'+a.priority+'</span><span class="action-time">'+timeStr+'</span></div></div></div>';
   }).join('');
-  var totalMin=d.actions.reduce(function(s,a){var m=parseInt(a.time);return s+(isNaN(m)?0:m);},0);
+  var totalMin=d.actions.reduce(function(s,a){var m=0;if(a.timeEstimate){if(a.timeEstimate.indexOf('hr')>-1){m=parseInt(a.timeEstimate)*60;}else if(a.timeEstimate.indexOf('min')>-1){m=parseInt(a.timeEstimate);}}return s+m;},0);
   document.getElementById("sActions").innerHTML='<div class="card fade-in d9"><div class="section-title">&#x2705; Top 10 Actions for Today <span style="font-size:11px;font-weight:400;color:rgba(240,237,216,.5);margin-left:8px">~'+(totalMin/60).toFixed(1)+' hrs total</span></div>'+actHtml+'</div>';
 
   // CLIENTS
-  var clHtml=d.clients.map(function(c){return '<div style="padding:14px;background:rgba(26,36,40,.4);border-radius:12px;border-left:3px solid '+c.borderColor+'"><div style="font-size:13px;font-weight:600;color:var(--white)">'+c.name+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:4px">'+c.meta+' &bull; <span style="color:'+c.statusColor+'">'+c.statusText+'</span></div><div style="font-size:10px;color:rgba(240,237,216,.5);margin-top:6px">'+c.detail+'</div></div>';}).join('');
+  var clHtml=d.clients.map(function(c){return '<div style="padding:14px;background:rgba(26,36,40,.4);border-radius:12px;border-left:3px solid '+c.color+'"><div style="font-size:13px;font-weight:600;color:var(--white)">'+c.name+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:4px">'+c.retainer+' • <span style="color:'+c.color+'">'+c.status+'</span></div><div style="font-size:10px;color:rgba(240,237,216,.5);margin-top:6px">'+c.recentActivity+'</div></div>';}).join('');
   document.getElementById("sClients").innerHTML='<div class="card fade-in d9"><div class="section-title">&#x1f9e9; Client Health</div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">'+clHtml+'</div></div>';
 
   // FOOTER
@@ -326,35 +325,37 @@ var __embeddedData = {
   "date": "Saturday, March 21, 2026",
   "greeting": "Happy Saturday, Faye!",
   "statusBadge": "Weekend — Date Day + Light Tasks",
-  "overview": "<p><strong>Today is YOUR day.</strong> You have a local date in Bradenton with Squilliam from 8 AM to 10 PM—this is the priority. At 10 AM, you'll take a quick 30-minute work break to upload Outscraper leads to Claude (pool cleaning, pressure washing, and competitor cities). Everything else is scheduled for tomorrow and beyond. Enjoy your date day!</p>",
+  "overview": "<p><strong>Today is YOUR day.</strong> You have a local date in Bradenton with Squilliam from 8 AM to 10 PM—this is the priority. At 7 AM, you'll complete a quick 30-minute work task to upload Outscraper leads to Claude (pool cleaning, pressure washing, and competitor cities). Everything else is scheduled for tomorrow and beyond. Enjoy your date day!</p>",
   "alerts": [
     {
       "id": "alert1",
-      "title": "Nancy Pile-Griffin — 30 Days Without Response",
-      "description": "Logo approved by committee, Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). Reply scheduled <strong>Wed 3/26</strong>. This is a warm lead at risk of going cold.",
-      "color": "#ef4444",
-      "badge": "badge-red"
+      "title": "Brooke Kommuck / VMC — 31 Days Without Contact",
+      "description": "Last contact Feb 18. Rack card follow-up drafts ready to send. Send check-in this week to re-engage.",
+      "color": "#ef4444"
     },
     {
       "id": "alert2",
-      "title": "Kit/ConvertKit — $39/mo with ZERO Sends",
-      "description": "Newsletter platform unused. Either send your first email by end of March or cancel the subscription to save $39/mo. Decision needed soon.",
-      "color": "#f59e0b",
-      "badge": "badge-yellow"
+      "title": "Nancy Pile-Griffin — 30 Days Without Response",
+      "description": "Logo approved by committee, Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). Reply scheduled <strong>Wed 3/26</strong>. This is a warm lead at risk of going cold.",
+      "color": "#ef4444"
     },
     {
       "id": "alert3",
-      "title": "Clay March Newsletter — OVERDUE",
-      "description": "Content received. Draft scheduled to start <strong>Sun 3/23</strong>, finish <strong>Thu 3/27</strong>. Get it done this week.",
-      "color": "#f59e0b",
-      "badge": "badge-yellow"
+      "title": "Kit/ConvertKit — $39/mo with ZERO Sends",
+      "description": "Newsletter platform unused. Either send your first email by end of March or cancel the subscription to save $39/mo. Decision needed soon.",
+      "color": "#f59e0b"
     },
     {
       "id": "alert4",
+      "title": "Clay March Newsletter — OVERDUE",
+      "description": "Content received. Draft scheduled to start <strong>Sun 3/23</strong>, finish <strong>Thu 3/27</strong>. Get it done this week.",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "alert5",
       "title": "Revenue Sprint — Need $1,000 in 2 Weeks",
       "description": "Monthly goal is $9,674. Collected $2,600 (27%). Gap: $7,074. Daily need: ~$707/day. CRM scan for quick wins scheduled <strong>Mon 3/24</strong>.",
-      "color": "#ef4444",
-      "badge": "badge-red"
+      "color": "#ef4444"
     }
   ],
   "schedule": {
@@ -369,22 +370,22 @@ var __embeddedData = {
       },
       {
         "id": "sched2",
+        "time": "7:00 - 7:30 AM",
+        "title": "Upload Outscraper Leads to Claude",
+        "subtitle": "Pool cleaning + pressure washing + competitor cities",
+        "calendar": "Primary",
+        "color": "#c8d9a0",
+        "status": "work",
+        "note": "Moved from 10 AM by optimizer. Quick task before date."
+      },
+      {
+        "id": "sched3",
         "time": "8:00 AM - 10:00 PM",
         "title": "Local Date in Bradenton With Squilliam",
         "calendar": "Social",
         "color": "#f472b6",
         "status": "primary",
         "note": "THIS IS THE BIG EVENT TODAY — ENJOY!"
-      },
-      {
-        "id": "sched3",
-        "time": "10:00 - 10:30 AM",
-        "title": "Upload Outscraper Leads to Claude",
-        "subtitle": "Pool cleaning + pressure washing + competitor cities",
-        "calendar": "Primary",
-        "color": "#c8d9a0",
-        "status": "work",
-        "note": "Quick work break during your date"
       },
       {
         "id": "sched4",
@@ -403,7 +404,7 @@ var __embeddedData = {
         "status": "routine"
       }
     ],
-    "dayTip": "Today is a low-work day by design. Your date with Squilliam is the priority. The 10 AM task is quick and can be done in 30 minutes. Relax and enjoy!",
+    "dayTip": "Today is a low-work day by design. Your date with Squilliam is the priority. The 7 AM task is quick and can be done in 30 minutes. Relax and enjoy!",
     "weekHighlights": [
       "Sunday 3/23: Clay/Hallwood Bound Presentation + Rush Revisions (~3hrs, $500 revenue), VMC Staff Headshots 2-4 PM at Lakewood Ranch, Start Clay March Newsletter, Peleta Blog Package Follow-Up, Quick Wendy/Robert Seal/Kolby tasks, Test Peleta Newsletter Automation, Weekly Personal Check-In",
       "Monday 3/24: Rooks Advertising In-Office 9AM-5:30PM, CC Quick Tasks 5:30-6:30 PM, <strong>Revenue Sprint: Scan CRM for quick-win prospects</strong>, Respond to Magate Sekonya, Check in with Nakeitha/Nikki Nyx, Izzy Hangout 7-10 PM",
@@ -584,7 +585,7 @@ var __embeddedData = {
       {
         "label": "New Batches Ready",
         "value": "2",
-        "sub": "Upload scheduled today 10 AM",
+        "sub": "Upload scheduled today 7 AM",
         "class": "metric-warning",
         "color": "#f59e0b"
       }
@@ -608,7 +609,7 @@ var __embeddedData = {
         "cities": "8 Florida cities"
       }
     ],
-    "nextSteps": "<p><strong>Today (10 AM):</strong> Upload new Outscraper leads to Claude. <strong>Next week:</strong> Begin outreach to pressure washing and pool cleaning leads. Use HoneyBook templates for discovery calls. Target: 10-15 discovery calls booked by end of month.</p>"
+    "nextSteps": "<p><strong>Today (7 AM):</strong> Upload new Outscraper leads to Claude. <strong>Next week:</strong> Begin outreach to pressure washing and pool cleaning leads. Use HoneyBook templates for discovery calls. Target: 10-15 discovery calls booked by end of month.</p>"
   },
   "leads": {
     "metrics": [
@@ -636,7 +637,7 @@ var __embeddedData = {
       {
         "label": "Pipeline Health",
         "value": "Building",
-        "sub": "10+ emails ready to send",
+        "sub": "10+ new cold outreach emails ready",
         "class": "metric-primary",
         "color": "#3b82f6"
       }
@@ -960,33 +961,7 @@ var __embeddedData = {
         "color": "#f59e0b"
       }
     ],
-    "growthOpps": "<p><strong>LinkedIn Authority:</strong> You have 701 followers and strong engagement potential. Post at least 2x per week to build authority. Consider sharing client case studies and design insights. <strong>Newsletter:</strong> Kit at $39/mo is unused — either activate it with your first send or cancel. <strong>Instagram:</strong> 5 unread DMs (including brycegoesdigital) — respond this week. <strong>SparkLoop:</strong> 2 newsletter partnership invitations waiting for review.</p>",
-    "socialLinks": [
-      {
-        "platform": "LinkedIn",
-        "followers": "701",
-        "url": "#",
-        "action": "Post 2x this week (content ideas: case studies, design tips, Q2 campaign insights)"
-      },
-      {
-        "platform": "Instagram",
-        "followers": "Active",
-        "url": "#",
-        "action": "Respond to 5 unread DMs"
-      },
-      {
-        "platform": "Newsletter (Kit)",
-        "subscribers": "0",
-        "url": "#",
-        "action": "Send first email or cancel ($39/mo)"
-      },
-      {
-        "platform": "SparkLoop",
-        "invitations": "2 pending",
-        "url": "#",
-        "action": "Review partnership opportunities"
-      }
-    ]
+    "growthOpps": "<p><strong>LinkedIn Authority:</strong> You have 701 followers and strong engagement potential. Post at least 2x per week to build authority. Consider sharing client case studies and design insights. <strong>Newsletter:</strong> Kit at $39/mo is unused — either activate it with your first send or cancel. <strong>Instagram:</strong> 5 unread DMs (including brycegoesdigital) — respond this week. <strong>SparkLoop:</strong> 2 newsletter partnership invitations waiting for review.</p>"
   },
   "email": {
     "metrics": [
@@ -1006,8 +981,8 @@ var __embeddedData = {
       },
       {
         "label": "Draft Emails Ready",
-        "value": "10+",
-        "sub": "Ready to send",
+        "value": "201+",
+        "sub": "Large outreach campaign ready",
         "class": "metric-warning",
         "color": "#f59e0b"
       },
@@ -1019,7 +994,7 @@ var __embeddedData = {
         "color": "#3b82f6"
       }
     ],
-    "summary": "<p><strong>Key Updates:</strong> Peleta confirmed newsletter working smoothly (Fri 11 PM). HoneyBook meeting notes from Peleta call ready. Alignable inquiry about small business websites (potential lead). Contra selected you to apply for Kajabi Expert gig. 5 Instagram DMs including from brycegoesdigital. WordPress developer Ram cold-emailed about subcontracting.</p><p><strong>Drafts Ready to Send:</strong> Wendy (2 versions: Website Updates + Monday Photoshoot). Wendy Kolby Foundation counter-proposal ($1,200 with $300x4 plan). Clay (Buzzard Springs logo file, Newsletter market section acknowledgment, Q2 Newsletter content request). Nakeitha (Confirmed Mar 27 meeting, Gallery walkthrough + blogging discussion). Peleta (Meta description update, Blog package gracefully declined response). Brooke VMC (Rack card follow-up, 2 versions).</p>"
+    "summary": "<p><strong>Key Updates:</strong> Peleta confirmed newsletter working smoothly (Fri 11 PM). HoneyBook meeting notes from Peleta call ready. Alignable inquiry about small business websites (potential lead). Contra selected you to apply for Kajabi Expert gig. 5 Instagram DMs including from brycegoesdigital. WordPress developer Ram cold-emailed about subcontracting.</p><p><strong>Drafts Ready to Send — NEW COLD OUTREACH:</strong> Mr. Handyman (Rob), SpringClear Pool & Spa, In Bloom Lawn & Landscape (Jim - 2 drafts: initial + follow-up), Alberti's On Main, FresKo FadeZ BarberShop, Sarasota Automotive, Magate Sekonya follow-up, Bellagena Med Spa (Julia), Phoenix Massage Spas.</p><p><strong>Drafts Ready to Send — CLIENT WORK:</strong> Peleta (Sneak Peak meta description reply), Nakeitha (Mar 27 meeting confirmation), Wendy (2 versions: Website Updates + Photoshoot, Kolby Foundation), Clay (Q2 Newsletter content request), Brooke VMC (rack card check-in). Auto-generated briefing drafts to self also included.</p>"
   },
   "opportunities": [
     {
@@ -1067,7 +1042,7 @@ var __embeddedData = {
       "class": "opp-med",
       "priority": "MEDIUM",
       "title": "Outscraper Leads Ready for Outreach",
-      "description": "New pool cleaning + pressure washing batches ready. Upload today (10 AM), begin outreach next week. 174+ leads already in pipeline.",
+      "description": "New pool cleaning + pressure washing batches ready. Upload today (7 AM), begin outreach next week. 174+ leads already in pipeline.",
       "value": "$10,000+ pipeline potential",
       "timeline": "Upload today, Outreach starts next week",
       "action": "Upload leads today, send HoneyBook discovery call templates Mon/Tue"
@@ -1098,8 +1073,8 @@ var __embeddedData = {
       "id": "act2",
       "rank": 2,
       "priority": "TODAY",
-      "title": "Upload Outscraper Leads to Claude at 10 AM",
-      "description": "Quick work break during your date. Upload pool cleaning + pressure washing + competitor cities batches from Outscraper. This takes 30 minutes max.",
+      "title": "Upload Outscraper Leads to Claude at 7 AM",
+      "description": "Quick work task before your date. Upload pool cleaning + pressure washing + competitor cities batches from Outscraper. This takes 30 minutes max.",
       "tag": "operations",
       "timeEstimate": "30 min",
       "completed": false
@@ -1195,6 +1170,7 @@ var __embeddedData = {
       "engagement": "Very active, responsive",
       "recentActivity": "Newsletter content received. Bound Presentation due Sun 3/23. Rush fee billable.",
       "nextAction": "Invoice Q1 + Rush fee Wed 3/26 ($300-500)",
+      "daysSinceContact": 1,
       "relationship": "Strong — spouse relationship with Nancy (Trinity UMC lead). Keep this client very happy.",
       "color": "#10b981"
     },
@@ -1204,9 +1180,10 @@ var __embeddedData = {
       "status": "Re-engaging",
       "retainer": "Project-based",
       "retainerStatus": "Active",
-      "engagement": "Moderate — 28+ days since last contact. Headshots booked.",
+      "engagement": "Moderate — Headshots scheduled.",
       "recentActivity": "Headshots scheduled Sun 3/23 at Lakewood Ranch. Website tour section needs update ($200 billable).",
       "nextAction": "Headshot session Sun 3/23, Invoice tour section work Thu 3/27",
+      "daysSinceContact": 1,
       "relationship": "Good — building momentum with headshots and fresh content. Check in regularly.",
       "color": "#f59e0b"
     },
@@ -1219,6 +1196,7 @@ var __embeddedData = {
       "engagement": "High — responsive, engaged",
       "recentActivity": "Newsletter confirmed working (Fri 11 PM). Website revisions from Mar 16 meeting. Blog package offered ($300/mo) — declined for now.",
       "nextAction": "Invoice Google Workspace $99 Wed 3/26, Website revisions Thu 3/27",
+      "daysSinceContact": 2,
       "relationship": "Strong — good upsell potential with blog package. Continue nurturing.",
       "color": "#10b981"
     },
@@ -1228,9 +1206,10 @@ var __embeddedData = {
       "status": "At Risk",
       "retainer": "Project-based",
       "retainerStatus": "Active (payment check needed)",
-      "engagement": "Low — 59 days since last contact. Discovery Call booked.",
+      "engagement": "Low — Discovery Call booked.",
       "recentActivity": "Discovery call booked via HoneyBook for Thu 3/27 at 1 PM. Outstanding balance needs clarification. Draft emails ready.",
       "nextAction": "Discovery Call Thu 3/27 — Gallery walkthrough + blog strategy",
+      "daysSinceContact": 2,
       "relationship": "At risk — reactivation opportunity. Prepare strong value proposition for discovery call.",
       "color": "#f59e0b"
     },
@@ -1243,6 +1222,7 @@ var __embeddedData = {
       "engagement": "Low — 30 days without response (was 27 on Mar 18)",
       "recentActivity": "Logo approved by committee. Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). No response since Feb 19.",
       "nextAction": "Reply Wed 3/26 with updated samples + enthusiasm",
+      "daysSinceContact": 30,
       "relationship": "At risk — CRITICAL. This is Clay's wife (retainer client). Losing Nancy could affect Clay relationship. Respond immediately with value + excitement.",
       "color": "#ef4444"
     },
@@ -1255,17 +1235,17 @@ var __embeddedData = {
       "engagement": "Low — No recent activity",
       "recentActivity": "Rack card template needed. Draft emails ready for follow-up.",
       "nextAction": "Send rack card follow-up email (2 versions ready)",
+      "daysSinceContact": 31,
       "relationship": "Good — quick follow-up will re-engage.",
-      "color": "#f59e0b"
+      "color": "#ef4444"
     }
   ],
   "footer": {
-    "lastUpdated": "Saturday, March 21 at 5:00 AM ET",
+    "lastUpdated": "Saturday, March 21 at 5:00 AM EDT",
     "url": "https://cc-daily-brief.vercel.app",
     "credits": "Daily Brief for Constant Creates | Built for Faye Constant, Founder"
   }
-}
-;
+};
 render(__embeddedData);
 </script>
 

@@ -3,31 +3,38 @@
   "date": "Saturday, March 21, 2026",
   "greeting": "Happy Saturday, Faye!",
   "statusBadge": "Weekend — Date Day + Light Tasks",
-  "overview": "<p><strong>Today is YOUR day.</strong> You have a local date in Bradenton with Squilliam from 8 AM to 10 PM—this is the priority. At 10 AM, you'll take a quick 30-minute work break to upload Outscraper leads to Claude (pool cleaning, pressure washing, and competitor cities). Everything else is scheduled for tomorrow and beyond. Enjoy your date day!</p>",
+  "overview": "<p><strong>Today is YOUR day.</strong> You have a local date in Bradenton with Squilliam from 8 AM to 10 PM—this is the priority. At 7 AM, you'll complete a quick 30-minute work task to upload Outscraper leads to Claude (pool cleaning, pressure washing, and competitor cities). Everything else is scheduled for tomorrow and beyond. Enjoy your date day!</p>",
   "alerts": [
     {
       "id": "alert1",
+      "title": "Brooke Kommuck / VMC — 31 Days Without Contact",
+      "description": "Last contact Feb 18. Rack card follow-up drafts ready to send. Send check-in this week to re-engage.",
+      "color": "#ef4444",
+      "badge": "badge-red"
+    },
+    {
+      "id": "alert2",
       "title": "Nancy Pile-Griffin — 30 Days Without Response",
       "description": "Logo approved by committee, Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). Reply scheduled <strong>Wed 3/26</strong>. This is a warm lead at risk of going cold.",
       "color": "#ef4444",
       "badge": "badge-red"
     },
     {
-      "id": "alert2",
+      "id": "alert3",
       "title": "Kit/ConvertKit — $39/mo with ZERO Sends",
       "description": "Newsletter platform unused. Either send your first email by end of March or cancel the subscription to save $39/mo. Decision needed soon.",
       "color": "#f59e0b",
       "badge": "badge-yellow"
     },
     {
-      "id": "alert3",
+      "id": "alert4",
       "title": "Clay March Newsletter — OVERDUE",
       "description": "Content received. Draft scheduled to start <strong>Sun 3/23</strong>, finish <strong>Thu 3/27</strong>. Get it done this week.",
       "color": "#f59e0b",
       "badge": "badge-yellow"
     },
     {
-      "id": "alert4",
+      "id": "alert5",
       "title": "Revenue Sprint — Need $1,000 in 2 Weeks",
       "description": "Monthly goal is $9,674. Collected $2,600 (27%). Gap: $7,074. Daily need: ~$707/day. CRM scan for quick wins scheduled <strong>Mon 3/24</strong>.",
       "color": "#ef4444",
@@ -46,22 +53,22 @@
       },
       {
         "id": "sched2",
+        "time": "7:00 - 7:30 AM",
+        "title": "Upload Outscraper Leads to Claude",
+        "subtitle": "Pool cleaning + pressure washing + competitor cities",
+        "calendar": "Primary",
+        "color": "#c8d9a0",
+        "status": "work",
+        "note": "Moved from 10 AM by optimizer. Quick task before date."
+      },
+      {
+        "id": "sched3",
         "time": "8:00 AM - 10:00 PM",
         "title": "Local Date in Bradenton With Squilliam",
         "calendar": "Social",
         "color": "#f472b6",
         "status": "primary",
         "note": "THIS IS THE BIG EVENT TODAY — ENJOY!"
-      },
-      {
-        "id": "sched3",
-        "time": "10:00 - 10:30 AM",
-        "title": "Upload Outscraper Leads to Claude",
-        "subtitle": "Pool cleaning + pressure washing + competitor cities",
-        "calendar": "Primary",
-        "color": "#c8d9a0",
-        "status": "work",
-        "note": "Quick work break during your date"
       },
       {
         "id": "sched4",
@@ -80,7 +87,7 @@
         "status": "routine"
       }
     ],
-    "dayTip": "Today is a low-work day by design. Your date with Squilliam is the priority. The 10 AM task is quick and can be done in 30 minutes. Relax and enjoy!",
+    "dayTip": "Today is a low-work day by design. Your date with Squilliam is the priority. The 7 AM task is quick and can be done in 30 minutes. Relax and enjoy!",
     "weekHighlights": [
       "Sunday 3/23: Clay/Hallwood Bound Presentation + Rush Revisions (~3hrs, $500 revenue), VMC Staff Headshots 2-4 PM at Lakewood Ranch, Start Clay March Newsletter, Peleta Blog Package Follow-Up, Quick Wendy/Robert Seal/Kolby tasks, Test Peleta Newsletter Automation, Weekly Personal Check-In",
       "Monday 3/24: Rooks Advertising In-Office 9AM-5:30PM, CC Quick Tasks 5:30-6:30 PM, <strong>Revenue Sprint: Scan CRM for quick-win prospects</strong>, Respond to Magate Sekonya, Check in with Nakeitha/Nikki Nyx, Izzy Hangout 7-10 PM",
@@ -261,7 +268,7 @@
       {
         "label": "New Batches Ready",
         "value": "2",
-        "sub": "Upload scheduled today 10 AM",
+        "sub": "Upload scheduled today 7 AM",
         "class": "metric-warning",
         "color": "#f59e0b"
       }
@@ -285,7 +292,7 @@
         "cities": "8 Florida cities"
       }
     ],
-    "nextSteps": "<p><strong>Today (10 AM):</strong> Upload new Outscraper leads to Claude. <strong>Next week:</strong> Begin outreach to pressure washing and pool cleaning leads. Use HoneyBook templates for discovery calls. Target: 10-15 discovery calls booked by end of month.</p>"
+    "nextSteps": "<p><strong>Today (7 AM):</strong> Upload new Outscraper leads to Claude. <strong>Next week:</strong> Begin outreach to pressure washing and pool cleaning leads. Use HoneyBook templates for discovery calls. Target: 10-15 discovery calls booked by end of month.</p>"
   },
   "leads": {
     "metrics": [
@@ -313,7 +320,7 @@
       {
         "label": "Pipeline Health",
         "value": "Building",
-        "sub": "10+ emails ready to send",
+        "sub": "10+ new cold outreach emails ready",
         "class": "metric-primary",
         "color": "#3b82f6"
       }
@@ -683,8 +690,8 @@
       },
       {
         "label": "Draft Emails Ready",
-        "value": "10+",
-        "sub": "Ready to send",
+        "value": "201+",
+        "sub": "Large outreach campaign ready",
         "class": "metric-warning",
         "color": "#f59e0b"
       },
@@ -696,7 +703,7 @@
         "color": "#3b82f6"
       }
     ],
-    "summary": "<p><strong>Key Updates:</strong> Peleta confirmed newsletter working smoothly (Fri 11 PM). HoneyBook meeting notes from Peleta call ready. Alignable inquiry about small business websites (potential lead). Contra selected you to apply for Kajabi Expert gig. 5 Instagram DMs including from brycegoesdigital. WordPress developer Ram cold-emailed about subcontracting.</p><p><strong>Drafts Ready to Send:</strong> Wendy (2 versions: Website Updates + Monday Photoshoot). Wendy Kolby Foundation counter-proposal ($1,200 with $300x4 plan). Clay (Buzzard Springs logo file, Newsletter market section acknowledgment, Q2 Newsletter content request). Nakeitha (Confirmed Mar 27 meeting, Gallery walkthrough + blogging discussion). Peleta (Meta description update, Blog package gracefully declined response). Brooke VMC (Rack card follow-up, 2 versions).</p>"
+    "summary": "<p><strong>Key Updates:</strong> Peleta confirmed newsletter working smoothly (Fri 11 PM). HoneyBook meeting notes from Peleta call ready. Alignable inquiry about small business websites (potential lead). Contra selected you to apply for Kajabi Expert gig. 5 Instagram DMs including from brycegoesdigital. WordPress developer Ram cold-emailed about subcontracting.</p><p><strong>Drafts Ready to Send — NEW COLD OUTREACH:</strong> Mr. Handyman (Rob), SpringClear Pool & Spa, In Bloom Lawn & Landscape (Jim - 2 drafts: initial + follow-up), Alberti's On Main, FresKo FadeZ BarberShop, Sarasota Automotive, Magate Sekonya follow-up, Bellagena Med Spa (Julia), Phoenix Massage Spas.</p><p><strong>Drafts Ready to Send — CLIENT WORK:</strong> Peleta (Sneak Peak meta description reply), Nakeitha (Mar 27 meeting confirmation), Wendy (2 versions: Website Updates + Photoshoot, Kolby Foundation), Clay (Q2 Newsletter content request), Brooke VMC (rack card check-in). Auto-generated briefing drafts to self also included.</p>"
   },
   "opportunities": [
     {
@@ -744,7 +751,7 @@
       "class": "opp-med",
       "priority": "MEDIUM",
       "title": "Outscraper Leads Ready for Outreach",
-      "description": "New pool cleaning + pressure washing batches ready. Upload today (10 AM), begin outreach next week. 174+ leads already in pipeline.",
+      "description": "New pool cleaning + pressure washing batches ready. Upload today (7 AM), begin outreach next week. 174+ leads already in pipeline.",
       "value": "$10,000+ pipeline potential",
       "timeline": "Upload today, Outreach starts next week",
       "action": "Upload leads today, send HoneyBook discovery call templates Mon/Tue"
@@ -775,8 +782,8 @@
       "id": "act2",
       "rank": 2,
       "priority": "TODAY",
-      "title": "Upload Outscraper Leads to Claude at 10 AM",
-      "description": "Quick work break during your date. Upload pool cleaning + pressure washing + competitor cities batches from Outscraper. This takes 30 minutes max.",
+      "title": "Upload Outscraper Leads to Claude at 7 AM",
+      "description": "Quick work task before your date. Upload pool cleaning + pressure washing + competitor cities batches from Outscraper. This takes 30 minutes max.",
       "tag": "operations",
       "timeEstimate": "30 min",
       "completed": false
@@ -872,6 +879,7 @@
       "engagement": "Very active, responsive",
       "recentActivity": "Newsletter content received. Bound Presentation due Sun 3/23. Rush fee billable.",
       "nextAction": "Invoice Q1 + Rush fee Wed 3/26 ($300-500)",
+      "daysSinceContact": 1,
       "relationship": "Strong — spouse relationship with Nancy (Trinity UMC lead). Keep this client very happy.",
       "color": "#10b981"
     },
@@ -881,9 +889,10 @@
       "status": "Re-engaging",
       "retainer": "Project-based",
       "retainerStatus": "Active",
-      "engagement": "Moderate — 28+ days since last contact. Headshots booked.",
+      "engagement": "Moderate — Headshots scheduled.",
       "recentActivity": "Headshots scheduled Sun 3/23 at Lakewood Ranch. Website tour section needs update ($200 billable).",
       "nextAction": "Headshot session Sun 3/23, Invoice tour section work Thu 3/27",
+      "daysSinceContact": 1,
       "relationship": "Good — building momentum with headshots and fresh content. Check in regularly.",
       "color": "#f59e0b"
     },
@@ -896,6 +905,7 @@
       "engagement": "High — responsive, engaged",
       "recentActivity": "Newsletter confirmed working (Fri 11 PM). Website revisions from Mar 16 meeting. Blog package offered ($300/mo) — declined for now.",
       "nextAction": "Invoice Google Workspace $99 Wed 3/26, Website revisions Thu 3/27",
+      "daysSinceContact": 2,
       "relationship": "Strong — good upsell potential with blog package. Continue nurturing.",
       "color": "#10b981"
     },
@@ -905,9 +915,10 @@
       "status": "At Risk",
       "retainer": "Project-based",
       "retainerStatus": "Active (payment check needed)",
-      "engagement": "Low — 59 days since last contact. Discovery Call booked.",
+      "engagement": "Low — Discovery Call booked.",
       "recentActivity": "Discovery call booked via HoneyBook for Thu 3/27 at 1 PM. Outstanding balance needs clarification. Draft emails ready.",
       "nextAction": "Discovery Call Thu 3/27 — Gallery walkthrough + blog strategy",
+      "daysSinceContact": 2,
       "relationship": "At risk — reactivation opportunity. Prepare strong value proposition for discovery call.",
       "color": "#f59e0b"
     },
@@ -920,6 +931,7 @@
       "engagement": "Low — 30 days without response (was 27 on Mar 18)",
       "recentActivity": "Logo approved by committee. Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). No response since Feb 19.",
       "nextAction": "Reply Wed 3/26 with updated samples + enthusiasm",
+      "daysSinceContact": 30,
       "relationship": "At risk — CRITICAL. This is Clay's wife (retainer client). Losing Nancy could affect Clay relationship. Respond immediately with value + excitement.",
       "color": "#ef4444"
     },
@@ -932,8 +944,9 @@
       "engagement": "Low — No recent activity",
       "recentActivity": "Rack card template needed. Draft emails ready for follow-up.",
       "nextAction": "Send rack card follow-up email (2 versions ready)",
+      "daysSinceContact": 31,
       "relationship": "Good — quick follow-up will re-engage.",
-      "color": "#f59e0b"
+      "color": "#ef4444"
     }
   ],
   "footer": {
