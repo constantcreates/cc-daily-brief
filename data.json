@@ -1,0 +1,466 @@
+{
+  "date": "Saturday, March 21, 2026",
+  "dateKey": "2026-03-21",
+  "greeting": "Good Morning, Faye",
+  "statusBadge": "Weekend Sprint Mode",
+  "overview": "Happy Saturday! Today is your <strong>date with Squilliam in Bradenton</strong> (8 AM &ndash; 10 PM) &mdash; enjoy it fully. Only <strong>1 unread email</strong> in inbox (Kit weekly digest, non-urgent). <strong>Upload Outscraper leads at 7 AM</strong> before you head out &mdash; pressure washing, pool cleaning, and competitor city CSVs ready. This is a light day by design. <strong>Revenue sits at ~$2,798 of $10,417 (27%)</strong> with 10 days left in March. <strong>Monday is your VMC Weekend Sprint day</strong> &mdash; 12 Notion tasks created for the VMC photoshoot prep at 2 PM. <strong>Nancy Pile-Griffin is now 31 days without a reply</strong> &mdash; scheduled for Thursday. <strong>Nakeitha/Nikki Nyx discovery call</strong> booked via HoneyBook for Friday Mar 27 at 1 PM. <strong>Clay's March newsletter</strong> and <strong>bound presentation</strong> are both overdue &mdash; Monday work block. Rooks in-office Tue &amp; Thu, remote Wed this week.",
+  "alerts": [
+    {
+      "color": "#ef4444",
+      "icon": "🚨",
+      "title": "Nancy Pile-Griffin &mdash; 31 Days Without Reply",
+      "desc": "Nancy replied Feb 19 saying committee likes mockups and Pastor Dan Kim wants to work with Faye directly. She's Clay's wife &mdash; this $300+ warm referral is going ice cold. Reply scheduled Thursday after Rooks.",
+      "linkText": "Find Thread in Gmail",
+      "linkUrl": "https://mail.google.com/mail/u/0/#search/nancy+pile+griffin"
+    },
+    {
+      "color": "#ef4444",
+      "icon": "🚨",
+      "title": "Clay March Newsletter &mdash; OVERDUE (Due 3/21)",
+      "desc": "Clay sent newsletter content Mar 19 (market synopsis re: rising fuel costs from US-Iran conflict). Monthly retainer deliverable. Start Monday during Clay work block, finish Friday.",
+      "linkText": "Find Clay Email",
+      "linkUrl": "https://mail.google.com/mail/u/0/#search/clay+newsletter+market"
+    },
+    {
+      "color": "#ef4444",
+      "icon": "📦",
+      "title": "Clay Bound Presentation + Rush Revisions &mdash; OVERDUE (Due 3/22)",
+      "desc": "Condensed bound presentation from branded guidelines + 10-Year Strategic Vision doc revisions with larger font. $500 rush fee revenue. Critical for Monday.",
+      "linkText": "CC Business Tasks",
+      "linkUrl": "https://www.notion.so"
+    },
+    {
+      "color": "#f59e0b",
+      "icon": "💰",
+      "title": "Clay Q1 Invoice + Rush Fee &mdash; Due End of March",
+      "desc": "Quarterly invoicing due end of March. Include $300-500 rush fee for Strategic Vision doc. Scheduled for Thursday morning before Rooks.",
+      "linkText": "Create Invoice in HoneyBook",
+      "linkUrl": "https://www.honeybook.com"
+    },
+    {
+      "color": "#f59e0b",
+      "icon": "📧",
+      "title": "Magate Sekonya &mdash; 14+ Days No Response",
+      "desc": "New inquiry via HoneyBook, incomplete form. Response scheduled Monday after Rooks at 6 PM.",
+      "linkText": "HoneyBook",
+      "linkUrl": "https://www.honeybook.com"
+    },
+    {
+      "color": "#3b82f6",
+      "icon": "📸",
+      "title": "VMC Photoshoot Monday 2&ndash;4 PM",
+      "desc": "Staff headshots & facility photography at VMC Lakewood Ranch. Weekend Sprint tasks prepping the site pages &mdash; 12 revision tasks in Notion. Wendy quick tasks bundled before photoshoot (12:15&ndash;1 PM).",
+      "linkText": "View in Calendar",
+      "linkUrl": "https://www.google.com/calendar/event?eid=M2hjM2hyNHVzYmUxaWZ0YzRiazc3dnUzbXMgZmF5ZUBjb25zdGFudGNyZWF0ZXMuY29t"
+    },
+    {
+      "color": "#3b82f6",
+      "icon": "🐾",
+      "title": "Nakeitha Discovery Call &mdash; Friday Mar 27 at 1 PM",
+      "desc": "HoneyBook-booked session. Topics: gallery walkthrough, blog posting discussion, general check-in. Prep meeting brief Thursday evening.",
+      "linkText": "HoneyBook Project",
+      "linkUrl": "https://www.honeybook.com/app/event/69bc396f08d68f0028a1c4f6"
+    }
+  ],
+  "schedule": {
+    "events": [
+      {
+        "color": "#c8d9a0",
+        "icon": "📤",
+        "time": "7:00 AM",
+        "title": "Upload Outscraper leads to Claude (pool cleaning + competitor cities)",
+        "url": "https://www.google.com/calendar/event?eid=dDZpOGMzZXE5bm51N3A1N2VhaXU5a2tvOGMgZmF5ZUBjb25zdGFudGNyZWF0ZXMuY29t"
+      },
+      {
+        "color": "#f472b6",
+        "icon": "💕",
+        "time": "8:00 AM &ndash; 10:00 PM",
+        "title": "Date with Squilliam in Bradenton (ALL DAY)",
+        "url": "https://www.google.com/calendar/event?eid=Yjc2ZDY0NzI2Y2I2NGRkYWI3YjNmNmJiYmE2OGI2MGZfMjAyNjAzMjFUMTIwMDAwWiBjX2JmYjU0ZDRhMmFiOGM4N2YxY2YzMDVkZjZiYWFhNDA4NWZjZDc4NWQwNTg4ZTkzNzM4OGIzNTdjYTQzYTdhZGJAZw"
+      },
+      {
+        "color": "#8b5cf6",
+        "icon": "🌙",
+        "time": "9:00 PM",
+        "title": "Evening Routine",
+        "url": "#"
+      }
+    ],
+    "dayTip": "Today is YOUR day &mdash; date with Squilliam, no client work required. The Outscraper upload is the only business task. Monday is a full sprint day &mdash; rest up!",
+    "weekHighlights": [
+      "Sun: Download Amphetamine if laptop slept overnight",
+      "Mon: Clay Work Block 9&ndash;12 + VMC Photoshoot 2&ndash;4 PM + Wendy Quick Tasks 12:15&ndash;1 PM",
+      "Mon: Test Peleta Newsletter + Start Clay Newsletter",
+      "Tue: Rooks In-Office (full day) + Revenue Sprint 5:30 PM + Magate & Nakeitha check-ins",
+      "Wed: Rooks Remote at Foxtail + Meal Prep evening",
+      "Thu: Rooks In-Office + Invoice Clay Q1 + Nancy Reply + Cancel Asana + Celine Hangout",
+      "Fri: Wendy/VMC Work Block 9&ndash;12 + Nakeitha Call 1 PM (HoneyBook) + Peleta Revisions + Call Will"
+    ],
+    "asanaTasks": ""
+  },
+  "revenue": {
+    "goal": 10417,
+    "collected": 2798,
+    "remaining": 7619,
+    "percent": 27,
+    "daysLeft": 10,
+    "dailyNeed": "762",
+    "progressColor": "linear-gradient(90deg,#ef4444,#f59e0b)",
+    "collectedItems": [
+      {"label": "Clay retainer (ACH)", "amount": "$600", "color": "var(--sage)"},
+      {"label": "Peleta (Google Workspace)", "amount": "$99", "color": "var(--sage)"},
+      {"label": "Wendy/VMC retainer", "amount": "$2,000", "color": "var(--sage)"},
+      {"label": "Peleta (prior balance)", "amount": "$99", "color": "var(--sage)"}
+    ],
+    "outstanding": [
+      "Clay Bound Presentation rush fee &mdash; $450&ndash;$500 (deliver Monday, invoice Thursday)",
+      "Nancy / Trinity UMC logo &mdash; ~$300 (need to reply first, 31 days waiting)",
+      "Peleta Blog/SEO package &mdash; $300/mo (awaiting her decision, follow up Monday)",
+      "Derek Mardones / Busy Bee &mdash; $600/mo social (proposal sent, waiting on county truck crisis)",
+      "Nakeitha add-on services &mdash; TBD (Friday call may surface opportunities)",
+      "VMC Tours website update &mdash; ~$200 (invoice as website update)"
+    ],
+    "toolCharges": "Squarespace, HoneyBook, Google Workspace, Semrush, Outscraper batches &mdash; exact amounts tracked in HoneyBook Income Tracker",
+    "fastCash": "1. <strong>Clay rush fee $500</strong> &mdash; deliver Monday, invoice Thursday<br>2. <strong>Nancy Trinity UMC $300</strong> &mdash; reply Thursday, close within a week<br>3. <strong>VMC Tours update $200</strong> &mdash; complete Friday, invoice same day<br>4. <strong>Peleta blog retainer $300/mo</strong> &mdash; follow up Monday on decision<br>5. <strong>Revenue Sprint Monday 5:30 PM</strong> &mdash; scan CRM for quick-win logo/one-pager prospects"
+  },
+  "q2Campaign": {
+    "metrics": [
+      {"label": "Total Leads", "value": "174+", "sub": "CRM pipeline", "class": ""},
+      {"label": "Outreach Sent", "value": "40+", "sub": "Tue batch", "class": ""},
+      {"label": "Responses", "value": "2", "sub": "Derek + Magate", "class": ""},
+      {"label": "Price Point", "value": "$999", "sub": "Quick Launch", "class": ""},
+      {"label": "New Verticals", "value": "3", "sub": "pool+pressure+cities", "class": ""}
+    ],
+    "verticals": [
+      {"name": "Lawn & Landscape", "count": "45+", "detail": "Manatee/Sarasota", "isNew": false},
+      {"name": "Auto Detailing", "count": "12", "detail": "Local service", "isNew": false},
+      {"name": "Painters", "count": "8", "detail": "Residential/commercial", "isNew": false},
+      {"name": "Pool Cleaning", "count": "NEW", "detail": "8 FL cities batch", "isNew": true},
+      {"name": "Pressure Washing", "count": "NEW", "detail": "Outscraper ready", "isNew": true},
+      {"name": "Competitor Cities", "count": "NEW", "detail": "St Pete, Tampa, etc.", "isNew": true}
+    ],
+    "nextSteps": "1. <strong>Upload Outscraper CSVs today</strong> (pool cleaning + pressure washing + competitor cities)<br>2. Tuesday lead outreach batch auto-runs at 9 AM<br>3. Derek Mardones &mdash; waiting on county truck parking crisis, follow up casually<br>4. Revenue Sprint Monday 5:30 PM &mdash; scan CRM for quick-win prospects"
+  },
+  "leads": {
+    "metrics": [
+      {"label": "Active Warm", "value": "6", "sub": "ready to close", "class": ""},
+      {"label": "Cold Pipeline", "value": "174+", "sub": "Q2 outreach", "class": ""},
+      {"label": "Avg Deal Size", "value": "$600", "sub": "est. monthly", "class": ""},
+      {"label": "Close Target", "value": "$1K", "sub": "in 2 weeks", "class": "metric-warn"}
+    ],
+    "cards": [
+      {
+        "name": "Derek Mardones / Busy Bee Movers",
+        "location": "Bradenton, FL &bull; (941) 321-6865",
+        "score": "$600/mo",
+        "borderColor": "#22c55e",
+        "reason": "Social media starter package &mdash; 8 posts/mo + monthly photo shoot. Proposal updated with full transcript. Waiting on county truck parking crisis (asked for 1 week on Mar 9). Night owl, prefers texting. Also wants: chatbot, SEO/blogs, vinyl wraps, website.",
+        "links": [
+          {"text": "Proposal", "url": "https://www.honeybook.com", "class": "primary"},
+          {"text": "Transcript", "url": "#", "class": "secondary"}
+        ]
+      },
+      {
+        "name": "Nancy Pile-Griffin / Trinity UMC",
+        "location": "Clay's wife &bull; griffinzoo007@gmail.com",
+        "score": "$300+",
+        "scoreStyle": "background:rgba(239,68,68,.15);color:#fca5a5",
+        "borderColor": "#ef4444",
+        "reason": "🚨 31 DAYS NO REPLY. Committee approved logo mockups Feb 19, Pastor Dan Kim wants to work with Faye directly. Also interested in peanut business branding ($350&ndash;$500). Warm referral going ice cold.",
+        "links": [
+          {"text": "Gmail Thread", "url": "https://mail.google.com/mail/u/0/#search/nancy+pile+griffin", "class": "primary"},
+          {"text": "Notion", "url": "https://www.notion.so/325c2960fceb81a78c12c1cf641c583c", "class": "secondary"}
+        ]
+      },
+      {
+        "name": "Peleta / Jus' Poetic",
+        "location": "Blog/SEO upsell &bull; juspoetic92@gmail.com",
+        "score": "$300/mo",
+        "borderColor": "#60a5fa",
+        "reason": "Website wrapping up. Blog/SEO pitch at $300/mo (first month free). Peleta said she'd decide by weekend. Follow up Monday if no answer. 8 revision items still pending from Mar 16 meeting.",
+        "links": [
+          {"text": "Email", "url": "https://mail.google.com/mail/u/0/#search/jus+poetic", "class": "primary"}
+        ]
+      },
+      {
+        "name": "Magate Sekonya / Manocons",
+        "location": "msekonya@manocons.com",
+        "score": "New Lead",
+        "borderColor": "#f59e0b",
+        "reason": "New HoneyBook inquiry Mar 7, didn't fill out full application. 14+ days with no reply. Response scheduled Monday 6 PM after Rooks.",
+        "links": [
+          {"text": "HoneyBook", "url": "https://www.honeybook.com", "class": "primary"}
+        ]
+      },
+      {
+        "name": "Angela Jones / Angela's Clothing",
+        "location": "angela.jones120p@gmail.com",
+        "score": "$1K",
+        "borderColor": "#c8d9a0",
+        "reason": "Logo project &mdash; minimal luxury aesthetic, black/white/gold palette. Draft response sent. Warm lead.",
+        "links": [
+          {"text": "Gmail", "url": "https://mail.google.com/mail/u/0/#search/angela+jones", "class": "primary"}
+        ]
+      },
+      {
+        "name": "Nakeitha / Nikki Nyx Karaoke",
+        "location": "nsmiley210@gmail.com &bull; Completed client",
+        "score": "Upsell",
+        "borderColor": "#8b5cf6",
+        "reason": "Project completed & paid. Discovery call booked for Friday Mar 27 at 1 PM via HoneyBook. Topics: gallery walkthrough, blog posting, general check-in. Good candidate for add-on services.",
+        "links": [
+          {"text": "HoneyBook Call", "url": "https://www.honeybook.com/app/event/69bc396f08d68f0028a1c4f6", "class": "primary"}
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "published": [
+      "Why Every Small Business Needs a Professional Logo",
+      "5 Signs Your Website Is Losing You Customers",
+      "Brand Identity vs. Brand Image: What's the Difference?",
+      "How to Choose the Right Colors for Your Brand",
+      "What Is a Brand Strategy and Why Does It Matter?"
+    ],
+    "drafts": [
+      "How Much Does a Website Cost in 2026?",
+      "The Complete Guide to Rebranding Your Small Business",
+      "Why Your Competitors' Websites Are Outranking You",
+      "How to Write a Brand Story That Connects",
+      "SEO for Service Businesses: A Beginner's Guide",
+      "Top 10 Website Mistakes Small Businesses Make"
+    ],
+    "queued": [
+      "6 new outlines from Tuesday's blog-strategy-from-competitors task",
+      "Prioritizing commercial/transactional intent (60-70% target)"
+    ],
+    "note": "Wednesday's write-blog-posts task writes all 6 outlined posts. Thursday's squarespace-verification checks they're live. Monday's keyword-rank-tracker checks rankings."
+  },
+  "seo": {
+    "metrics": [
+      {"label": "Domain Authority", "value": "6", "sub": "building", "class": ""},
+      {"label": "Organic Keywords", "value": "~50", "sub": "-13% trend", "class": "metric-warn"},
+      {"label": "Traffic Trend", "value": "-36%", "sub": "need content push", "class": "metric-danger"}
+    ],
+    "topKeywords": [
+      "bradenton graphic design &mdash; Target #1",
+      "sarasota branding agency &mdash; Captivation #1",
+      "brand identity design florida",
+      "small business website bradenton",
+      "logo design sarasota",
+      "brand strategy consultant florida"
+    ],
+    "semrushNote": "Self-audit showed 79% informational intent. Shifting to 60-70% commercial/transactional. Blog strategy updated to prioritize commercial keywords.",
+    "dataNote": "Weekly keyword rank tracker runs Mondays at 10 AM. Weekly Squarespace verification Thursdays at 9 AM."
+  },
+  "subscriptions": [
+    {
+      "name": "HoneyBook",
+      "desc": "CRM, invoicing, contracts, scheduling. Nakeitha call booked for Mar 27.",
+      "borderColor": "var(--sage)",
+      "alert": "",
+      "alertColor": ""
+    },
+    {
+      "name": "Squarespace",
+      "desc": "Website hosting for constantcreates.com + client sites (Peleta, VMC staging)",
+      "borderColor": "var(--sage)",
+      "alert": "",
+      "alertColor": ""
+    },
+    {
+      "name": "Google Workspace",
+      "desc": "Email, Drive, Calendar for constantcreates.com",
+      "borderColor": "var(--sage)",
+      "alert": "",
+      "alertColor": ""
+    },
+    {
+      "name": "Semrush",
+      "desc": "SEO audits, keyword tracking, competitor analysis. 8 new optimization ideas flagged.",
+      "borderColor": "#60a5fa",
+      "alert": "50% discount support ticket open",
+      "alertColor": "#fcd34d"
+    },
+    {
+      "name": "Asana",
+      "desc": "VMC project management (shared with Wendy/Brooke). MIGRATED TO NOTION — cancel this week.",
+      "borderColor": "#ef4444",
+      "alert": "CANCEL — saves $61/mo",
+      "alertColor": "#fca5a5"
+    },
+    {
+      "name": "Kit (ConvertKit)",
+      "desc": "Email marketing / newsletter platform. Weekly digest received today.",
+      "borderColor": "rgba(74,102,80,.4)",
+      "alert": "",
+      "alertColor": ""
+    }
+  ],
+  "authority": {
+    "metrics": [
+      {"label": "GBP Reviews", "value": "0", "sub": "need reviews!", "class": "metric-warn"},
+      {"label": "Competitors Tracked", "value": "174", "sub": "6 deep-audited", "class": ""},
+      {"label": "GBP Posts Queued", "value": "8 wks", "sub": "Mar 26 &ndash; May 14", "class": ""}
+    ],
+    "growthOpps": "1. <strong>GBP is wide open</strong> &mdash; neither Captivation nor DreamBig post to GBP. 8 weeks of posts pre-loaded starting Mar 26.<br>2. <strong>Ask satisfied clients for Google reviews</strong> &mdash; Clay, Peleta, Nakeitha are all good candidates.<br>3. <strong>LinkedIn consistency</strong> &mdash; Buffer setup task in CC Business Tasks. Connect and schedule first posts.<br>4. <strong>Blog content flywheel</strong> &mdash; 6 new posts/week pipeline active.",
+    "socialLinks": [
+      {"name": "Instagram", "url": "https://instagram.com/constantcreates", "color": "192,132,252"},
+      {"name": "LinkedIn", "url": "https://linkedin.com/company/constant-creates", "color": "96,165,250"},
+      {"name": "TikTok", "url": "https://tiktok.com/@constantcreates", "color": "244,114,182"},
+      {"name": "Google Business", "url": "https://business.google.com", "color": "34,197,94"}
+    ]
+  },
+  "email": {
+    "metrics": [
+      {"label": "Unread", "value": "1", "sub": "Kit digest only", "class": ""},
+      {"label": "Starred Unread", "value": "6", "sub": "mostly old", "class": "metric-warn"},
+      {"label": "Drafts Pending", "value": "5+", "sub": "Nancy, Magate, etc.", "class": ""},
+      {"label": "Auto-Filing", "value": "Active", "sub": "every 2 hrs", "class": ""}
+    ],
+    "summary": "<strong>Inbox is clean today!</strong> Only 1 unread email &mdash; Kit weekly digest (non-urgent). <strong>6 starred unread messages are all old</strong> (Aug&ndash;Dec 2025): Asana daily task digest (Nov), Semrush 50% discount (Aug), Chase Zelle inactive notice (Aug), Bradenton Marauders pitch (Aug), therapist check-in (Mar 2025), Manatee Chamber BBC (Dec 2024). Consider unstarring these or taking action on the Semrush discount and Chamber connection. <strong>Auto-drafting runs at 7 AM and 2 PM</strong>. Gmail auto-sort runs every 2 hours."
+  },
+  "opportunities": [
+    {
+      "priority": "🔥 High",
+      "title": "Revenue Sprint &mdash; Close $1K in 2 Weeks",
+      "desc": "Monday 5:30 PM: Scan CRM for quick-win prospects. Logo projects, one-pagers, quick website fixes from existing warm leads. Clay rush fee + Nancy + VMC tours = ~$1,000.",
+      "cardClass": "opp-high",
+      "badgeClass": "badge-red"
+    },
+    {
+      "priority": "📈 Medium",
+      "title": "VMC Weekend Sprint &mdash; 12 Tasks Before Photoshoot",
+      "desc": "12 revision task pages created in Notion covering all VMC website pages. Critical items: remove arthroscopy from surgery page, fix \"Description goes here\" placeholders on Community page, fix Contact page rendering bug.",
+      "cardClass": "opp-med",
+      "badgeClass": "badge-blue"
+    },
+    {
+      "priority": "🌱 Growth",
+      "title": "Cancel Asana &mdash; Save $732/Year",
+      "desc": "VMC tasks fully migrated to Notion. Cancel Asana Thursday to save $61/month ($732/year). Verify social media login links from old Asana page first.",
+      "cardClass": "opp-low",
+      "badgeClass": "badge-green"
+    }
+  ],
+  "actions": [
+    {
+      "id": "act-1",
+      "text": "Upload Outscraper lead CSVs to Claude (pool cleaning + pressure washing + competitor cities)",
+      "tag": "LEADS",
+      "tagStyle": "background:rgba(200,217,160,.2);color:var(--sage)",
+      "time": "30 min",
+      "value": ""
+    },
+    {
+      "id": "act-2",
+      "text": "Enjoy your date with Squilliam in Bradenton! 💕 No client work today.",
+      "tag": "PERSONAL",
+      "tagStyle": "background:rgba(244,114,182,.15);color:#f472b6",
+      "time": "All day",
+      "value": ""
+    },
+    {
+      "id": "act-3",
+      "text": "PREP FOR MONDAY: Review VMC Weekend Sprint tasks in Notion (12 page revision tasks)",
+      "tag": "VMC",
+      "tagStyle": "background:rgba(96,165,250,.15);color:#93c5fd",
+      "time": "15 min",
+      "value": ""
+    },
+    {
+      "id": "act-4",
+      "text": "PREP FOR MONDAY: Gather Clay newsletter content from Mar 19 email + prep bound presentation files",
+      "tag": "CLAY",
+      "tagStyle": "background:rgba(200,217,160,.2);color:var(--sage)",
+      "time": "15 min",
+      "value": "$500"
+    },
+    {
+      "id": "act-5",
+      "text": "Check if laptop needs Amphetamine (anti-sleep app) &mdash; scheduled tasks may have failed overnight",
+      "tag": "SYSTEM",
+      "tagStyle": "background:rgba(192,132,252,.15);color:#d8b4fe",
+      "time": "5 min",
+      "value": ""
+    },
+    {
+      "id": "act-6",
+      "text": "Quick review: Do starred emails from 2025 still need action? Unstar or create tasks for Semrush discount & Chamber connection",
+      "tag": "EMAIL",
+      "tagStyle": "background:rgba(251,191,36,.15);color:#fcd34d",
+      "time": "10 min",
+      "value": ""
+    },
+    {
+      "id": "act-7",
+      "text": "Monday game plan: Clay work block 9&ndash;12, Wendy quick tasks 12:15&ndash;1, VMC photoshoot 2&ndash;4 PM, newsletter 4&ndash;5 PM, Peleta follow-up 4&ndash;4:30 PM",
+      "tag": "PLANNING",
+      "tagStyle": "background:rgba(34,211,238,.15);color:#67e8f9",
+      "time": "5 min",
+      "value": ""
+    },
+    {
+      "id": "act-8",
+      "text": "Reminder: Peleta said she'd have blog package answer before weekend &mdash; check if she responded",
+      "tag": "PELETA",
+      "tagStyle": "background:rgba(96,165,250,.15);color:#93c5fd",
+      "time": "5 min",
+      "value": "$300/mo"
+    },
+    {
+      "id": "act-9",
+      "text": "Friday is packed: Wendy VMC work block 9&ndash;12 + Nakeitha call 1 PM + Peleta revisions + CEO check-in 3 PM",
+      "tag": "WEEK AHEAD",
+      "tagStyle": "background:rgba(34,211,238,.15);color:#67e8f9",
+      "time": "Note",
+      "value": ""
+    },
+    {
+      "id": "act-10",
+      "text": "Weekly personal check-in scheduled for Monday 6&ndash;7 PM. How are you feeling? What does 'locking in' look like this week?",
+      "tag": "WELLNESS",
+      "tagStyle": "background:rgba(244,114,182,.15);color:#f472b6",
+      "time": "60 min",
+      "value": ""
+    }
+  ],
+  "clients": [
+    {
+      "name": "Clay Griffin / Hallwood",
+      "meta": "$600/mo retainer &bull; Last contact Mar 20",
+      "statusText": "Active &mdash; 2 overdue deliverables",
+      "statusColor": "#f59e0b",
+      "borderColor": "var(--sage)",
+      "detail": "March newsletter OVERDUE (due 3/21). Bound presentation OVERDUE (due 3/22). Buzzard Springs logo file unsent. Q1 invoice due end of March. ACH retainer on 6th. Monday work block 9&ndash;12."
+    },
+    {
+      "name": "Dr. Wendy Ellis / VMC",
+      "meta": "$2,000/mo retainer &bull; Last contact Mar 20",
+      "statusText": "Active &mdash; Photoshoot Monday 2 PM",
+      "statusColor": "#22c55e",
+      "borderColor": "#22c55e",
+      "detail": "12 VMC page revision tasks for weekend sprint. Photoshoot Mon 2&ndash;4 PM. Quick tasks: Robert Seal domain follow-up, arthroscopy removal, Kolby proposal. Tours section update ~$200. Colby Foundation ON HOLD (IT guy)."
+    },
+    {
+      "name": "Peleta / Jus' Poetic",
+      "meta": "Wrapping up &bull; Last contact Mar 19",
+      "statusText": "Blog decision pending",
+      "statusColor": "#60a5fa",
+      "borderColor": "#60a5fa",
+      "detail": "$99 Google Workspace fee collected. 8 website revisions pending from Mar 16 meeting. Blog/SEO pitch at $300/mo. Peleta said she'd decide by weekend. Test newsletter automation (overdue). Invoice $99 Google Workspace (Thu)."
+    },
+    {
+      "name": "Nakeitha / Nikki Nyx",
+      "meta": "Completed &bull; Last contact Mar 19",
+      "statusText": "Discovery call Fri Mar 27",
+      "statusColor": "#8b5cf6",
+      "borderColor": "#8b5cf6",
+      "detail": "All paid. Website & flyers delivered. HoneyBook session booked Fri 1 PM. Topics: gallery, blog posting, check-in. Good relationship &mdash; upsell candidate for maintenance/blog."
+    }
+  ],
+  "footer": {
+    "lastUpdated": "Saturday, March 21, 2026 at 5:00 AM EDT",
+    "url": "https://cc-daily-brief.vercel.app"
+  }
+}

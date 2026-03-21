@@ -1,0 +1,61 @@
+{
+  "last_updated": "2026-03-16T08:00:00-04:00",
+  "summary": {
+    "total_clients": 5,
+    "overdue": 1,
+    "due_soon": 2,
+    "recent": 2
+  },
+  "clients": [
+    {
+      "name": "Nakeitha Anyamele-Latney",
+      "business": "Nikki Nyx International Karaoke",
+      "email": "nsmiley210@gmail.com",
+      "last_contact": "2026-01-16",
+      "days_since_contact": 59,
+      "status": "overdue",
+      "project_notes": "Website, photos & brand overview video script. Payment delays due to government shutdown — flexible terms offered.",
+      "has_unsent_draft": true
+    },
+    {
+      "name": "Dr. Wendy Ellis",
+      "business": "Veterinary Medical Center (VMC)",
+      "email": "ellis.vmc@gmail.com",
+      "last_contact": "2026-02-16",
+      "days_since_contact": 28,
+      "status": "due_soon",
+      "project_notes": "Rack cards design (GotPrint) and website design. Works closely with Practice Manager Brooke Kommuck.",
+      "has_unsent_draft": false
+    },
+    {
+      "name": "Brooke Kommuck",
+      "business": "Veterinary Medical Center (VMC)",
+      "email": "brooke.vmc@gmail.com",
+      "last_contact": "2026-02-18",
+      "days_since_contact": 26,
+      "status": "due_soon",
+      "project_notes": "Practice Manager at VMC. GotPrint template for 4x9 rack cards. Part of the same VMC client project with Dr. Ellis.",
+      "has_unsent_draft": false
+    },
+    {
+      "name": "Clay Griffin",
+      "business": "Hallwood Enterprises Inc.",
+      "email": "claygriffin@hallwood-usa.com",
+      "last_contact": "2026-03-13",
+      "days_since_contact": 3,
+      "status": "recent",
+      "project_notes": "On retainer Mar 2026–Feb 2027. Website, monthly newsletters, LinkedIn management, presentations, logo work.",
+      "has_unsent_draft": true
+    },
+    {
+      "name": "Jus' Poetic",
+      "business": "Jus' Poetic LLC",
+      "email": "juspoetic92@gmail.com",
+      "last_contact": "2026-03-15",
+      "days_since_contact": 1,
+      "status": "recent",
+      "project_notes": "Active website design. Full revision list received Mar 15 — all-black design, simplified layout, social links. Meeting 3/16 @ 3pm.",
+      "has_unsent_draft": true
+    }
+  ]
+}
