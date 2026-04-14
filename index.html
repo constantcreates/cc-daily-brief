@@ -3,327 +3,1090 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Constant Creates — Daily Brief</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a2428'/><text x='16' y='22' font-size='18' font-family='serif' font-weight='bold' fill='%23c8d9a0' text-anchor='middle'>CC</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<title>CC Daily Brief — Tuesday, April 14, 2026</title>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--dark:#1a2428;--forest:#263633;--green:#4a6650;--sage:#c8d9a0;--cream:#f0edd8;--light:#F7F6F1;--white:#fff;--warn:#f59e0b;--danger:#ef4444;--success:#22c55e}
-body{font-family:'Poppins',system-ui,sans-serif;background:var(--dark);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
-.container{max-width:1200px;margin:0 auto;padding:0 20px}
-a{color:var(--sage);text-decoration:none;transition:color .2s}
-a:hover{color:var(--white);text-decoration:underline}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.fade-in{animation:fadeInUp .5s ease-out forwards;opacity:0}
-.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}.d6{animation-delay:.6s}.d7{animation-delay:.7s}.d8{animation-delay:.8s}.d9{animation-delay:.9s}
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;900&display=swap');
 
-header{border-bottom:1px solid rgba(74,102,80,.3);background:rgba(26,36,40,.9);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.logo-group{display:flex;align-items:center;gap:12px}
-.logo-icon{width:40px;height:40px;border-radius:10px;background:rgba(200,217,160,.2);display:flex;align-items:center;justify-content:center;font-size:18px}
-.logo-text h1{font-size:16px;font-weight:600;letter-spacing:-.02em;color:var(--white)}
-.logo-text p{font-size:10px;color:var(--sage);text-transform:uppercase;letter-spacing:.15em}
-.status-badge{display:flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);font-size:11px;color:#fcd34d;font-weight:500}
-.pulse-dot{width:8px;height:8px;border-radius:50%;background:#f59e0b;animation:pulse 2s ease-in-out infinite}
+  :root {
+    --bg: #0e0e11;
+    --surface: #17171c;
+    --surface-raised: #1e1e25;
+    --border: #2a2a35;
+    --text: #e8e6e3;
+    --text-muted: #8a8a96;
+    --accent: #c9a45c;
+    --accent-glow: rgba(201,164,92,0.15);
+    --critical: #ef4444;
+    --critical-bg: rgba(239,68,68,0.1);
+    --urgent: #f97316;
+    --urgent-bg: rgba(249,115,22,0.1);
+    --high: #eab308;
+    --high-bg: rgba(234,179,8,0.08);
+    --medium: #3b82f6;
+    --medium-bg: rgba(59,130,246,0.08);
+    --done: #22c55e;
+    --done-bg: rgba(34,197,94,0.08);
+    --green: #22c55e;
+    --graphite: #6b7280;
+    --lavender: #a78bfa;
+    --blue: #3b82f6;
+  }
 
-.card{border-radius:16px;background:rgba(38,54,51,.6);border:1px solid rgba(74,102,80,.2);padding:24px;position:relative;overflow:hidden;margin-bottom:20px}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--sage),transparent);opacity:.35}
-.card-accent{background:linear-gradient(135deg,rgba(38,54,51,.9),rgba(74,102,80,.25));border-color:rgba(200,217,160,.25)}
-.section-title{font-size:17px;font-weight:600;display:flex;align-items:center;gap:8px;margin-bottom:16px;color:var(--white)}
-.badge{font-size:10px;font-weight:600;text-transform:capitalize;padding:4px 12px;border-radius:999px;letter-spacing:.03em}
-.badge-green{background:rgba(200,217,160,.18);color:var(--sage)}
-.badge-red{background:rgba(239,68,68,.15);color:#fca5a5}
-.badge-yellow{background:rgba(245,158,11,.15);color:#fcd34d}
-.badge-blue{background:rgba(96,165,250,.15);color:#93c5fd}
-.badge-purple{background:rgba(192,132,252,.15);color:#d8b4fe}
-.badge-amber{background:rgba(251,191,36,.15);color:#fcd34d}
-.badge-cyan{background:rgba(34,211,238,.15);color:#67e8f9}
+  * { margin:0; padding:0; box-sizing:border-box; }
 
-.metrics{display:grid;gap:12px;margin-bottom:20px}
-.m4{grid-template-columns:repeat(4,1fr)}
-.m3{grid-template-columns:repeat(3,1fr)}
-.m5{grid-template-columns:repeat(5,1fr)}
-@media(max-width:768px){.m4,.m5{grid-template-columns:repeat(2,1fr)}.m3{grid-template-columns:repeat(3,1fr)}}
-.metric{background:rgba(26,36,40,.5);border-radius:12px;padding:16px;border:1px solid rgba(74,102,80,.15)}
-.metric-sm{text-align:center;padding:14px}
-.metric-label{font-size:11px;color:rgba(240,237,216,.6);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;font-weight:500}
-.metric-value{font-size:22px;font-weight:700;color:var(--white)}
-.metric-sub{font-size:11px;color:rgba(200,217,160,.6);margin-top:4px}
-.metric-warn .metric-value{color:var(--warn)}
-.metric-danger .metric-value{color:var(--danger)}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
 
-.progress-wrap{margin-bottom:20px}
-.progress-header{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}
-.progress-bar{height:10px;background:rgba(26,36,40,.6);border-radius:999px;overflow:hidden}
-.progress-fill{height:100%;border-radius:999px;transition:width 1s}
-.progress-footer{display:flex;justify-content:space-between;font-size:12px;color:rgba(240,237,216,.5);margin-top:6px}
+  .noise {
+    position: fixed; inset:0; z-index:0; pointer-events:none; opacity:0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
 
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:768px){.grid-3{grid-template-columns:1fr}}
+  .container {
+    position: relative; z-index:1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
 
-.lead-card{background:rgba(26,36,40,.4);border-radius:12px;padding:14px;border:1px solid rgba(74,102,80,.15);margin-bottom:10px}
-.lead-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
-.lead-name{font-size:14px;font-weight:600;color:var(--white)}
-.lead-loc{font-size:11px;color:rgba(240,237,216,.5)}
-.lead-score{font-size:12px;font-weight:700;color:var(--sage);background:rgba(200,217,160,.18);padding:3px 10px;border-radius:999px}
-.lead-reason{font-size:12px;color:rgba(240,237,216,.6);margin-top:4px;line-height:1.6}
-.lead-links{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-.lead-link{font-size:10px;font-weight:600;padding:4px 10px;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:all .2s}
-.lead-link:hover{text-decoration:none;filter:brightness(1.2)}
-.lead-link-primary{background:rgba(200,217,160,.2);color:var(--sage);border:1px solid rgba(200,217,160,.3)}
-.lead-link-secondary{background:rgba(96,165,250,.12);color:#93c5fd;border:1px solid rgba(96,165,250,.2)}
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
 
-.cal-item{display:flex;align-items:center;justify-content:space-between;background:rgba(26,36,40,.3);border-radius:10px;padding:10px 14px;margin-bottom:6px}
-.cal-title{font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px;color:rgba(240,237,216,.85)}
-.cal-title a{color:rgba(240,237,216,.85)}
-.cal-title a:hover{color:var(--white)}
+  .header-brand {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
 
-.opp-card{border-radius:14px;padding:18px;border:1px solid}
-.opp-type{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-left:8px}
-.opp-title{font-size:14px;font-weight:600;margin:10px 0 6px;color:var(--white)}
-.opp-desc{font-size:12px;color:rgba(240,237,216,.6);line-height:1.6}
-.opp-links{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.opp-high{background:rgba(239,68,68,.06);border-color:rgba(239,68,68,.3)}
-.opp-med{background:rgba(96,165,250,.06);border-color:rgba(96,165,250,.3)}
-.opp-low{background:rgba(200,217,160,.06);border-color:rgba(200,217,160,.2)}
+  .header h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 0.4rem;
+  }
 
-.action-item{display:flex;align-items:flex-start;gap:16px;border-radius:14px;padding:18px;background:rgba(26,36,40,.5);border:1px solid rgba(74,102,80,.15);margin-bottom:10px;transition:all .2s;cursor:pointer}
-.action-item:hover{border-color:rgba(200,217,160,.35)}
-.action-item.completed{opacity:.5;border-color:rgba(34,197,94,.3)}
-.action-item.completed .action-text{text-decoration:line-through;color:rgba(240,237,216,.4)}
-.action-check{width:28px;height:28px;border-radius:50%;border:2px solid rgba(200,217,160,.3);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--sage);flex-shrink:0;margin-top:2px;transition:all .2s}
-.action-item.completed .action-check{background:var(--success);border-color:var(--success);color:var(--dark)}
-.action-text{font-size:14px;font-weight:500;line-height:1.6;color:var(--white)}
-.action-meta{display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap}
-.action-meta-tag{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;padding:4px 10px;border-radius:6px;background:rgba(74,102,80,.25);color:var(--sage)}
-.action-time{font-size:10px;color:rgba(240,237,216,.5)}
+  .header-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
 
-footer{background:rgba(26,36,40,.6);border-top:1px solid rgba(74,102,80,.2);padding:16px 0;margin-top:40px;text-align:center;color:rgba(240,237,216,.5);font-size:11px}
+  .header-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
 
-.alert-container{display:flex;flex-direction:column;gap:12px}
-.alert-item{background:rgba(26,36,40,.5);border-radius:12px;padding:16px;border:1px solid rgba(74,102,80,.2);border-left:4px solid var(--warn)}
-.alert-title{font-size:13px;font-weight:600;color:var(--white);margin-bottom:6px}
-.alert-desc{font-size:12px;color:rgba(240,237,216,.6);margin-bottom:8px;line-height:1.6}
+  .focus-badge {
+    display: inline-block;
+    background: var(--medium-bg);
+    color: var(--medium);
+    border: 1px solid rgba(59,130,246,0.25);
+    padding: 0.25rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
 
-.lock-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,36,40,.95);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;z-index:9999}
-.lock-box{background:rgba(38,54,51,.8);border:1px solid rgba(200,217,160,.25);border-radius:20px;padding:40px;text-align:center;max-width:400px}
-.lock-title{font-size:24px;font-weight:700;margin-bottom:16px}
-.lock-desc{font-size:13px;color:rgba(240,237,216,.6);margin-bottom:24px;line-height:1.6}
-.lock-input{width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(200,217,160,.2);background:rgba(26,36,40,.5);color:var(--cream);font-size:14px;margin-bottom:16px}
-.lock-input::placeholder{color:rgba(240,237,216,.4)}
-.lock-btn{width:100%;padding:12px;border-radius:10px;background:var(--sage);color:var(--dark);border:none;font-weight:600;cursor:pointer;transition:all .2s;font-size:14px}
-.lock-btn:hover{filter:brightness(0.9)}
+  /* SECTION */
+  .section {
+    margin-bottom: 2rem;
+  }
 
-@media(max-width:768px){.grid-2,.card{padding:16px}.section-title{font-size:15px}.action-item{padding:14px}.opp-card{padding:14px}}
-#loading{display:flex;align-items:center;justify-content:center;height:80vh;font-size:14px;color:var(--sage)}
+  .section-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-count {
+    background: var(--surface-raised);
+    color: var(--text-muted);
+    padding: 0.1rem 0.5rem;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.6rem;
+    transition: border-color 0.2s;
+  }
+
+  .card:hover {
+    border-color: var(--accent);
+  }
+
+  .card.urgent-card {
+    border-left: 3px solid var(--urgent);
+  }
+
+  .card.critical-card {
+    border-left: 3px solid var(--critical);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--text);
+    line-height: 1.35;
+  }
+
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 0.3rem;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.55rem;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .badge-critical { background: var(--critical-bg); color: var(--critical); border: 1px solid rgba(239,68,68,0.3); }
+  .badge-urgent { background: var(--urgent-bg); color: var(--urgent); border: 1px solid rgba(249,115,22,0.3); }
+  .badge-high { background: var(--high-bg); color: var(--high); border: 1px solid rgba(234,179,8,0.2); }
+  .badge-medium { background: var(--medium-bg); color: var(--medium); border: 1px solid rgba(59,130,246,0.2); }
+  .badge-client { background: var(--accent-glow); color: var(--accent); border: 1px solid rgba(201,164,92,0.25); }
+  .badge-category { background: var(--surface-raised); color: var(--text-muted); border: 1px solid var(--border); }
+
+  .card-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  .due-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* CALENDAR CARD */
+  .cal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .cal-time {
+    min-width: 80px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+    padding-top: 0.15rem;
+  }
+
+  .cal-type {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .cal-type.work { background: rgba(107,114,128,0.2); color: var(--graphite); }
+  .cal-type.cc-task { background: var(--accent-glow); color: var(--accent); }
+  .cal-type.revenue { background: rgba(34,197,94,0.15); color: var(--green); }
+  .cal-type.personal { background: rgba(167,139,250,0.15); color: var(--lavender); }
+  .cal-type.free { background: rgba(59,130,246,0.15); color: var(--blue); }
+
+  .cal-details h4 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  .cal-details p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* HEALTH CARDS */
+  .health-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .health-card.overdue {
+    border-left: 3px solid var(--critical);
+    background: rgba(239,68,68,0.05);
+  }
+
+  .health-card.healthy {
+    border-left: 3px solid var(--green);
+  }
+
+  .health-title {
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .health-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .health-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 0.3rem;
+  }
+
+  /* REVENUE TABLE */
+  .revenue-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .revenue-bar h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .rev-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.82rem;
+  }
+
+  .rev-row:last-child { border-bottom: none; }
+
+  .rev-client { color: var(--text); font-weight: 500; }
+  .rev-amount { color: var(--accent); font-weight: 700; }
+  .rev-status { color: var(--text-muted); font-size: 0.75rem; }
+
+  .rev-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--accent);
+    font-weight: 700;
+  }
+
+  .rev-total .rev-amount {
+    font-size: 1.1rem;
+  }
+
+  .overdue-section {
+    background: rgba(239,68,68,0.05);
+    border-left: 3px solid var(--critical);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+  }
+
+  /* TABLE */
+  .table-card {
+    overflow-x: auto;
+  }
+
+  .simple-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  .simple-table th {
+    text-align: left;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .simple-table td {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .simple-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* GOAL CARDS */
+  .goal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .goal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .goal-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .goal-category {
+    font-size: 0.65rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  .goal-progress {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ALERT CARDS */
+  .alert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+
+  .alert-card.critical {
+    border-left: 3px solid var(--critical);
+    background: rgba(239,68,68,0.05);
+  }
+
+  .alert-card.positive {
+    border-left: 3px solid var(--green);
+    background: rgba(34,197,94,0.05);
+  }
+
+  .alert-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .alert-text {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+  }
+
+  /* ANIMATION */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+  }
+
+  .section {
+    animation: fadeUp 0.5s ease-out both;
+  }
+
+  .critical-card {
+    animation: pulse-glow 2s infinite;
+  }
+
+  .section:nth-child(2) { animation-delay: 0.05s; }
+  .section:nth-child(3) { animation-delay: 0.1s; }
+  .section:nth-child(4) { animation-delay: 0.15s; }
+  .section:nth-child(5) { animation-delay: 0.2s; }
+  .section:nth-child(6) { animation-delay: 0.25s; }
+  .section:nth-child(7) { animation-delay: 0.3s; }
+  .section:nth-child(8) { animation-delay: 0.35s; }
+  .section:nth-child(9) { animation-delay: 0.4s; }
+  .section:nth-child(10) { animation-delay: 0.45s; }
+  .section:nth-child(11) { animation-delay: 0.5s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section { animation: none; }
+    .critical-card { animation: none; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 1.25rem 1rem 3rem; }
+    .header h1 { font-size: 1.6rem; }
+    .card { padding: 0.85rem 1rem; }
+    .cal-card { flex-direction: column; gap: 0.4rem; }
+    .cal-time { min-width: unset; }
+    .goal-grid { grid-template-columns: 1fr; }
+    .card-header { flex-direction: column; }
+    .simple-table { font-size: 0.75rem; }
+  }
 </style>
 </head>
 <body>
+<div class="noise"></div>
+<div class="container">
 
-<!-- AUTH LOCK -->
-<div class="lock-overlay" id="lockOverlay">
-  <div class="lock-box">
-    <div class="lock-title">&#x1f512; Dashboard</div>
-    <div class="lock-desc">This dashboard contains sensitive business information. Enter password to access.</div>
-    <input type="password" id="lockInput" class="lock-input" placeholder="Enter password">
-    <button class="lock-btn" onclick="checkPassword()">Unlock</button>
-  </div>
-</div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-brand">Constant Creates</div>
+    <h1>Daily Brief</h1>
+    <div class="header-date">Tuesday, April 14, 2026</div>
+    <div class="header-meta">Generated at 5:00 AM ET</div>
+    <span class="focus-badge">📱 Social Media & Engagement</span>
+  </header>
 
-<div id="loading">Loading dashboard data...</div>
-<div id="app" style="display:none">
+  <!-- URGENT ACTIONS -->
+  <div class="section">
+    <div class="section-title">Urgent Actions <span class="section-count">5 items</span></div>
 
-<!-- HEADER -->
-<header class="fade-in d1">
-  <div class="container">
-    <div class="header-inner">
-      <div class="logo-group">
-        <div class="logo-icon">&#x1f33f;</div>
-        <div class="logo-text">
-          <h1>Constant Creates</h1>
-          <p>Daily Brief</p>
-        </div>
+    <div class="card critical-card">
+      <div class="card-meta">
+        <span class="badge badge-critical">CRITICAL</span>
+        <span class="badge badge-client">Wendy Ellis / VMC</span>
       </div>
-      <div style="text-align:right">
-        <div style="font-size:11px;color:rgba(240,237,216,.5);margin-bottom:4px" id="hDate"></div>
-        <div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:8px" id="hGreeting"></div>
-        <div class="status-badge"><span class="pulse-dot"></span> <span id="hBadge"></span></div>
+      <div class="card-title">VMC About/Team pages — 11 days overdue</div>
+      <div class="card-note">Calendar block Friday 9–10:30 AM to finalize revisions and launch. This is blocking project completion.</div>
+    </div>
+
+    <div class="card urgent-card">
+      <div class="card-meta">
+        <span class="badge badge-urgent">URGENT</span>
+        <span class="badge badge-client">Wendy Ellis / VMC</span>
+      </div>
+      <div class="card-title">Send Wendy update email + Review Dr. Diaz Squarespace page</div>
+      <div class="card-note">Blocks VMC site launch. Send progress update and get her approval on the Dr. Diaz page before going live.</div>
+    </div>
+
+    <div class="card urgent-card">
+      <div class="card-meta">
+        <span class="badge badge-urgent">URGENT</span>
+        <span class="badge badge-client">Clay Griffin / Hallwood</span>
+      </div>
+      <div class="card-title">Resend Hallwood Q1 invoice to Clay ($1,000)</div>
+      <div class="card-note">6 days past due. Hits HoneyBook's 7-day auto-reminder threshold tomorrow. Clay may not have seen the original.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">Peleta Henderson / Jus' Poetic</span>
+      </div>
+      <div class="card-title">Invoice Peleta $99 (Google Workspace setup) + send testimonial request</div>
+      <div class="card-note">Offer free blogging month with testimonial. She replied warmly this morning — warm lead signal!</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">Nakeitha / Nikki Nyx</span>
+      </div>
+      <div class="card-title">Send Nakeitha follow-up draft</div>
+      <div class="card-note">2 unsent drafts (Apr 2 & Apr 10). 14 days since last contact. At risk of losing this lead.</div>
+    </div>
+  </div>
+
+  <!-- TODAY'S CALENDAR -->
+  <div class="section">
+    <div class="section-title">Today's Schedule <span class="section-count">9 events</span></div>
+
+    <div class="cal-card">
+      <div class="cal-time">9:00–11:30 AM</div>
+      <div class="cal-details">
+        <span class="cal-type work">WORK</span>
+        <h4>Rooks — Morning Block</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">11:00 AM–12:00 PM</div>
+      <div class="cal-details">
+        <span class="cal-type cc-task">CC TASK</span>
+        <h4>Add Promotions to Alignable for the Quarter</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">11:30 AM–1:30 PM</div>
+      <div class="cal-details">
+        <span class="cal-type work">WORK</span>
+        <h4>Rooks — Lunch Break (BLOCKED)</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">1:30–5:00 PM</div>
+      <div class="cal-details">
+        <span class="cal-type work">WORK</span>
+        <h4>Rooks — Afternoon Block</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">5:00–5:30 PM</div>
+      <div class="cal-details">
+        <span class="cal-type free">FREE</span>
+        <h4>FREE — Only open slot today</h4>
+        <p>Use this 30 min for a quick win or breather before evening tasks.</p>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">5:30–6:00 PM</div>
+      <div class="cal-details">
+        <span class="cal-type cc-task">CC TASK</span>
+        <h4>Send Wendy update email + Review Dr. Diaz page</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">5:30–6:30 PM</div>
+      <div class="cal-details">
+        <span class="cal-type cc-task">CC TASK</span>
+        <h4>CC Quick Tasks</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">6:00–6:30 PM</div>
+      <div class="cal-details">
+        <span class="cal-type revenue">REVENUE</span>
+        <h4>Invoice Jus' Poetic $99 + testimonial request</h4>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-time">7:00–10:00 PM</div>
+      <div class="cal-details">
+        <span class="cal-type personal">PERSONAL</span>
+        <h4>Izzy Hangout (non-negotiable)</h4>
       </div>
     </div>
   </div>
-</header>
 
-<main class="container" style="padding-top:24px;padding-bottom:40px">
-  <div id="sOverview"></div>
-  <div id="sAlerts"></div>
-  <div id="sScheduleRevenue"></div>
-  <div id="sQ2"></div>
-  <div id="sLeads"></div>
-  <div id="sBlogSeo"></div>
-  <div id="sSubsAuth"></div>
-  <div id="sEmail"></div>
-  <div id="sOpps"></div>
-  <div id="sActions"></div>
-  <div id="sClients"></div>
-</main>
+  <!-- EMAIL & DRAFTS -->
+  <div class="section">
+    <div class="section-title">Email & Drafts <span class="section-count">3 alerts</span></div>
 
-<footer class="fade-in d9" id="sFooter"></footer>
+    <div class="card">
+      <div class="card-meta">
+        <span class="badge badge-critical">30 UNREAD</span>
+      </div>
+      <div class="card-title">Inbox Status</div>
+      <div class="card-note">30 unread messages. 1 urgent email from HoneyBook about Hallwood Q1 invoice ($1,000 past due).</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="badge badge-urgent">8 STALE DRAFTS</span>
+      </div>
+      <div class="card-title">Pending Emails</div>
+      <div class="card-note">8 unsent drafts waiting. Oldest from Apr 3 (11 days). Latest from Apr 10 (4 days). Priority: Nakeitha (Apr 2 & 10) — 2 drafts.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-meta">
+        <span class="badge badge-medium">WARM LEAD</span>
+        <span class="badge badge-client">Peleta Henderson</span>
+      </div>
+      <div class="card-title">Warm Signal — Peleta replied this morning</div>
+      <div class="card-note">"I'll be working with you sooner than later." Blog retainer $300/mo still on the table. Draft reply ready in Gmail.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Stale Drafts Breakdown</div>
+      <table class="simple-table">
+        <thead>
+          <tr><th>To</th><th>Days</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nakeitha (Nikki Nyx)</td><td>4 days</td></tr>
+          <tr><td>Derek Mardones</td><td>4 days</td></tr>
+          <tr><td>Clay Griffin</td><td>4 days</td></tr>
+          <tr><td>Magate Sekonya (Mano Cons)</td><td>4 days</td></tr>
+          <tr><td>Adam Godwin (AG FunnyMan)</td><td>7 days</td></tr>
+          <tr><td>Ariena Sullivan</td><td>8 days</td></tr>
+          <tr><td>Jim Davidson</td><td>10 days</td></tr>
+          <tr><td>Peleta Henderson</td><td>11 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CLIENT HEALTH -->
+  <div class="section">
+    <div class="section-title">Client Health <span class="section-count">5 clients</span></div>
+
+    <div class="health-card overdue">
+      <div class="health-title">Nakeitha Anyamele-Latney — Nikki Nyx International Karaoke</div>
+      <div class="health-meta">
+        <span>14 days since contact</span>
+        <span>Last: Mar 30</span>
+      </div>
+      <div class="health-note">🚨 Red Flag: TWO unsent drafts in Gmail (Apr 2 & 10). She expressed interest in blogs + gallery. Action: Send Apr 10 draft NOW.</div>
+    </div>
+
+    <div class="health-card healthy">
+      <div class="health-title">Clay Griffin — Hallwood Enterprises</div>
+      <div class="health-meta">
+        <span>1 day since contact</span>
+        <span>Last: Apr 13</span>
+      </div>
+      <div class="health-note">Biweekly call held yesterday. Q1 invoice $1K past due — he may not have seen original. Still active and engaged.</div>
+    </div>
+
+    <div class="health-card healthy">
+      <div class="health-title">Dr. Wendy Ellis — Veterinary Medical Center</div>
+      <div class="health-meta">
+        <span>2 days since contact</span>
+        <span>Last: Apr 12</span>
+      </div>
+      <div class="health-note">Active texts about staff page corrections. Photo shoot tomorrow 7:30 PM. Highly engaged.</div>
+    </div>
+
+    <div class="health-card healthy">
+      <div class="health-title">Peleta Henderson — Jus' Poetic LLC</div>
+      <div class="health-meta">
+        <span>0 days since contact</span>
+        <span>Last: Apr 14</span>
+      </div>
+      <div class="health-note">Replied this morning — warm signal for blog retainer. Draft reply ready. Strong momentum!</div>
+    </div>
+
+    <div class="health-card healthy">
+      <div class="health-title">Derek Mardones — Busy Bee Movers</div>
+      <div class="health-meta">
+        <span>3 days since contact</span>
+        <span>Last: Apr 11</span>
+      </div>
+      <div class="health-note">Photo shoot reschedule email sent. Waiting for confirmation. Tentative Sat Apr 18.</div>
+    </div>
+  </div>
+
+  <!-- REVENUE & PIPELINE -->
+  <div class="section">
+    <div class="section-title">Revenue & Pipeline</div>
+
+    <div class="revenue-bar">
+      <h3>Monthly Recurring Revenue (MRR)</h3>
+      <div class="rev-row">
+        <span class="rev-client">Wendy Ellis / VMC (Retainer)</span>
+        <span class="rev-amount">$2,000/mo</span>
+      </div>
+      <div class="rev-row">
+        <span class="rev-client">Clay Griffin / Hallwood (Lite Retainer)</span>
+        <span class="rev-amount">$600/mo</span>
+      </div>
+      <div class="rev-row">
+        <span class="rev-client">Derek Mardones / Busy Bee (Social Media)</span>
+        <span class="rev-amount">$600/mo</span>
+      </div>
+      <div class="rev-total">
+        <span>Active MRR</span>
+        <span class="rev-amount">$3,200/mo</span>
+      </div>
+    </div>
+
+    <div class="revenue-bar">
+      <h3>Overdue & Pending</h3>
+      <div class="rev-row">
+        <span class="rev-client">Hallwood Q1 Invoice (6 days overdue)</span>
+        <span class="rev-amount" style="color: var(--critical);">$1,000 ⚠️</span>
+      </div>
+      <div class="rev-row">
+        <span class="rev-client">Peleta Google Workspace Invoice</span>
+        <span class="rev-amount">$99 (due today)</span>
+      </div>
+      <div class="overdue-section">
+        Total Overdue: <strong style="color: var(--critical);">$1,000</strong>
+      </div>
+    </div>
+
+    <div class="revenue-bar">
+      <h3>Active Pipeline — $850 Value</h3>
+      <div class="rev-row">
+        <span class="rev-client">Peleta Henderson / Jus' Poetic (Blog Retainer)</span>
+        <span class="rev-amount">$300/mo</span>
+        <span class="rev-status">Warm Lead</span>
+      </div>
+      <div class="rev-row">
+        <span class="rev-client">Nakeitha / Nikki Nyx (Retainer Options)</span>
+        <span class="rev-amount">$300-600/mo</span>
+        <span class="rev-status">Proposal Sent</span>
+      </div>
+      <div class="rev-row">
+        <span class="rev-client">Pastor Dan / Trinity UMC (Logo)</span>
+        <span class="rev-amount">$250</span>
+        <span class="rev-status">In Progress</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEADLINES THIS WEEK -->
+  <div class="section">
+    <div class="section-title">Deadlines This Week</div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Today – April 14</div>
+      </div>
+      <ul style="margin-left: 1rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8;">
+        <li><strong>Send Wendy update + Dr. Diaz review</strong> <span class="badge badge-urgent">Urgent</span></li>
+        <li>Add Q2 promotions to Alignable <span class="badge badge-medium">Medium</span></li>
+        <li><strong>Invoice Peleta $99 + testimonial request</strong> <span class="badge badge-high">High</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Wednesday – April 15</div>
+      </div>
+      <ul style="margin-left: 1rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8;">
+        <li><strong>VMC Photo Shoot — Staff headshots</strong> <span class="badge badge-high">High</span> (7:30–9:00 PM)</li>
+        <li>GBP: Upload photos + publish Google Post <span class="badge badge-medium">Medium</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Thursday – April 17</div>
+      </div>
+      <ul style="margin-left: 1rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8;">
+        <li><strong>VMC About/Team pages — finish revisions</strong> <span class="badge badge-critical">CRITICAL</span> (11 days overdue)</li>
+        <li>VMC: Header video replacements <span class="badge badge-high">High</span></li>
+        <li>Jus' Poetic website revisions <span class="badge badge-high">High</span></li>
+        <li>Jus' Poetic Google Workspace setup + handoff <span class="badge badge-high">High</span></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Friday – April 18</div>
+      </div>
+      <ul style="margin-left: 1rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.8;">
+        <li>Derek / Busy Bee photo shoot (TENTATIVE) <span class="badge badge-medium">Medium</span></li>
+        <li>Woofstock at VMC — content opportunity <span class="badge badge-medium">Medium</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PENDING DELIVERABLES -->
+  <div class="section">
+    <div class="section-title">Pending Deliverables <span class="section-count">7 items</span></div>
+
+    <div class="card critical-card">
+      <div class="card-header">
+        <div class="card-title">VMC: About/Team pages revisions</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-critical">CRITICAL</span>
+        <span class="badge badge-client">VMC</span>
+      </div>
+      <div class="card-note">Due Apr 17 — 11 days overdue from original Apr 3 deadline. Status: In Progress. Block Friday 9–10:30 AM to finalize.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">VMC: Header video replacements</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">VMC</span>
+      </div>
+      <div class="card-note">Due Apr 17. Videos needed for General Practice, Emergency, and Radiology pages. Status: To Do.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">VMC: Staff headshots photo shoot</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">VMC</span>
+      </div>
+      <div class="card-note">Due Apr 15. Scheduled 7:30–8:30 PM tomorrow. Capture all staff for website bios.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Jus' Poetic: Website revisions</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">Peleta Henderson / Jus' Poetic</span>
+      </div>
+      <div class="card-note">Due Apr 17. From Mar 16 meeting notes. Status: To Do.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Jus' Poetic: Google Workspace setup + handoff</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-high">HIGH</span>
+        <span class="badge badge-client">Peleta Henderson / Jus' Poetic</span>
+      </div>
+      <div class="card-note">Due Apr 17. Invoice $99 due today. Complete setup and provide training/docs.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Hallwood: Resend Q1 invoice</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-urgent">URGENT</span>
+        <span class="badge badge-client">Clay Griffin / Hallwood</span>
+      </div>
+      <div class="card-note">Due ASAP — 1 day overdue. Resend original invoice with friendly follow-up.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Busy Bee: Photo shoot (tentative)</div>
+      </div>
+      <div class="card-meta">
+        <span class="badge badge-medium">MEDIUM</span>
+        <span class="badge badge-client">Derek Mardones / Busy Bee</span>
+      </div>
+      <div class="card-note">Due Apr 18. Waiting on Derek confirmation. Tentatively scheduled for Saturday.</div>
+    </div>
+  </div>
+
+  <!-- SEO & CONTENT ALERTS -->
+  <div class="section">
+    <div class="section-title">SEO & Content Alerts</div>
+
+    <div style="margin-bottom: 1rem;">
+      <div style="font-size: 0.85rem; color: var(--accent); font-weight: 700; margin-bottom: 0.6rem;">🚨 Critical Issues</div>
+
+      <div class="alert-card critical">
+        <div class="alert-icon">📉</div>
+        <div class="alert-text"><strong>Traffic share collapsed to 7%</strong> (was 24% on Mar 17) — CRITICAL</div>
+      </div>
+
+      <div class="alert-card critical">
+        <div class="alert-icon">📉</div>
+        <div class="alert-text"><strong>Organic traffic down 22.8%</strong> (92 to 71 sessions)</div>
+      </div>
+
+      <div class="alert-card critical">
+        <div class="alert-icon">🔗</div>
+        <div class="alert-text"><strong>87 backlinks lost</strong> (468 to 381) — authority declining</div>
+      </div>
+
+      <div class="alert-card critical">
+        <div class="alert-icon">⏰</div>
+        <div class="alert-text"><strong>Service landing pages 5+ weeks overdue</strong> — zero commercial visibility</div>
+      </div>
+
+      <div class="alert-card critical">
+        <div class="alert-icon">❌</div>
+        <div class="alert-text"><strong>www.constantcreates.com 429 error</strong> — still unverified</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size: 0.85rem; color: var(--green); font-weight: 700; margin-bottom: 0.6rem;">✓ Positive Signals</div>
+
+      <div class="alert-card positive">
+        <div class="alert-icon">✨</div>
+        <div class="alert-text"><strong>Semrush site audit:</strong> "Great Job! Better Results" email received today</div>
+      </div>
+
+      <div class="alert-card positive">
+        <div class="alert-icon">👥</div>
+        <div class="alert-text"><strong>Alignable profile visits:</strong> 17 new profile visits from Parrish members</div>
+      </div>
+
+      <div class="alert-card positive">
+        <div class="alert-icon">📊</div>
+        <div class="alert-text"><strong>Bing Webmaster:</strong> March performance insights now available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISION BOARD -->
+  <div class="section">
+    <div class="section-title">Vision Board — Key Goals</div>
+
+    <div class="goal-grid">
+      <div class="goal-card">
+        <div class="goal-category">Revenue</div>
+        <div class="goal-title">Hit Consistent $6K Months</div>
+        <div class="goal-progress">MRR $3,200. Hot pipeline ~$1,800 active. Need $2,800 more.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Career</div>
+        <div class="goal-title">Quit Rooks by June 2026</div>
+        <div class="goal-progress">Active — building CC revenue to replace Rooks income.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Career</div>
+        <div class="goal-title">Grow Constant Creates Brand</div>
+        <div class="goal-progress">GBP optimization in progress. SEO traffic down — needs attention.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Health</div>
+        <div class="goal-title">Get Healthy</div>
+        <div class="goal-progress">Active goal.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Personal</div>
+        <div class="goal-title">Build $10K Emergency Fund</div>
+        <div class="goal-progress">In progress.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Creative</div>
+        <div class="goal-title">Complete 12 Portfolio Case Studies</div>
+        <div class="goal-progress">Goal set — execution pending.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Creative</div>
+        <div class="goal-title">Build Content Machine</div>
+        <div class="goal-progress">Active — systems being built.</div>
+      </div>
+
+      <div class="goal-card">
+        <div class="goal-category">Learning</div>
+        <div class="goal-title">Read 12 Books This Year</div>
+        <div class="goal-progress">Tracking.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DATA GAPS -->
+  <div class="section">
+    <div class="section-title">Data Gaps & Notes</div>
+
+    <div class="card" style="background: rgba(138,138,150,0.05); border: 1px solid var(--border);">
+      <div class="card-note">
+        <strong>Missing data sources:</strong>
+        <ul style="margin-top: 0.5rem; margin-left: 1rem; color: var(--text-muted);">
+          <li>keyword-ranks.json not found — no keyword ranking data this run</li>
+          <li>Social Calendar returned 'Not Found' — may need calendar ID verification</li>
+          <li>Leads CRM full data too large — used upstream file + Notion search instead</li>
+          <li>Master Task List queried by semantic search due to size constraints</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Generated: Tuesday, April 14, 2026 at 5:00 AM ET</p>
+    <p style="margin-top:0.5rem;">Data sources: daily-briefing.json • Notion Master Task List • Google Calendar • HoneyBook</p>
+    <p style="margin-top:0.5rem; font-size:0.7rem; color: var(--border);">Constant Creates — Daily Briefing Dashboard</p>
+  </div>
 
 </div>
 
-<script>
-// PASSWORD PROTECTION via SHA-256
-async function hashPassword(pw){
-  const enc=new TextEncoder().encode(pw);
-  const buf=await crypto.subtle.digest('SHA-256',enc);
-  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+<!-- BRIEFING DATA (EMBEDDED FOR FUTURE USE) -->
+<script type="application/json" id="briefing-data">
+{
+  "date": "2026-04-14",
+  "generated_at": "2026-04-14T05:00:00-04:00",
+  "dayOfWeek": "Tuesday",
+  "contentFocus": "Social Media & Engagement",
+  "urgentActions": 5,
+  "totalCalendarEvents": 9,
+  "unreadEmails": 30,
+  "staleDrafts": 8,
+  "clientHealth": {
+    "overdue": 1,
+    "healthy": 4
+  },
+  "monthlyRecurringRevenue": 3200,
+  "overdueInvoices": 1000,
+  "pipelineValue": 850,
+  "criticalDeadlinesThisWeek": 11
 }
-async function checkPassword(){
-  const input=document.getElementById("lockInput").value;
-  const hash=await hashPassword(input);
-  if(hash==="5abe73d87c6c3ba9822f62a7c7ebde38e16c08b779d2e0319acb660f6e16073f"){
-    document.getElementById("lockOverlay").style.display="none";
-    sessionStorage.setItem("cc-dash-auth","1");
-    loadActionStates();
-  }else{
-    alert("Incorrect password");
-    document.getElementById("lockInput").value="";
-  }
-}
-if(sessionStorage.getItem("cc-dash-auth")==="1"){
-  document.getElementById("lockOverlay").style.display="none";
-}
-document.getElementById("lockInput").addEventListener("keypress",function(e){
-  if(e.key==="Enter") checkPassword();
-});
-
-// ACTION ITEM PERSISTENCE
-function toggleAction(el,actionId){
-  el.classList.toggle("completed");
-  var dk=window._dateKey||"unknown";
-  var states=JSON.parse(localStorage.getItem("ccActionStates-"+dk)||"{}");
-  states[actionId]=el.classList.contains("completed");
-  localStorage.setItem("ccActionStates-"+dk,JSON.stringify(states));
-}
-function loadActionStates(){
-  var dk=window._dateKey||"unknown";
-  var states=JSON.parse(localStorage.getItem("ccActionStates-"+dk)||"{}");
-  Object.keys(states).forEach(function(actionId){
-    if(states[actionId]){
-      var el=document.getElementById(actionId);
-      if(el){el.closest(".action-item").classList.add("completed")}
-    }
-  });
-}
-
-// RENDER HELPERS
-function renderMetrics(arr, cols){
-  return '<div class="metrics m'+cols+'">'+arr.map(function(m){
-    var cls='metric metric-sm'+(m.class?' '+m.class:'');
-    var vs=m.color?' style="color:'+m.color+'"':'';
-    return '<div class="'+cls+'"><div class="metric-label">'+m.label+'</div><div class="metric-value"'+vs+'>'+m.value+'</div><div class="metric-sub">'+m.sub+'</div></div>';
-  }).join('')+'</div>';
-}
-
-function render(d){
-  window._dateKey=d.dateKey;
-  document.getElementById("hDate").innerHTML=d.date;
-  document.getElementById("hGreeting").innerHTML=d.greeting;
-  document.getElementById("hBadge").innerHTML=d.statusBadge;
-
-  // OVERVIEW
-  document.getElementById("sOverview").innerHTML='<div class="card fade-in d2"><div class="section-title">&#x1f4ca; Today\'s Overview</div><div style="font-size:13px;line-height:1.8;color:rgba(240,237,216,.8)">'+d.overview+'</div></div>';
-
-  // ALERTS
-  document.getElementById("sAlerts").innerHTML='<div class="card fade-in d3"><div class="section-title">&#x26a0;&#xfe0f; Critical Alerts</div><div class="alert-container">'+d.alerts.map(function(a){return '<div class="alert-item" style="border-left-color:'+a.color+'"><div class="alert-title">'+a.icon+' '+a.title+'</div><div class="alert-desc">'+a.desc+'</div><a href="'+a.linkUrl+'" target="_blank" style="font-size:11px;font-weight:600">&rarr; '+a.linkText+'</a></div>';}).join('')+'</div></div>';
-
-  // SCHEDULE + REVENUE
-  var schedHtml=d.schedule.events.map(function(e){return '<div class="cal-item" style="border-left:3px solid '+e.color+'"><div class="cal-title"><a href="'+e.url+'" target="_blank">'+e.icon+' '+e.time+': '+e.title+'</a></div></div>';}).join('');
-  var tipHtml='<div class="cal-item" style="background:rgba(200,217,160,.08)"><div class="cal-title" style="max-width:100%;white-space:normal;font-size:11px;color:var(--sage)">&#x1f4a1; '+d.schedule.dayTip+'</div></div>';
-  var weekHtml=d.schedule.weekHighlights.map(function(w){var p=w.indexOf(':');return '<div>&bull; <strong>'+w.substring(0,p)+':</strong>'+w.substring(p+1)+'</div>';}).join('');
-  var asanaHtml=d.schedule.asanaTasks?'<div style="margin-top:16px;padding:10px;background:rgba(239,68,68,.06);border-radius:8px;border:1px solid rgba(239,68,68,.15)"><div style="font-size:11px;color:#fca5a5;font-weight:600">&#x1f4cb; Asana Tasks Due (Migrate to Notion)</div><div style="font-size:10px;color:rgba(240,237,216,.6);margin-top:4px;line-height:1.6">'+d.schedule.asanaTasks+'</div></div>':'';
-
-  var r=d.revenue;
-  var collHtml=r.collectedItems.map(function(c){return '<div><span style="color:'+c.color+'">'+c.label+':</span> '+c.amount+'</div>';}).join('');
-  var outHtml=r.outstanding.map(function(o,i){return '<div style="color:rgba(240,237,216,.7)">'+(i+1)+'. '+o+'</div>';}).join('');
-
-  document.getElementById("sScheduleRevenue").innerHTML='<div class="grid-2"><div class="card fade-in d4"><div class="section-title">&#x1f4c5; Today\'s Schedule</div><div style="display:flex;flex-direction:column;gap:8px">'+schedHtml+tipHtml+'</div><div style="margin-top:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:16px"><div style="font-size:12px;font-weight:600;color:var(--white);margin-bottom:10px">This Week Highlights</div><div style="display:flex;flex-direction:column;gap:6px;font-size:11px;color:rgba(240,237,216,.7)">'+weekHtml+'</div></div>'+asanaHtml+'</div><div class="card card-accent fade-in d4"><div class="section-title">&#x1f4b0; Revenue & Collections</div><div style="margin-bottom:20px"><div style="font-size:11px;color:rgba(240,237,216,.6);margin-bottom:4px;font-weight:500">MARCH GOAL: $'+r.goal.toLocaleString()+'</div><div class="progress-wrap"><div class="progress-header"><span style="font-weight:600">$'+r.collected.toLocaleString()+' collected ('+r.percent+'%)</span><span style="color:var(--sage)">$'+r.remaining.toLocaleString()+' remaining</span></div><div class="progress-bar"><div class="progress-fill" style="width:'+r.percent+'%;background:'+r.progressColor+'"></div></div><div class="progress-footer"><span>'+r.daysLeft+' days remaining in March</span><span>Need ~$'+r.dailyNeed+'/day</span></div></div></div><div style="margin-bottom:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:rgba(240,237,216,.6);margin-bottom:6px;font-weight:500">COLLECTED THIS MONTH</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px">'+collHtml+'</div></div><div style="margin-bottom:16px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:#fca5a5;font-weight:600;margin-bottom:8px">OUTSTANDING / PENDING</div><div style="display:flex;flex-direction:column;gap:6px;font-size:11px">'+outHtml+'</div></div><div style="margin-bottom:16px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:rgba(240,237,216,.6);font-weight:600;margin-bottom:8px">RECENT TOOL CHARGES (Last 7 Days)</div><div style="font-size:10px;color:rgba(240,237,216,.5)">'+r.toolCharges+'</div></div><div style="padding:12px;background:rgba(200,217,160,.08);border-radius:10px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">&#x1f4a1; FASTEST CASH PATHS</div><div style="font-size:11px;line-height:1.6;color:rgba(240,237,216,.7)">'+r.fastCash+'</div></div></div></div>';
-
-  // Q2 CAMPAIGN
-  var q=d.q2Campaign;
-  var vertHtml=q.verticals.map(function(v){
-    var border=v.isNew?'border:1px solid rgba(200,217,160,.2);':'';
-    var nameExtra=v.isNew?' <span style="font-size:8px;color:#fcd34d">NEW</span>':'';
-    var sub=v.isNew?v.detail||'Imported today':v.detail;
-    return '<div style="padding:10px;background:rgba(26,36,40,.4);border-radius:10px;text-align:center;'+border+'"><div style="font-size:10px;color:'+(v.isNew?'var(--sage)':'rgba(240,237,216,.5)')+';text-transform:uppercase;letter-spacing:.08em">'+v.name+nameExtra+'</div><div style="font-size:16px;font-weight:700;color:var(--white);margin:4px 0">'+v.count+'</div><div style="font-size:10px;color:var(--sage)">'+sub+'</div></div>';
-  }).join('');
-  document.getElementById("sQ2").innerHTML='<div class="card card-accent fade-in d5"><div class="section-title">&#x1f680; Q2 Quick Launch Campaign &mdash; $999 Websites</div>'+renderMetrics(q.metrics,5)+'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px">'+vertHtml+'</div><div style="margin-top:16px;padding:12px;background:rgba(200,217,160,.08);border-radius:10px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:4px">NEXT STEPS</div><div style="font-size:11px;color:rgba(240,237,216,.7);line-height:1.6">'+q.nextSteps+'</div></div></div>';
-
-  // LEADS
-  var l=d.leads;
-  var leadCards=l.cards.map(function(c){
-    var links=(c.links||[]).map(function(lk){return '<a href="'+lk.url+'" target="_blank" class="lead-link lead-link-'+lk.class+'">&rarr; '+lk.text+'</a>';}).join('');
-    var scoreStyle=c.scoreStyle?' style="'+c.scoreStyle+'"':'';
-    return '<div class="lead-card" style="border-left:3px solid '+(c.borderColor||'rgba(74,102,80,.15)')+'"><div class="lead-header"><div><div class="lead-name">'+c.name+'</div><div class="lead-loc">'+c.location+'</div></div><span class="lead-score"'+scoreStyle+'>'+c.score+'</span></div><div class="lead-reason">'+c.reason+'</div>'+(links?'<div class="lead-links">'+links+'</div>':'')+'</div>';
-  }).join('');
-  document.getElementById("sLeads").innerHTML='<div class="card fade-in d5"><div class="section-title">&#x1f3af; Lead Pipeline &mdash; Active Warm Leads</div>'+renderMetrics(l.metrics,4)+'<div style="margin-top:20px">'+leadCards+'</div></div>';
-
-  // BLOG + SEO
-  var b=d.blog;
-  var s=d.seo;
-  var pubHtml=b.published.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
-  var dftHtml=b.drafts.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
-  var queHtml=b.queued.map(function(p){return '&bull; "'+p+'"';}).join('<br>');
-  var kwHtml=s.topKeywords.map(function(k,i){return (i+1)+'. '+k;}).join('<br>');
-  document.getElementById("sBlogSeo").innerHTML='<div class="grid-2"><div class="card fade-in d6"><div class="section-title">&#x1f4dd; Blog & Content</div><div style="margin-bottom:20px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Published ('+b.published.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+pubHtml+'</div></div><div style="margin-bottom:20px;border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Drafts ('+b.drafts.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+dftHtml+'</div></div><div style="border-top:1px solid rgba(74,102,80,.2);padding-top:12px"><div style="font-size:11px;color:var(--sage);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Queued ('+b.queued.length+')</div><div style="font-size:12px;color:rgba(240,237,216,.7)">'+queHtml+'</div></div><div style="margin-top:16px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;font-size:11px;color:var(--sage)">&#x1f4cc; '+b.note+'</div></div><div class="card card-accent fade-in d6"><div class="section-title">&#x1f50d; SEO & Search Performance</div>'+renderMetrics(s.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px"><div style="font-size:11px;color:var(--sage);font-weight:600;margin-bottom:6px">TOP KEYWORDS</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.8">'+kwHtml+'</div></div><div style="margin-top:12px;padding:10px;background:rgba(200,217,160,.08);border-radius:8px;border:1px solid rgba(200,217,160,.15)"><div style="font-size:11px;color:var(--sage);font-weight:600">&#x2728; Semrush: 8 New SEO Optimization Ideas</div><div style="font-size:10px;color:rgba(240,237,216,.6);margin-top:4px">'+s.semrushNote+'</div></div><div style="margin-top:8px;font-size:10px;color:rgba(240,237,216,.4)">&#x26a1; '+s.dataNote+'</div></div></div>';
-
-  // SUBSCRIPTIONS + AUTHORITY
-  var subHtml=d.subscriptions.map(function(t){
-    var alertSpan=t.alert?' &mdash; <span style="color:'+t.alertColor+';font-size:10px">'+t.alert+'</span>':'';
-    return '<div style="padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid '+t.borderColor+'"><div style="font-size:12px;font-weight:600;color:var(--white)">'+t.name+alertSpan+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:4px">'+t.desc+'</div></div>';
-  }).join('');
-  var au=d.authority;
-  var socHtml=au.socialLinks.map(function(sl){return '<a href="'+sl.url+'" target="_blank" style="font-size:10px;padding:4px 10px;border-radius:999px;background:rgba('+sl.color+',.12);color:rgba('+sl.color+',1);border:1px solid rgba('+sl.color+',.2);text-decoration:none">'+sl.name+'</a>';}).join('');
-  document.getElementById("sSubsAuth").innerHTML='<div class="grid-2"><div class="card fade-in d7"><div class="section-title">&#x1f4e7; Subscriptions & Tools</div><div style="display:flex;flex-direction:column;gap:10px">'+subHtml+'</div></div><div class="card card-accent fade-in d7"><div class="section-title">&#x2b50; Authority & Audience</div>'+renderMetrics(au.metrics,3)+'<div style="margin-top:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:10px;border-left:3px solid #fbbf24"><div style="font-size:11px;font-weight:600;color:var(--white);margin-bottom:6px">&#x1f680; GROWTH OPPORTUNITIES</div><div style="font-size:11px;color:rgba(240,237,216,.6);line-height:1.6">'+au.growthOpps+'</div></div><div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">'+socHtml+'</div></div></div>';
-
-  // EMAIL
-  var em=d.email;
-  document.getElementById("sEmail").innerHTML='<div class="card fade-in d7"><div class="section-title">&#x1f4ec; Email Status</div>'+renderMetrics(em.metrics,4)+'<div style="font-size:12px;color:rgba(240,237,216,.7);line-height:1.8">'+em.summary+'</div></div>';
-
-  // OPPORTUNITIES
-  var oppHtml=d.opportunities.map(function(o){return '<div class="opp-card '+o.cardClass+'"><span class="badge '+o.badgeClass+'" style="display:inline-block">'+o.priority+'</span><div class="opp-title">'+o.title+'</div><div class="opp-desc">'+o.desc+'</div></div>';}).join('');
-  document.getElementById("sOpps").innerHTML='<div class="card fade-in d8"><div class="section-title">&#x1f4a1; Strategic Growth Suggestions</div><div class="grid-3">'+oppHtml+'</div></div>';
-
-  // ACTIONS
-  var actHtml=d.actions.map(function(a,i){
-    var tagStyle=a.tagStyle?' style="'+a.tagStyle+'"':'';
-    var valSpan=a.value?'<span style="font-size:10px;color:var(--sage);font-weight:600">'+a.value+'</span>':'';
-    return '<div class="action-item" onclick="toggleAction(this,\''+a.id+'\')"><div class="action-check" id="'+a.id+'">'+(i+1)+'</div><div><div class="action-text">'+a.text+'</div><div class="action-meta"><span class="action-meta-tag"'+tagStyle+'>'+a.tag+'</span><span class="action-time">'+a.time+'</span>'+valSpan+'</div></div></div>';
-  }).join('');
-  var totalMin=d.actions.reduce(function(s,a){var m=parseInt(a.time);return s+(isNaN(m)?0:m);},0);
-  document.getElementById("sActions").innerHTML='<div class="card fade-in d9"><div class="section-title">&#x2705; Top 10 Actions for Today <span style="font-size:11px;font-weight:400;color:rgba(240,237,216,.5);margin-left:8px">~'+(totalMin/60).toFixed(1)+' hrs total</span></div>'+actHtml+'</div>';
-
-  // CLIENTS
-  var clHtml=d.clients.map(function(c){return '<div style="padding:14px;background:rgba(26,36,40,.4);border-radius:12px;border-left:3px solid '+c.borderColor+'"><div style="font-size:13px;font-weight:600;color:var(--white)">'+c.name+'</div><div style="font-size:11px;color:rgba(240,237,216,.6);margin-top:4px">'+c.meta+' &bull; <span style="color:'+c.statusColor+'">'+c.statusText+'</span></div><div style="font-size:10px;color:rgba(240,237,216,.5);margin-top:6px">'+c.detail+'</div></div>';}).join('');
-  document.getElementById("sClients").innerHTML='<div class="card fade-in d9"><div class="section-title">&#x1f9e9; Client Health</div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px">'+clHtml+'</div></div>';
-
-  // FOOTER
-  document.getElementById("sFooter").innerHTML='Last updated '+d.footer.lastUpdated+' &nbsp;&middot;&nbsp; <a href="'+d.footer.url+'" style="color:rgba(240,237,216,.5)">'+d.footer.url.replace('https://','')+'</a>';
-
-  // Show app
-  document.getElementById("loading").style.display="none";
-  document.getElementById("app").style.display="block";
-  loadActionStates();
-}
-
-// LOAD DATA
-fetch('./data.json?t='+Date.now())
-  .then(function(r){return r.json();})
-  .then(render)
-  .catch(function(e){document.getElementById("loading").innerHTML='Failed to load data: '+e.message;});
 </script>
 
 </body>

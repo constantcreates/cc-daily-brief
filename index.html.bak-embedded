@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constant Creates — Daily Brief</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a2428'/><text x='16' y='22' font-size='18' font-family='serif' font-weight='bold' fill='%23c8d9a0' text-anchor='middle'>CC</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--dark:#1a2428;--forest:#263633;--green:#4a6650;--sage:#c8d9a0;--cream:#f0edd8;--light:#F7F6F1;--white:#fff;--warn:#f59e0b;--danger:#ef4444;--success:#22c55e}
+body{font-family:'Poppins',system-ui,sans-serif;background:var(--dark);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+a{color:var(--sage);text-decoration:none;transition:color .2s}
+a:hover{color:var(--white);text-decoration:underline}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.fade-in{animation:fadeInUp .5s ease-out forwards;opacity:0}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}.d6{animation-delay:.6s}.d7{animation-delay:.7s}.d8{animation-delay:.8s}.d9{animation-delay:.9s}
+
+header{border-bottom:1px solid rgba(74,102,80,.3);background:rgba(26,36,40,.9);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
+header .container{display:flex;flex-direction:column;gap:12px;padding:20px}
+.header-top{display:flex;justify-content:space-between;align-items:flex-start}
+.header-top h1{font-family:'Playfair Display',serif;font-size:32px;color:var(--sage);margin:0}
+.header-top .badge{display:inline-block;padding:8px 16px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);border-radius:20px;font-size:12px;color:#fca5a5;font-weight:600}
+.header-meta{display:flex;gap:12px;flex-wrap:wrap}
+.header-meta .meta-item{font-size:13px;color:var(--cream);opacity:.8;display:flex;gap:6px}
+.header-meta .meta-label{opacity:.6}
+
+main{padding:40px 0}
+.section{margin-bottom:40px;padding:32px;background:rgba(38,54,51,.4);border:1px solid rgba(74,102,80,.2);border-radius:12px}
+.section h2{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:20px;color:var(--sage)}
+
+.overview{font-size:16px;line-height:1.8}
+.overview p{margin-bottom:16px}
+
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px}
+.alert-card{padding:16px;border-left:4px solid;border-radius:8px;background:rgba(26,36,40,.6)}
+.alert-card h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--cream)}
+.alert-card p{font-size:13px;opacity:.85}
+
+.schedule-events{display:flex;flex-direction:column;gap:12px}
+.event{display:flex;gap:16px;padding:12px;background:rgba(26,36,40,.4);border-radius:8px;border-left:3px solid}
+.event-time{min-width:120px;font-weight:600;font-size:13px}
+.event-content{flex:1}
+.event-title{font-weight:600;margin-bottom:4px}
+.event-meta{font-size:12px;opacity:.7}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.metric-card{padding:16px;background:rgba(26,36,40,.5);border-radius:8px;border:1px solid rgba(74,102,80,.2)}
+.metric-value{font-size:28px;font-weight:700;color:var(--sage);margin-bottom:4px}
+.metric-label{font-size:13px;opacity:.8;margin-bottom:2px}
+.metric-sub{font-size:12px;opacity:.6}
+
+.invoice-list{display:flex;flex-direction:column;gap:12px}
+.invoice-item{padding:12px;background:rgba(26,36,40,.4);border-radius:8px;display:flex;justify-content:space-between;align-items:flex-start}
+.invoice-client{flex:1}
+.invoice-client-name{font-weight:600;margin-bottom:2px}
+.invoice-description{font-size:13px;opacity:.8}
+.invoice-amount{text-align:right;min-width:100px}
+.invoice-amount .amount{font-size:18px;font-weight:700;color:#22c55e}
+.invoice-amount .status{font-size:12px;opacity:.7}
+
+.lead-card{padding:16px;background:rgba(26,36,40,.5);border-radius:8px;border-left:3px solid;margin-bottom:12px}
+.lead-name{font-weight:600;margin-bottom:2px}
+.lead-location{font-size:12px;opacity:.7;margin-bottom:8px}
+.lead-score{display:inline-block;background:rgba(74,102,80,.3);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600;margin-bottom:8px}
+.lead-reason{font-size:13px;margin-bottom:8px}
+.lead-links{display:flex;gap:8px;flex-wrap:wrap}
+.lead-link{padding:4px 12px;background:rgba(74,102,80,.2);border-radius:4px;font-size:12px;border:1px solid rgba(74,102,80,.4);color:var(--sage)}
+
+.blog-list{display:flex;flex-direction:column;gap:8px}
+.blog-item{padding:8px 12px;background:rgba(26,36,40,.3);border-radius:6px;font-size:14px;border-left:2px solid var(--green)}
+
+.opportunity{padding:16px;background:rgba(26,36,40,.4);border-radius:8px;margin-bottom:12px;border-left:3px solid}
+.opportunity-title{font-weight:600;margin-bottom:6px}
+.opportunity-desc{font-size:13px;opacity:.8}
+
+.action-item{padding:12px;background:rgba(26,36,40,.3);border-radius:6px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.action-priority{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:600;margin-right:8px;background:rgba(245,158,11,.2);color:#fbbf24}
+.action-title{flex:1;font-size:14px}
+.action-estimate{font-size:12px;opacity:.6;min-width:80px;text-align:right}
+
+.client-card{padding:16px;background:rgba(26,36,40,.4);border-radius:8px;margin-bottom:12px}
+.client-name{font-weight:600;font-size:16px;margin-bottom:4px}
+.client-retainer{font-size:12px;opacity:.7;margin-bottom:8px}
+.client-status{display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:600;margin-bottom:8px}
+.client-activity{font-size:13px}
+
+footer{border-top:1px solid rgba(74,102,80,.2);padding:32px 0;text-align:center;opacity:.7;font-size:13px;margin-top:40px}
+
+.tabs{display:flex;gap:4px;margin-top:12px}
+.tab{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:14px;font-weight:500;border-bottom:2px solid transparent;color:rgba(240,237,216,.4);cursor:pointer;transition:all .2s;text-decoration:none}
+.tab:hover{color:rgba(240,237,216,.6);border-color:rgba(74,102,80,.3);text-decoration:none}
+.tab.active{color:var(--sage);border-color:var(--sage)}
+.tab svg{width:16px;height:16px}
+
+@media (max-width:768px){
+  .header-top{flex-direction:column}
+  .header-top h1{font-size:24px}
+  .section{padding:16px}
+  .metrics-grid{grid-template-columns:1fr}
+  .alert-grid{grid-template-columns:1fr}
+  .event{gap:12px}
+  .event-time{min-width:80px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-top fade-in d1">
+      <h1>Daily Brief</h1>
+      <div class="badge" id="statusBadge">Status badge here</div>
+    </div>
+    <div class="header-meta fade-in d2">
+      <div class="meta-item">
+        <span class="meta-label">Date:</span>
+        <span id="dateDisplay">Date here</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Greeting:</span>
+        <span id="greeting">Greeting here</span>
+      </div>
+    </div>
+    <div class="tabs fade-in d2">
+      <a href="index.html" class="tab active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Daily Brief
+      </a>
+      <a href="onboarding.html" class="tab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        Client Onboarding
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- OVERVIEW SECTION -->
+<section class="section fade-in d3">
+  <h2>Today at a Glance</h2>
+  <div class="overview" id="overview"></div>
+</section>
+
+<!-- ALERTS SECTION -->
+<section class="section fade-in d4">
+  <h2>Alerts & Blockers</h2>
+  <div class="alert-grid" id="alertsContainer"></div>
+</section>
+
+<!-- SCHEDULE SECTION -->
+<section class="section fade-in d5">
+  <h2>Today's Schedule</h2>
+  <div class="schedule-events" id="scheduleContainer"></div>
+  <p style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(74,102,80,.2);font-size:13px;opacity:.8"><strong>Day Tip:</strong> <span id="dayTip"></span></p>
+  <div style="margin-top:16px;padding:12px;background:rgba(74,102,80,.1);border-radius:8px;font-size:13px;">
+    <strong>This Week's Highlights:</strong>
+    <ul style="margin-top:8px;margin-left:20px;opacity:.9">
+      <li id="weekHighlight1" style="margin-bottom:6px;"></li>
+      <li id="weekHighlight2" style="margin-bottom:6px;"></li>
+      <li id="weekHighlight3" style="margin-bottom:6px;"></li>
+      <li id="weekHighlight4" style="margin-bottom:6px;"></li>
+      <li id="weekHighlight5" style="margin-bottom:6px;"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- REVENUE SECTION -->
+<section class="section fade-in d6">
+  <h2>Revenue Status</h2>
+
+  <h3 style="font-size:16px;margin:20px 0 12px;color:var(--cream)">Monthly Metrics</h3>
+  <div class="metrics-grid" id="revenueMetricsContainer"></div>
+
+  <h3 style="font-size:16px;margin:20px 0 12px;color:var(--cream)">Outstanding Invoices</h3>
+  <div class="invoice-list" id="invoicesContainer"></div>
+
+  <h3 style="font-size:16px;margin:20px 0 12px;color:var(--cream)">Fastest Cash Paths</h3>
+  <div class="invoice-list" id="cashPathsContainer"></div>
+</section>
+
+<!-- Q2 CAMPAIGN SECTION -->
+<section class="section fade-in d7">
+  <h2>Q2 Campaign Pulse</h2>
+  <div class="metrics-grid" id="q2MetricsContainer"></div>
+  <p style="margin-top:16px;font-size:13px;" id="q2NextSteps"></p>
+</section>
+
+<!-- LEADS SECTION -->
+<section class="section fade-in d7">
+  <h2>Leads & Opportunities</h2>
+  <div class="metrics-grid" id="leadsMetricsContainer"></div>
+  <h3 style="font-size:16px;margin:20px 0 12px;color:var(--cream)">Lead Cards</h3>
+  <div id="leadsCardsContainer"></div>
+</section>
+
+<!-- BLOG & CONTENT SECTION -->
+<section class="section fade-in d7">
+  <h2>Content & SEO</h2>
+
+  <h3 style="font-size:14px;margin:16px 0 12px;color:var(--cream)">Published</h3>
+  <div class="blog-list" id="blogPublished"></div>
+
+  <h3 style="font-size:14px;margin:16px 0 12px;color:var(--cream)">In Progress</h3>
+  <div class="blog-list" id="blogDrafts"></div>
+
+  <h3 style="font-size:14px;margin:16px 0 12px;color:var(--cream)">Queued</h3>
+  <div class="blog-list" id="blogQueued"></div>
+
+  <div style="margin-top:16px;padding:12px;background:rgba(74,102,80,.1);border-radius:8px;font-size:13px;" id="blogNote"></div>
+
+  <h3 style="font-size:14px;margin:16px 0 12px;color:var(--cream)">SEO Metrics</h3>
+  <div class="metrics-grid" id="seoMetricsContainer"></div>
+
+  <div style="margin-top:16px;padding:12px;background:rgba(74,102,80,.1);border-radius:8px;font-size:13px;">
+    <strong>Top Keywords:</strong>
+    <ul style="margin-top:8px;margin-left:20px;opacity:.9" id="topKeywords"></ul>
+  </div>
+</section>
+
+<!-- SUBSCRIPTIONS SECTION -->
+<section class="section fade-in d8">
+  <h2>Subscriptions & Tools</h2>
+  <div class="invoice-list" id="subscriptionsContainer"></div>
+</section>
+
+<!-- AUTHORITY SECTION -->
+<section class="section fade-in d8">
+  <h2>Personal Authority & Content</h2>
+  <div class="metrics-grid" id="authorityMetricsContainer"></div>
+  <div style="margin-top:16px;padding:12px;background:rgba(74,102,80,.1);border-radius:8px;font-size:13px;" id="growthOpps"></div>
+</section>
+
+<!-- EMAIL SECTION -->
+<section class="section fade-in d9">
+  <h2>Email & Communication</h2>
+  <div class="metrics-grid" id="emailMetricsContainer"></div>
+  <div style="margin-top:16px;padding:12px;background:rgba(74,102,80,.1);border-radius:8px;font-size:13px;" id="emailSummary"></div>
+</section>
+
+<!-- OPPORTUNITIES SECTION -->
+<section class="section fade-in d9">
+  <h2>Key Opportunities</h2>
+  <div id="opportunitiesContainer"></div>
+</section>
+
+<!-- ACTIONS SECTION -->
+<section class="section fade-in d9">
+  <h2>Action Items</h2>
+  <div id="actionsContainer"></div>
+</section>
+
+<!-- CLIENTS SECTION -->
+<section class="section fade-in d9">
+  <h2>Active Clients</h2>
+  <div id="clientsContainer"></div>
+</section>
+
+</main>
+
+<footer class="container">
+  <p id="lastUpdated">Last Updated</p>
+</footer>
+
+<script>
+function render(data){
+  // Header
+  document.getElementById('statusBadge').textContent=data.statusBadge;
+  document.getElementById('dateDisplay').textContent=data.date;
+  document.getElementById('greeting').textContent=data.greeting;
+
+  // Overview
+  document.getElementById('overview').innerHTML=data.overview;
+
+  // Alerts
+  const alertsHtml=data.alerts.map(a=>`
+    <div class="alert-card fade-in" style="border-left-color:${a.color}">
+      <h3>${a.title}</h3>
+      <p>${a.description}</p>
+    </div>
+  `).join('');
+  document.getElementById('alertsContainer').innerHTML=alertsHtml;
+
+  // Schedule
+  const scheduleHtml=data.schedule.events.map(e=>`
+    <div class="event fade-in" style="border-left-color:${e.color}">
+      <div class="event-time">${e.time}</div>
+      <div class="event-content">
+        <div class="event-title">${e.title}</div>
+        <div class="event-meta">${e.calendar}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('scheduleContainer').innerHTML=scheduleHtml;
+
+  document.getElementById('dayTip').textContent=data.schedule.dayTip;
+
+  // Week Highlights
+  data.schedule.weekHighlights.forEach((h,i)=>{
+    const el=document.getElementById(`weekHighlight${i+1}`);
+    if(el) el.innerHTML=h;
+  });
+
+  // Revenue Metrics
+  const revMetricsHtml=data.revenue.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('revenueMetricsContainer').innerHTML=revMetricsHtml;
+
+  // Invoices
+  const invoicesHtml=data.revenue.outstandingInvoices.map(inv=>`
+    <div class="invoice-item fade-in">
+      <div class="invoice-client">
+        <div class="invoice-client-name">${inv.client}</div>
+        <div class="invoice-description">${inv.item}</div>
+      </div>
+      <div class="invoice-amount">
+        <div class="amount">${inv.amount}</div>
+        <div class="status">${inv.status}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('invoicesContainer').innerHTML=invoicesHtml;
+
+  // Cash Paths
+  const cashHtml=data.revenue.fastestCashPaths.map(cp=>`
+    <div class="invoice-item fade-in">
+      <div class="invoice-client">
+        <div class="invoice-client-name">#${cp.rank}: ${cp.action}</div>
+        <div class="invoice-description">${cp.timeline}</div>
+      </div>
+      <div class="invoice-amount">
+        <div class="amount">${cp.amount}</div>
+        <div class="status">${cp.effort}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('cashPathsContainer').innerHTML=cashHtml;
+
+  // Q2 Campaign
+  const q2MetricsHtml=data.q2Campaign.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('q2MetricsContainer').innerHTML=q2MetricsHtml;
+  document.getElementById('q2NextSteps').innerHTML=data.q2Campaign.nextSteps;
+
+  // Leads Metrics
+  const leadsMetricsHtml=data.leads.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('leadsMetricsContainer').innerHTML=leadsMetricsHtml;
+
+  // Lead Cards
+  const leadsCardsHtml=data.leads.cards.map(l=>`
+    <div class="lead-card fade-in" style="border-left-color:${l.borderColor}">
+      <div class="lead-name">${l.name}</div>
+      <div class="lead-location">${l.location}</div>
+      <div class="lead-score">${l.score}</div>
+      <div class="lead-reason">${l.reason}</div>
+      <div class="lead-links">
+        ${l.links.map(link=>`<a href="${link.url}" class="lead-link">${link.text}</a>`).join('')}
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('leadsCardsContainer').innerHTML=leadsCardsHtml;
+
+  // Blog
+  const pubHtml=data.blog.published.map(b=>`<div class="blog-item fade-in">${b.title}</div>`).join('');
+  document.getElementById('blogPublished').innerHTML=pubHtml;
+
+  const draftHtml=data.blog.drafts.map(b=>`<div class="blog-item fade-in">${b.title}</div>`).join('');
+  document.getElementById('blogDrafts').innerHTML=draftHtml;
+
+  const queuedHtml=data.blog.queued.map(b=>`<div class="blog-item fade-in">${b}</div>`).join('');
+  document.getElementById('blogQueued').innerHTML=queuedHtml;
+
+  document.getElementById('blogNote').innerHTML=data.blog.note;
+
+  // SEO Metrics
+  const seoMetricsHtml=data.seo.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('seoMetricsContainer').innerHTML=seoMetricsHtml;
+
+  const keywordsHtml=data.seo.topKeywords.map(k=>`<li>${k.keyword}</li>`).join('');
+  document.getElementById('topKeywords').innerHTML=keywordsHtml;
+
+  // Subscriptions
+  const subHtml=data.subscriptions.map(s=>`
+    <div class="invoice-item fade-in">
+      <div class="invoice-client">
+        <div class="invoice-client-name">${s.name}</div>
+        <div class="invoice-description">${s.notes}</div>
+      </div>
+      <div class="invoice-amount">
+        <div class="status" style="color:${s.priority==='high'?'#ef4444':'#f59e0b'};font-weight:600;">${s.priority}</div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('subscriptionsContainer').innerHTML=subHtml;
+
+  // Authority
+  const authMetricsHtml=data.authority.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('authorityMetricsContainer').innerHTML=authMetricsHtml;
+  document.getElementById('growthOpps').innerHTML=data.authority.growthOpps;
+
+  // Email
+  const emailMetricsHtml=data.email.metrics.map(m=>`
+    <div class="metric-card fade-in">
+      <div class="metric-value" style="color:${m.color}">${m.value}</div>
+      <div class="metric-label">${m.label}</div>
+      <div class="metric-sub">${m.sub}</div>
+    </div>
+  `).join('');
+  document.getElementById('emailMetricsContainer').innerHTML=emailMetricsHtml;
+  document.getElementById('emailSummary').innerHTML=data.email.summary;
+
+  // Opportunities
+  const oppHtml=data.opportunities.map(o=>`
+    <div class="opportunity fade-in" style="border-left-color:${o.class==='opp-high'?'#ef4444':'#f59e0b'}">
+      <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+        <span style="display:inline-block;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:600;background:${o.class==='opp-high'?'rgba(239,68,68,.2)':'rgba(245,158,11,.2)'};color:${o.class==='opp-high'?'#fca5a5':'#fbbf24'}">${o.priority}</span>
+        <div class="opportunity-title">${o.title}</div>
+      </div>
+      <div class="opportunity-desc">${o.description}</div>
+    </div>
+  `).join('');
+  document.getElementById('opportunitiesContainer').innerHTML=oppHtml;
+
+  // Actions
+  const actionsHtml=data.actions.map(a=>`
+    <div class="action-item fade-in">
+      <span class="action-priority">${a.priority}</span>
+      <span class="action-title">${a.title}</span>
+      <span class="action-estimate">${a.timeEstimate}</span>
+    </div>
+  `).join('');
+  document.getElementById('actionsContainer').innerHTML=actionsHtml;
+
+  // Clients
+  const clientsHtml=data.clients.map(c=>`
+    <div class="client-card fade-in" style="border-left:3px solid ${c.color}">
+      <div class="client-name" style="color:${c.color}">${c.name}</div>
+      <div class="client-retainer">${c.retainer}</div>
+      <div class="client-status" style="background:${c.color}26;color:${c.color}">${c.status}</div>
+      <div class="client-activity">${c.recentActivity}</div>
+    </div>
+  `).join('');
+  document.getElementById('clientsContainer').innerHTML=clientsHtml;
+
+  // Footer
+  document.getElementById('lastUpdated').textContent=`Last updated: ${data.footer.lastUpdated}`;
+}
+
+
+var __embeddedData = 
+{
+  "dateKey": "2026-03-28",
+  "date": "Saturday, March 28, 2026",
+  "greeting": "Happy Saturday, Faye! Yesterday was a huge win \u2014 Derek signed and you delivered $500 in billable work. Today is all about Squilliam time and recharging. Monday is loaded: Clay Q1 invoice, newsletter, and Jus' Poetic revisions. Enjoy the weekend!",
+  "statusBadge": "6 Active Clients \u00b7 3 Days Left in March \u00b7 Weekend Mode",
+  "overview": "<p><strong>Weekend Check-In:</strong> It's Saturday \u2014 your calendar is clear of client work. Enjoy Squilliam day and recharge before a packed Monday.</p><p><strong>Yesterday's Wins:</strong> Derek Mardones / Busy Bee Movers signed ($600/mo), VMC Tour Section ($200) + Nancy Trinity Logo ($300) = $500 billable delivered. Nakeitha got the full retainer pitch in person. 6 active clients hit!</p><p><strong>VMC Payment Alert:</strong> The $2,000 VMC autopay was due yesterday (Mar 27). Confirm deposit landed in HoneyBook \u2014 this is your biggest monthly payment.</p><p><strong>Monday Preview:</strong> Hallwood Work Block 8-11 AM (Clay Q1 invoice + newsletter OVERDUE), Clay/HoneyBook call at 9 AM, Jus' Poetic revisions 12-2 PM, Deploy CC tools 2-3 PM. Full day ahead.</p><p><strong>Inbox:</strong> Only 2 unread emails \u2014 both low-priority (Mailchimp promo + Semrush auto-post). No client emails needing response. Clean inbox heading into the weekend.</p>",
+  "alerts": [
+    {
+      "id": "alert-vmc-payment",
+      "title": "VMC $2,000 Payment \u2014 Confirm Deposit",
+      "description": "Autopay was due Mar 27 (yesterday). Verify the $2,000 hit your HoneyBook account. This is payment 6 of 11 ($22,174 paid of $32,000).",
+      "color": "#ef4444"
+    },
+    {
+      "id": "alert-clay-q1-invoice",
+      "title": "Clay Q1 Invoice \u2014 Send Monday Morning",
+      "description": "Hallwood Q1 retainer invoice: $1,800 ($600/mo x 3). Gmail draft ready. Send FIRST thing during 8 AM work block. Revenue task \u2014 do this before newsletter.",
+      "color": "#ef4444"
+    },
+    {
+      "id": "alert-clay-newsletter",
+      "title": "Clay March Newsletter \u2014 OVERDUE (Due 3/21)",
+      "description": "7 days overdue. Scheduled Monday 8:15-10:45 AM during Hallwood Work Block. Estimated 2.5 hours. Revenue-generating retainer deliverable.",
+      "color": "#ef4444"
+    },
+    {
+      "id": "alert-derek-onboarding",
+      "title": "Derek Onboarding Call \u2014 Confirm Tuesday 6 PM",
+      "description": "NEW CLIENT! Derek Mardones / Busy Bee Movers ($600/mo retainer). Confirm Tuesday onboarding call. First photo session targeting April 6.",
+      "color": "#ef4444"
+    },
+    {
+      "id": "alert-nancy-pile-griffin",
+      "title": "Nancy Pile-Griffin \u2014 36 Days No Contact",
+      "description": "Trinity UMC logo ($300) + peanut business opportunity ($350-500). Clay's wife. Warm lead, needs re-engagement.",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "alert-brooke-outreach",
+      "title": "Brooke Kommuck \u2014 38 Days No Contact",
+      "description": "VMC Practice Manager. Follow up with rack card revisions and check-in.",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "alert-asana-cancel",
+      "title": "Asana Subscription \u2014 Cancel by Month-End",
+      "description": "Still paying $61/mo. Migrated to Notion. 3 days left to cancel before April billing cycle.",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "alert-nakeitha-follow-up",
+      "title": "Nakeitha Retainer Decision \u2014 Follow Up Monday/Tuesday",
+      "description": "Pitched Option A ($300/mo blog & SEO) or Option B ($600/mo social + content) in person yesterday. Follow up early next week.",
+      "color": "#f59e0b"
+    }
+  ],
+  "schedule": {
+    "events": [
+      {
+        "id": "event-morning-routine",
+        "time": "5:00-6:00 AM",
+        "title": "Morning Routine",
+        "calendar": "Personal",
+        "color": "#8b5cf6"
+      },
+      {
+        "id": "event-weekie-watchie",
+        "time": "7:00 AM-12:30 PM",
+        "title": "Weekie Watchie",
+        "calendar": "HoneyBook",
+        "color": "#10b981"
+      },
+      {
+        "id": "event-squilliam",
+        "time": "7:00 AM-9:00 PM",
+        "title": "Sleepover With Squilliam",
+        "calendar": "Social",
+        "color": "#3b82f6"
+      },
+      {
+        "id": "event-evening-routine",
+        "time": "8:00-9:00 PM",
+        "title": "Evening Routine",
+        "calendar": "Personal",
+        "color": "#8b5cf6"
+      }
+    ],
+    "dayTip": "It's Saturday \u2014 no client work on the calendar. Enjoy Squilliam time and recharge. If you get a few spare minutes, you could review mood board form submissions or mentally prep for Monday's packed Clay work block. But no pressure \u2014 rest is productive too.",
+    "weekHighlights": [
+      "<strong>Monday 3/30:</strong> Clay Work Block 8-11 AM (Q1 invoice + newsletter OVERDUE), Clay/HoneyBook call 9 AM, Jus' Poetic revisions 12-2 PM, Deploy CC tools 2-3 PM, Weekly Check-In 5 PM",
+      "<strong>Tuesday 3/31:</strong> Rooks all day (8 AM-4 PM), Derek onboarding call 6 PM (CONFIRM), Connect IG/TikTok to Buffer, Buffer LinkedIn setup",
+      "<strong>Wednesday 4/1:</strong> Rooks Remote all day, Newsletter strategy 4-5 PM, Review automations + clean Hallwood dupes 5-5:30 PM",
+      "<strong>Thursday 4/2:</strong> Rooks all day, Jus' Poetic newsletter + blog upsell prep 4:30-5:30 PM, Celine hangout 6-9 PM",
+      "<strong>Friday 4/3:</strong> VMC Work Block 8-11 AM (Surgery page CRITICAL \u2014 remove arthroscopy, Community page CRITICAL \u2014 write partner descriptions), GP page + About/Team revisions afternoon"
+    ]
+  },
+  "revenue": {
+    "metrics": [
+      {
+        "label": "Monthly Recurring Revenue",
+        "value": "$3,200/mo",
+        "sub": "VMC $2K + Hallwood $600 + Derek $600",
+        "color": "#10b981"
+      },
+      {
+        "label": "March Collected",
+        "value": "$695.54",
+        "sub": "Peleta $95.54 + Hallwood $600 (deposited)",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "March Expected",
+        "value": "$2,695.54",
+        "sub": "Incl. VMC $2,000 due 3/27 (verify)",
+        "color": "#f59e0b"
+      },
+      {
+        "label": "Total Outstanding",
+        "value": "$19,400",
+        "sub": "Across all active contracts",
+        "color": "#f59e0b"
+      }
+    ],
+    "outstandingInvoices": [
+      {
+        "client": "Clay Griffin / Hallwood",
+        "amount": "$1,800",
+        "item": "Q1 Retainer Invoice (Jan-Mar)",
+        "status": "Send Monday AM",
+        "dueDate": "March 31"
+      },
+      {
+        "client": "Growing VMC @ LWR",
+        "amount": "$2,000",
+        "item": "March retainer (autopay)",
+        "status": "Due 3/27 \u2014 verify deposit",
+        "dueDate": "March 27"
+      },
+      {
+        "client": "Nancy Pile-Griffin",
+        "amount": "$300",
+        "item": "Trinity UMC Logo",
+        "status": "Pending \u2014 re-engage",
+        "dueDate": "End of March"
+      },
+      {
+        "client": "Derek Mardones / Busy Bee",
+        "amount": "$300",
+        "item": "Deposit (contract signed 3/27)",
+        "status": "Pending onboarding",
+        "dueDate": "Upon confirmation"
+      }
+    ],
+    "fastestCashPaths": [
+      {
+        "rank": 1,
+        "action": "Verify VMC $2,000 Autopay Deposited",
+        "amount": "$2,000",
+        "timeline": "Was due Mar 27 \u2014 check HoneyBook",
+        "effort": "2 mins \u2014 verify in app"
+      },
+      {
+        "rank": 2,
+        "action": "Send Clay Q1 Invoice Monday",
+        "amount": "$1,800",
+        "timeline": "Send Monday 8 AM, ACH by April 6",
+        "effort": "5 mins \u2014 draft ready in Gmail"
+      },
+      {
+        "rank": 3,
+        "action": "Confirm Derek Onboarding Deposit",
+        "amount": "$300",
+        "timeline": "Due upon Tuesday call confirmation",
+        "effort": "Email confirmation needed"
+      },
+      {
+        "rank": 4,
+        "action": "Re-engage Nancy Pile-Griffin",
+        "amount": "$300-500",
+        "timeline": "Logo completion + peanut business quote",
+        "effort": "Warm outreach + scope clarification"
+      }
+    ]
+  },
+  "q2Campaign": {
+    "metrics": [
+      {
+        "label": "Q2 Client Goal",
+        "value": "6 active \u2014 HIT!",
+        "sub": "Derek signed yesterday!",
+        "color": "#10b981"
+      },
+      {
+        "label": "Retainer Pipeline",
+        "value": "3 opportunities",
+        "sub": "Nakeitha, Peleta upsell, Nancy",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "YTD Gross Booked",
+        "value": "$8,973",
+        "sub": "HoneyBook (excl. Clay ACH)",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "HoneyBook Balance",
+        "value": "$5,575.97",
+        "sub": "Current account balance",
+        "color": "#10b981"
+      }
+    ],
+    "nextSteps": "<p><strong>This Week's Revenue Actions:</strong></p><ul><li><strong>Saturday:</strong> Verify VMC $2,000 autopay deposited (was due 3/27).</li><li><strong>Monday 3/30:</strong> Send Clay Q1 Invoice ($1,800) FIRST. Finish overdue newsletter. Deploy CC tools. Send Peleta testimonial request.</li><li><strong>Tuesday 3/31:</strong> Confirm Derek onboarding call 6 PM. Cancel Asana ($61/mo savings).</li><li><strong>Early Week:</strong> Follow up with Nakeitha on retainer decision ($300-600/mo).</li><li><strong>Friday 4/3:</strong> VMC Surgery + Community pages CRITICAL \u2014 prioritize during work block.</li></ul>"
+  },
+  "leads": {
+    "metrics": [
+      {
+        "label": "Active Clients",
+        "value": "6",
+        "sub": "VMC, Hallwood, Derek, Peleta, Nakeitha, Brooke",
+        "color": "#10b981"
+      },
+      {
+        "label": "Warm Leads",
+        "value": "4",
+        "sub": "Nancy, Angela, mood board leads",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "CRM Total",
+        "value": "750+",
+        "sub": "Across 4 industries in Notion",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "A+B Candidates",
+        "value": "355",
+        "sub": "With personalized scripts",
+        "color": "#10b981"
+      }
+    ],
+    "cards": [
+      {
+        "name": "Derek Mardones",
+        "location": "Busy Bee Movers",
+        "score": "SIGNED 3/27",
+        "reason": "New client! $600/mo Social Media Starter. Contract signed. Onboarding Tue 6 PM (confirm). Photo session ~April 6.",
+        "borderColor": "#10b981",
+        "links": [
+          {
+            "url": "#",
+            "text": "View contract"
+          }
+        ]
+      },
+      {
+        "name": "Nakeitha / Nikki Nyx",
+        "location": "Karaoke Business",
+        "score": "PITCH DELIVERED",
+        "reason": "Met in person Mar 27. Pitched Option A ($300/mo blog & SEO) or Option B ($600/mo social). Follow up Monday/Tuesday.",
+        "borderColor": "#3b82f6",
+        "links": [
+          {
+            "url": "#",
+            "text": "Follow up next week"
+          }
+        ]
+      },
+      {
+        "name": "Nancy Pile-Griffin",
+        "location": "Trinity UMC + Peanut Business",
+        "score": "36 DAYS",
+        "reason": "Logo ($300) + peanut business ($350-500). Clay's wife. Warm lead. Requires re-engagement.",
+        "borderColor": "#ef4444",
+        "links": [
+          {
+            "url": "#",
+            "text": "Re-engage"
+          }
+        ]
+      },
+      {
+        "name": "Angela Jones",
+        "location": "Logo Project",
+        "score": "$1,000 BUDGET",
+        "reason": "Logo inquiry. Draft proposal sent. Awaiting feedback.",
+        "borderColor": "#f59e0b",
+        "links": [
+          {
+            "url": "#",
+            "text": "Follow up"
+          }
+        ]
+      }
+    ]
+  },
+  "blog": {
+    "published": [
+      {
+        "title": "Marketing Priorities for Service Businesses"
+      },
+      {
+        "title": "Social Media Strategy for Small Business"
+      },
+      {
+        "title": "What is Brand Strategy?"
+      },
+      {
+        "title": "15 Profitable Creative Service Business Ideas"
+      },
+      {
+        "title": "7 Car Business Ideas"
+      }
+    ],
+    "drafts": [
+      {
+        "title": "Clay March Newsletter (OVERDUE \u2014 due 3/21, 7 days late)"
+      },
+      {
+        "title": "Content Creation Without Overwhelm"
+      }
+    ],
+    "queued": [
+      "How Hallwood Keeps Supply Chains Moving",
+      "SEO Self-Audit Guide",
+      "From Freebie to Client: Lead Magnets That Convert"
+    ],
+    "note": "<p><strong>Status:</strong> 5 published posts live on constantcreates.com. 2 drafts in progress (1 overdue). 3 queued for April.</p><p><strong>Monday Priority:</strong> Finish Clay March Newsletter during 8:15-10:45 AM Hallwood work block. This is a revenue deliverable \u2014 7 days overdue.</p><p><strong>Thursday:</strong> Jus' Poetic first newsletter + blog/SEO upsell prep scheduled 4:30-5:30 PM.</p><p><strong>Content Strategy:</strong> Publishing 3x/week (MWF at 8 AM) for SEO dominance. Mix of brand strategy, local business, and thought leadership.</p>"
+  },
+  "seo": {
+    "metrics": [
+      {
+        "label": "Clicks (28-day)",
+        "value": "158",
+        "sub": "CTR 0.2%, trending stable",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "Impressions (28-day)",
+        "value": "83.6K",
+        "sub": "Visibility consistent",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "Top Keyword",
+        "value": "Power of Multiple Logos",
+        "sub": "Brand positioning keyword",
+        "color": "#10b981"
+      },
+      {
+        "label": "Growth Opportunity",
+        "value": "Blog + Backlinks",
+        "sub": "Peleta SEO upsell ($300/mo)",
+        "color": "#f59e0b"
+      }
+    ],
+    "topKeywords": [
+      {
+        "keyword": "Power of Multiple Logos"
+      },
+      {
+        "keyword": "Social media strategy for small business"
+      },
+      {
+        "keyword": "Brand strategy"
+      }
+    ]
+  },
+  "subscriptions": [
+    {
+      "name": "Asana \u2014 CANCEL NOW",
+      "notes": "$61/mo. Migrated to Notion. 3 days left before April billing. Cancel immediately.",
+      "priority": "high"
+    },
+    {
+      "name": "Kit (ConvertKit)",
+      "notes": "$39/mo, zero sends. Evaluate vs Mailchimp. Consider consolidating.",
+      "priority": "high"
+    },
+    {
+      "name": "Anthropic Claude",
+      "notes": "Essential. Core business tool for content, strategy, client work, daily brief.",
+      "priority": "high"
+    },
+    {
+      "name": "Semrush",
+      "notes": "Essential. SEO monitoring, keyword research, auto social posts.",
+      "priority": "high"
+    },
+    {
+      "name": "HoneyBook",
+      "notes": "Essential. CRM, proposals, contracts, autopay. VMC + Hallwood billing.",
+      "priority": "high"
+    },
+    {
+      "name": "Google Workspace",
+      "notes": "Active. Business email + suite. Peleta paying $99/mo for setup.",
+      "priority": "medium"
+    },
+    {
+      "name": "Squarespace",
+      "notes": "Active. Portfolio site + mood board form working well. Leads coming in.",
+      "priority": "medium"
+    },
+    {
+      "name": "Mailchimp",
+      "notes": "Free trial. Integration promos arriving. Potential email consolidation target.",
+      "priority": "medium"
+    }
+  ],
+  "authority": {
+    "metrics": [
+      {
+        "label": "Published Content",
+        "value": "5 posts",
+        "sub": "Evergreen brand assets on CC blog",
+        "color": "#10b981"
+      },
+      {
+        "label": "LinkedIn Presence",
+        "value": "Active",
+        "sub": "Weekly thought leadership posts",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "Client Testimonials",
+        "value": "1 queued",
+        "sub": "Peleta Google review + testimonial request Monday",
+        "color": "#10b981"
+      },
+      {
+        "label": "All-Time Clients",
+        "value": "15",
+        "sub": "$39,322 net deposited via HoneyBook",
+        "color": "#10b981"
+      }
+    ],
+    "growthOpps": "<p><strong>Build Authority Q2:</strong></p><ul><li>Deploy Peleta testimonial + Google review on website (Monday task).</li><li>Publish queued blog posts: \"How Hallwood Keeps Supply Chains Moving\" + \"SEO Self-Audit\" + \"Lead Magnets That Convert.\"</li><li>Create case studies from Derek onboarding, VMC website overhaul, Nakeitha rebrand.</li><li>Newsletter strategy session Wednesday \u2014 biweekly Constant Creates newsletter launch.</li><li>Connect Instagram + TikTok to Buffer Tuesday for consistent social presence.</li></ul>"
+  },
+  "email": {
+    "metrics": [
+      {
+        "label": "Unread",
+        "value": "2",
+        "sub": "Both low-priority (promos)",
+        "color": "#10b981"
+      },
+      {
+        "label": "Client Emails",
+        "value": "All clear",
+        "sub": "No critical items pending",
+        "color": "#10b981"
+      },
+      {
+        "label": "Drafts Ready",
+        "value": "2",
+        "sub": "Clay Q1 invoice + Peleta testimonial",
+        "color": "#3b82f6"
+      },
+      {
+        "label": "Monday Send",
+        "value": "Clay Q1 Invoice",
+        "sub": "$1,800 \u2014 draft ready in Gmail",
+        "color": "#f59e0b"
+      }
+    ],
+    "summary": "<p><strong>Inbox Status:</strong> Only 2 unread emails \u2014 Mailchimp integrations promo and Semrush auto-generated social post. Both low priority.</p><p><strong>Clean Inbox Weekend:</strong> No client emails needing response. Great position heading into Monday.</p><p><strong>Gmail Drafts Ready:</strong> Clay Q1 Invoice email and Peleta testimonial request are both drafted and waiting to send Monday.</p><p><strong>Semrush Auto-Post:</strong> A social media post was auto-generated for Constant Creates. Review and publish if the copy looks good, or customize it.</p>"
+  },
+  "opportunities": [
+    {
+      "class": "opp-high",
+      "priority": "HIGH",
+      "title": "VMC $2,000 Payment \u2014 Verify Deposit",
+      "description": "Autopay was due Mar 27. Confirm the $2,000 landed in HoneyBook. This brings VMC total paid to $22,174 of $32,000."
+    },
+    {
+      "class": "opp-high",
+      "priority": "HIGH",
+      "title": "Clay Q1 Invoice \u2014 $1,800 Revenue Monday",
+      "description": "Draft is ready. Send at 8 AM Monday during Hallwood Work Block. ACH expected by April 6. Biggest quick-win revenue action."
+    },
+    {
+      "class": "opp-high",
+      "priority": "HIGH",
+      "title": "Derek Onboarding \u2014 Confirm Tuesday Call",
+      "description": "New $600/mo client. Confirm Tuesday 6 PM onboarding. First photo session April 6. Quick win for recurring revenue."
+    },
+    {
+      "class": "opp-high",
+      "priority": "HIGH",
+      "title": "Nakeitha Retainer Decision \u2014 $300-600/mo",
+      "description": "Pitched both options in person Friday. Follow up Monday/Tuesday. Could add $300-600/mo recurring starting April or May."
+    },
+    {
+      "class": "opp-med",
+      "priority": "MEDIUM",
+      "title": "Nancy Re-engagement \u2014 $300-500",
+      "description": "36 days no contact. Trinity UMC logo ($300) + peanut business quote ($350-500). Clay's wife \u2014 warm lead."
+    },
+    {
+      "class": "opp-med",
+      "priority": "MEDIUM",
+      "title": "Peleta Blog/SEO Upsell \u2014 $300/mo",
+      "description": "Website wrapping up. Jus' Poetic newsletter + upsell prep scheduled Thursday. Natural next step from current project."
+    }
+  ],
+  "actions": [
+    {
+      "id": "action-verify-vmc",
+      "priority": "URGENT",
+      "title": "Verify VMC $2,000 Autopay Deposited (Due 3/27)",
+      "timeEstimate": "2 mins"
+    },
+    {
+      "id": "action-send-clay-invoice",
+      "priority": "URGENT",
+      "title": "Send Clay Q1 Invoice ($1,800) \u2014 Monday 8 AM",
+      "timeEstimate": "5 mins Monday"
+    },
+    {
+      "id": "action-finish-clay-newsletter",
+      "priority": "URGENT",
+      "title": "Finish Clay March Newsletter (7 Days Overdue)",
+      "timeEstimate": "2.5 hours Monday AM"
+    },
+    {
+      "id": "action-confirm-derek",
+      "priority": "URGENT",
+      "title": "Confirm Derek Onboarding Call Tuesday 6 PM",
+      "timeEstimate": "5 mins"
+    },
+    {
+      "id": "action-cancel-asana",
+      "priority": "HIGH",
+      "title": "Cancel Asana Subscription \u2014 3 Days Left ($61/mo savings)",
+      "timeEstimate": "5 mins"
+    },
+    {
+      "id": "action-follow-up-nakeitha",
+      "priority": "HIGH",
+      "title": "Follow up with Nakeitha on Retainer Decision",
+      "timeEstimate": "15 mins Mon/Tue"
+    },
+    {
+      "id": "action-re-engage-nancy",
+      "priority": "HIGH",
+      "title": "Re-engage Nancy Pile-Griffin (36 days no contact)",
+      "timeEstimate": "20 mins"
+    },
+    {
+      "id": "action-deploy-cc-tools",
+      "priority": "MEDIUM",
+      "title": "Deploy CC Tools to Vercel + Peleta Testimonial Request",
+      "timeEstimate": "1 hour Monday 2-3 PM"
+    },
+    {
+      "id": "action-jus-poetic-revisions",
+      "priority": "MEDIUM",
+      "title": "Jus' Poetic Website Revisions (All-Black Design)",
+      "timeEstimate": "2 hours Monday 12-2 PM"
+    },
+    {
+      "id": "action-vmc-surgery-page",
+      "priority": "MEDIUM",
+      "title": "VMC Surgery Page \u2014 Remove Arthroscopy (CRITICAL, Friday)",
+      "timeEstimate": "1.5 hours Friday AM"
+    }
+  ],
+  "clients": [
+    {
+      "name": "Dr. Wendy Ellis / VMC",
+      "retainer": "$2,000/mo (autopay)",
+      "status": "Active",
+      "recentActivity": "Mar payment due 3/27 \u2014 verify deposit. Tour section updated. Photo shoot done. Surgery page + Community page CRITICAL for Friday.",
+      "color": "#10b981"
+    },
+    {
+      "name": "Clay Griffin / Hallwood",
+      "retainer": "$600/mo (ACH)",
+      "status": "Active",
+      "recentActivity": "Q1 invoice ($1,800) due Monday. Newsletter 7 days overdue. HoneyBook call Mon 9 AM. Weekly calls now Mon 10 AM.",
+      "color": "#3b82f6"
+    },
+    {
+      "name": "Derek Mardones / Busy Bee Movers",
+      "retainer": "$600/mo (NEW)",
+      "status": "Signed \u2014 Onboarding Pending",
+      "recentActivity": "Contract signed Mar 27. Confirm Tue 6 PM onboarding. First photo session ~April 6. Social Media Starter package.",
+      "color": "#10b981"
+    },
+    {
+      "name": "Peleta Henderson / Jus' Poetic",
+      "retainer": "$0 (project wrapping up)",
+      "status": "Active \u2014 Upsell Pending",
+      "recentActivity": "Website revisions Mon 12-2 PM. First newsletter + blog/SEO upsell prep Thursday. Testimonial request Monday.",
+      "color": "#10b981"
+    },
+    {
+      "name": "Nakeitha / Nikki Nyx",
+      "retainer": "$0 (awaiting retainer decision)",
+      "status": "Pitch Delivered",
+      "recentActivity": "Met in person Mar 27. Option A ($300/mo) or B ($600/mo). Follow up Mon/Tue for decision.",
+      "color": "#3b82f6"
+    },
+    {
+      "name": "Brooke Kommuck / VMC",
+      "retainer": "~$0 (practice manager)",
+      "status": "Needs Outreach",
+      "recentActivity": "38 days no contact. Rack card follow-up needed. Re-engage this week.",
+      "color": "#f59e0b"
+    }
+  ],
+  "footer": {
+    "lastUpdated": "Saturday, March 28 at 5:00 AM CDT",
+    "url": "https://cc-daily-brief.vercel.app"
+  }
+}
+render(__embeddedData);
+</script>
+
+</body>
+</html>

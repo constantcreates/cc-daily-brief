@@ -1,957 +1,226 @@
 {
-  "dateKey": "2026-03-21",
-  "date": "Saturday, March 21, 2026",
-  "greeting": "Happy Saturday, Faye!",
-  "statusBadge": "Weekend — Date Day + Light Tasks",
-  "overview": "<p><strong>Today is YOUR day.</strong> You have a local date in Bradenton with Squilliam from 8 AM to 10 PM—this is the priority. At 7 AM, you'll complete a quick 30-minute work task to upload Outscraper leads to Claude (pool cleaning, pressure washing, and competitor cities). Everything else is scheduled for tomorrow and beyond. Enjoy your date day!</p>",
-  "alerts": [
-    {
-      "id": "alert1",
-      "title": "Brooke Kommuck / VMC — 31 Days Without Contact",
-      "description": "Last contact Feb 18. Rack card follow-up drafts ready to send. Send check-in this week to re-engage.",
-      "color": "#ef4444",
-      "badge": "badge-red"
-    },
-    {
-      "id": "alert2",
-      "title": "Nancy Pile-Griffin — 30 Days Without Response",
-      "description": "Logo approved by committee, Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). Reply scheduled <strong>Wed 3/26</strong>. This is a warm lead at risk of going cold.",
-      "color": "#ef4444",
-      "badge": "badge-red"
-    },
-    {
-      "id": "alert3",
-      "title": "Kit/ConvertKit — $39/mo with ZERO Sends",
-      "description": "Newsletter platform unused. Either send your first email by end of March or cancel the subscription to save $39/mo. Decision needed soon.",
-      "color": "#f59e0b",
-      "badge": "badge-yellow"
-    },
-    {
-      "id": "alert4",
-      "title": "Clay March Newsletter — OVERDUE",
-      "description": "Content received. Draft scheduled to start <strong>Sun 3/23</strong>, finish <strong>Thu 3/27</strong>. Get it done this week.",
-      "color": "#f59e0b",
-      "badge": "badge-yellow"
-    },
-    {
-      "id": "alert5",
-      "title": "Revenue Sprint — Need $1,000 in 2 Weeks",
-      "description": "Monthly goal is $9,674. Collected $2,600 (27%). Gap: $7,074. Daily need: ~$707/day. CRM scan for quick wins scheduled <strong>Mon 3/24</strong>.",
-      "color": "#ef4444",
-      "badge": "badge-red"
-    }
-  ],
-  "schedule": {
-    "events": [
-      {
-        "id": "sched1",
-        "time": "6:00 - 7:00 AM",
-        "title": "Morning Routine",
-        "calendar": "Personal",
-        "color": "#a78bfa",
-        "status": "routine"
-      },
-      {
-        "id": "sched2",
-        "time": "7:00 - 7:30 AM",
-        "title": "Upload Outscraper Leads to Claude",
-        "subtitle": "Pool cleaning + pressure washing + competitor cities",
-        "calendar": "Primary",
-        "color": "#c8d9a0",
-        "status": "work",
-        "note": "Moved from 10 AM by optimizer. Quick task before date."
-      },
-      {
-        "id": "sched3",
-        "time": "8:00 AM - 10:00 PM",
-        "title": "Local Date in Bradenton With Squilliam",
-        "calendar": "Social",
-        "color": "#f472b6",
-        "status": "primary",
-        "note": "THIS IS THE BIG EVENT TODAY — ENJOY!"
-      },
-      {
-        "id": "sched4",
-        "time": "9:00 - 10:00 PM",
-        "title": "Evening Routine",
-        "calendar": "Personal",
-        "color": "#a78bfa",
-        "status": "routine"
-      },
-      {
-        "id": "sched5",
-        "time": "10:00 PM",
-        "title": "Sleep",
-        "calendar": "Personal",
-        "color": "#a78bfa",
-        "status": "routine"
-      }
-    ],
-    "dayTip": "Today is a low-work day by design. Your date with Squilliam is the priority. The 7 AM task is quick and can be done in 30 minutes. Relax and enjoy!",
-    "weekHighlights": [
-      "Sunday 3/23: Clay/Hallwood Bound Presentation + Rush Revisions (~3hrs, $500 revenue), VMC Staff Headshots 2-4 PM at Lakewood Ranch, Start Clay March Newsletter, Peleta Blog Package Follow-Up, Quick Wendy/Robert Seal/Kolby tasks, Test Peleta Newsletter Automation, Weekly Personal Check-In",
-      "Monday 3/24: Rooks Advertising In-Office 9AM-5:30PM, CC Quick Tasks 5:30-6:30 PM, <strong>Revenue Sprint: Scan CRM for quick-win prospects</strong>, Respond to Magate Sekonya, Check in with Nakeitha/Nikki Nyx, Izzy Hangout 7-10 PM",
-      "Tuesday 3/25: Rooks Remote at Foxtail 9AM-5PM, Meal Prep 6 PM",
-      "Wednesday 3/26: Rooks In-Office 9AM-5:30PM, <strong>Invoice Clay Q1 + Rush Fee ($300-500)</strong>, <strong>Reply to Nancy Trinity UMC Logo + Peanut Business Pitch ($300+)</strong>, Cancel Asana ($61/mo savings), Invoice Peleta $99 Google Workspace, Celine Hangout 7 PM",
-      "Thursday 3/27: Wendy/VMC Work Block 9AM-12PM, VMC Tour Section Update (~1.5 hrs, $200), Nancy Trinity UMC Logo Design (~1.25 hrs), Wendy 9x11 Magnet Design Session 1, <strong>Nakeitha Discovery Call 1-1:45 PM via HoneyBook/Zoom</strong>, Finish Clay March Newsletter, Jus' Poetic Website Revisions, Call Will & Get Ready for Weekend, Sleepover With Squilliam"
-    ],
-    "asanaTasks": "Asana subscription ($61/mo) scheduled for cancellation Wed 3/26. All active tasks have been migrated to Notion. After cancellation, Notion will be your primary task management tool."
+  "lastUpdated": "2026-04-07T08:00:00Z",
+  "overview": {
+    "date": "Tuesday, April 7, 2026",
+    "healthSummary": "Moderate health with critical attention needed. Today is a Rooks workday with limited CC time (5:30-6:30 PM ~1 hour). Critical issues: Wendy Ellis Zoom meeting notes from yesterday need review, Google Business Profile showing zero engagement (0 interactions, 75 views -8%) is a major red flag, and Mailchimp trial expires TOMORROW (Apr 8) requiring immediate decision. Clay's ACH payment ($600) should have cleared yesterday—verify receipt. Two overdue tasks: lead funnel testing (Apr 3) and domain transfer call with Wendy's IT guy (Mar 25). Revenue baseline is tracking but pipeline engagement is weak.",
+    "healthRating": "needs-attention"
   },
   "revenue": {
-    "goal": 9674,
-    "collected": 2600,
-    "percent": 27,
-    "remaining": 7074,
-    "daysLeftInMonth": 10,
-    "dailyNeed": 707,
-    "metrics": [
-      {
-        "label": "Monthly Goal",
-        "value": "$9,674",
-        "sub": "March 2026 target",
-        "class": "metric-primary",
-        "color": "#3b82f6"
-      },
-      {
-        "label": "Collected This Month",
-        "value": "$2,600",
-        "sub": "27% of goal",
-        "class": "metric-success",
-        "color": "#10b981"
-      },
-      {
-        "label": "Still Needed",
-        "value": "$7,074",
-        "sub": "73% of goal",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      },
-      {
-        "label": "Daily Need",
-        "value": "$707/day",
-        "sub": "10 days remaining",
-        "class": "metric-danger",
-        "color": "#ef4444"
-      }
-    ],
-    "outstandingInvoices": [
-      {
-        "id": "inv1",
-        "client": "Peleta Henderson (Jus' Poetic)",
-        "amount": "$99",
-        "item": "Google Workspace Fee",
-        "status": "ready",
-        "dueDate": "Wed 3/26"
-      },
-      {
-        "id": "inv2",
-        "client": "Clay Griffin (Hallwood)",
-        "amount": "$300-500",
-        "item": "Q1 Invoice + Rush Fee",
-        "status": "ready",
-        "dueDate": "Wed 3/26"
-      },
-      {
-        "id": "inv3",
-        "client": "Nancy Pile-Griffin (Trinity UMC)",
-        "amount": "$300",
-        "item": "Logo Design",
-        "status": "pending-reply",
-        "dueDate": "Reply Wed 3/26"
-      },
-      {
-        "id": "inv4",
-        "client": "Nancy Pile-Griffin (Peanut Business)",
-        "amount": "$350-500",
-        "item": "Branding Package",
-        "status": "pending-reply",
-        "dueDate": "Reply Wed 3/26"
-      },
-      {
-        "id": "inv5",
-        "client": "Dr. Wendy Ellis (VMC)",
-        "amount": "$200",
-        "item": "Tour Section Update",
-        "status": "scheduled",
-        "dueDate": "Thu 3/27"
-      },
-      {
-        "id": "inv6",
-        "client": "Nakeitha Anyamele-Latney (Nikki Nyx)",
-        "amount": "TBD",
-        "item": "Outstanding Balance Check-In",
-        "status": "needs-discovery",
-        "dueDate": "Thu 3/27 Discovery Call"
-      }
-    ],
-    "recentCharges": [
-      {
-        "vendor": "Outscraper",
-        "amount": "$86.51",
-        "date": "Last 3 days",
-        "purpose": "Lead scraping for Q2 campaign (pool cleaning, pressure washing, competitor cities)"
-      },
-      {
-        "vendor": "Anthropic (Claude)",
-        "amount": "See receipt",
-        "date": "Mar 19",
-        "purpose": "AI assistant subscription"
-      },
-      {
-        "vendor": "Zoom",
-        "amount": "$13.33/mo",
-        "date": "Recurring",
-        "purpose": "Video conferencing"
-      }
-    ],
-    "fastestCashPaths": [
-      {
-        "rank": 1,
-        "action": "Invoice Clay Q1 + Rush Fee",
-        "amount": "$300-500",
-        "timeline": "Wed 3/26",
-        "effort": "15 min"
-      },
-      {
-        "rank": 2,
-        "action": "Invoice Peleta Google Workspace",
-        "amount": "$99",
-        "timeline": "Wed 3/26",
-        "effort": "5 min"
-      },
-      {
-        "rank": 3,
-        "action": "Reply Nancy Trinity UMC + Peanut Business",
-        "amount": "$300-500",
-        "timeline": "Reply Wed 3/26, work Thu 3/27",
-        "effort": "2-3 hrs"
-      },
-      {
-        "rank": 4,
-        "action": "VMC Tour Section Update",
-        "amount": "$200",
-        "timeline": "Thu 3/27",
-        "effort": "1.5 hrs"
-      },
-      {
-        "rank": 5,
-        "action": "Revenue Sprint CRM Scan",
-        "amount": "$1,000+ potential",
-        "timeline": "Mon 3/24",
-        "effort": "30 min"
-      }
+    "revenueThisMonth": 1200,
+    "projectedMonthly": 3200,
+    "pipelineRevenue": 4350,
+    "invoicesUnpaid": 1,
+    "invoicesUnpaidAmount": 0,
+    "paymentsReceivedThisWeek": 1200,
+    "newContractsSigned": 0,
+    "monthlyGoal": 5000,
+    "revenueLastMonth": 2800,
+    "weeklyTrend": [
+      {"week": "Mar 31 - Apr 6", "amount": 1200},
+      {"week": "Apr 7 - Apr 13", "amount": 0}
     ]
   },
-  "q2Campaign": {
-    "metrics": [
+  "leadPipeline": {
+    "newLeadsToday": 0,
+    "highScoreLeads": 3,
+    "brandAuditsCreated": 0,
+    "outreachEmailsSent": 1,
+    "repliesReceived": 0,
+    "warmLeadsDetected": 4,
+    "pipelineHealth": "weakening - engagement declining",
+    "topLeads": [
       {
-        "label": "Outscraper Spend This Week",
-        "value": "$86.51",
-        "sub": "Pool cleaning, pressure washing, competitors",
-        "class": "metric-primary",
-        "color": "#3b82f6"
+        "name": "Angela Jones / A Clothing",
+        "location": "Unknown",
+        "score": 95,
+        "reason": "$1K logo project - CRITICAL: Email bounced, needs resend to angela.jones013p@gmail.com TODAY"
       },
       {
-        "label": "Leads in Notion",
-        "value": "174+",
-        "sub": "From prior batches",
-        "class": "metric-info",
-        "color": "#06b6d4"
+        "name": "Nancy Pile-Griffin / Trinity UMC",
+        "location": "Unknown",
+        "score": 70,
+        "reason": "$250 logo - 6+ weeks without reply, cold lead, needs re-engagement"
       },
       {
-        "label": "SEO Audits Completed",
-        "value": "6",
-        "sub": "Ready for outreach",
-        "class": "metric-success",
-        "color": "#10b981"
+        "name": "Buzzard Springs (Clay) / Websites",
+        "location": "Unknown",
+        "score": 85,
+        "reason": "Two websites $3K - Clay dragging feet, needs follow-up"
       },
       {
-        "label": "New Batches Ready",
-        "value": "2",
-        "sub": "Upload scheduled today 7 AM",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      }
-    ],
-    "verticals": [
-      {
-        "name": "Mobile Detailing",
-        "status": "existing",
-        "notes": "Established vertical from prior campaign"
-      },
-      {
-        "name": "Pressure Washing",
-        "status": "new",
-        "leads": "New batch downloading",
-        "cities": "St. Pete, Tampa, Clearwater, Naples, Fort Myers"
-      },
-      {
-        "name": "Pool Cleaning",
-        "status": "new",
-        "leads": "New batch downloading",
-        "cities": "8 Florida cities"
-      }
-    ],
-    "nextSteps": "<p><strong>Today (7 AM):</strong> Upload new Outscraper leads to Claude. <strong>Next week:</strong> Begin outreach to pressure washing and pool cleaning leads. Use HoneyBook templates for discovery calls. Target: 10-15 discovery calls booked by end of month.</p>"
-  },
-  "leads": {
-    "metrics": [
-      {
-        "label": "Active Clients",
-        "value": "4",
-        "sub": "Clay, Wendy/VMC, Peleta, Nakeitha",
-        "class": "metric-success",
-        "color": "#10b981"
-      },
-      {
-        "label": "Warm Leads",
-        "value": "3",
-        "sub": "Nancy, Magate, Alignable",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      },
-      {
-        "label": "Discovery Calls Scheduled",
-        "value": "1",
-        "sub": "Nakeitha Thu 3/27",
-        "class": "metric-info",
-        "color": "#06b6d4"
-      },
-      {
-        "label": "Pipeline Health",
-        "value": "Building",
-        "sub": "10+ new cold outreach emails ready",
-        "class": "metric-primary",
-        "color": "#3b82f6"
-      }
-    ],
-    "cards": [
-      {
-        "id": "lead1",
-        "name": "Nancy Pile-Griffin",
-        "location": "Trinity UMC (+ Peanut Business)",
-        "score": "58/100",
-        "reason": "Logo approved by committee. Pastor Dan ready. Peanut business opportunity. Last reply Feb 19 — 30 DAYS without response. At risk of going cold.",
-        "borderColor": "#ef4444",
-        "priority": "HIGH",
-        "links": [
-          {
-            "url": "#",
-            "text": "Reply Wed 3/26",
-            "class": "link-action"
-          },
-          {
-            "url": "#",
-            "text": "Logo Work + Peanut Pitch",
-            "class": "link-revenue"
-          },
-          {
-            "url": "#",
-            "text": "Logo: $300 + Peanut: $350-500",
-            "class": "link-amount"
-          }
-        ]
-      },
-      {
-        "id": "lead2",
-        "name": "Nakeitha Anyamele-Latney (Nikki Nyx)",
-        "location": "Content Creator / Influencer",
-        "score": "50/100",
-        "reason": "59 days since contact. Discovery Call booked via HoneyBook for Thu 3/27 at 1 PM. Payment situation needs clarification. Gallery walkthrough + blog discussion planned.",
-        "borderColor": "#f59e0b",
-        "priority": "HIGH",
-        "links": [
-          {
-            "url": "https://us06web.zoom.us/j/81066393062?pwd=Pf5BUx5M2jpFBnq8a2Qe0C0QfsYDYF.1",
-            "text": "HoneyBook Discovery Call — Thu 3/27 1 PM",
-            "class": "link-zoom"
-          },
-          {
-            "url": "#",
-            "text": "Draft Emails Ready",
-            "class": "link-draft"
-          },
-          {
-            "url": "#",
-            "text": "Check Outstanding Balance",
-            "class": "link-action"
-          }
-        ]
-      },
-      {
-        "id": "lead3",
         "name": "Magate Sekonya",
-        "location": "HoneyBook Inquiry",
-        "score": "60/100",
-        "reason": "Warm lead via HoneyBook. Inquiry received. Draft response created but unsent. Respond Mon 3/24.",
-        "borderColor": "#60a5fa",
-        "priority": "MEDIUM",
-        "links": [
-          {
-            "url": "#",
-            "text": "Send Draft Response",
-            "class": "link-action"
-          },
-          {
-            "url": "#",
-            "text": "Mon 3/24",
-            "class": "link-timeline"
-          }
-        ]
-      },
-      {
-        "id": "lead4",
-        "name": "Peleta Henderson (Jus' Poetic)",
-        "location": "Content Creator / Poet",
-        "score": "Active Client",
-        "reason": "Active engagement. Website revisions from Mar 16 meeting. Blog package offered ($300/mo) — declined for now but relationship strong. $99 Google Workspace invoice pending. Newsletter confirmed working smoothly.",
-        "borderColor": "#10b981",
-        "priority": "ACTIVE",
-        "links": [
-          {
-            "url": "#",
-            "text": "Invoice $99 Wed 3/26",
-            "class": "link-revenue"
-          },
-          {
-            "url": "#",
-            "text": "Website Revisions Thu 3/27",
-            "class": "link-work"
-          },
-          {
-            "url": "#",
-            "text": "Blog Package Follow-Up",
-            "class": "link-upsell"
-          }
-        ]
-      },
-      {
-        "id": "lead5",
-        "name": "Alignable Inquiry",
-        "location": "Online Lead",
-        "score": "New",
-        "reason": "Someone inquired about small business website services (Fri 3/20). New potential lead — respond immediately.",
-        "borderColor": "#a78bfa",
-        "priority": "NEW",
-        "links": [
-          {
-            "url": "#",
-            "text": "Draft Response",
-            "class": "link-action"
-          },
-          {
-            "url": "#",
-            "text": "ASAP",
-            "class": "link-urgent"
-          }
-        ]
-      },
-      {
-        "id": "lead6",
-        "name": "Contra / Kajabi Expert",
-        "location": "Freelance Opportunity",
-        "score": "Opportunity",
-        "reason": "Selected to apply for Kajabi Expert Platform Assistance gig. Potential freelance income stream. Worth reviewing this week.",
-        "borderColor": "#8b5cf6",
-        "priority": "MEDIUM",
-        "links": [
-          {
-            "url": "#",
-            "text": "Review Application",
-            "class": "link-action"
-          },
-          {
-            "url": "#",
-            "text": "Freelance Income",
-            "class": "link-revenue"
-          }
-        ]
+        "location": "Unknown",
+        "score": 60,
+        "reason": "New inquiry - incomplete form, intro draft sent"
       }
     ]
   },
-  "blog": {
-    "published": [
-      {
-        "title": "The Power of Multiple Logos",
-        "publishedDate": "Mar 16, 2026",
-        "status": "published",
-        "stats": "36 clicks, 12,646 impressions (top performer)",
-        "link": "#"
-      },
-      {
-        "title": "Batch of 10 Posts",
-        "publishedDate": "Mar 16, 2026",
-        "status": "published",
-        "stats": "Part of 10-post publish batch",
-        "link": "#"
-      }
-    ],
-    "drafts": [
-      {
-        "title": "Clay March Newsletter Content",
-        "status": "content-received",
-        "dueDate": "Start Sun 3/23, Finish Thu 3/27",
-        "notes": "OVERDUE — Content received from Clay. Start design this Sunday."
-      }
-    ],
-    "queued": [],
-    "note": "<p><strong>Semrush Optimization:</strong> 8 new optimization ideas received Mar 20. Apply these to upcoming content for improved SEO performance. <strong>Search Console (3-month):</strong> 158 clicks, 83,600 impressions, 0.2% CTR, 181 pages indexed.</p>"
-  },
-  "seo": {
-    "metrics": [
-      {
-        "label": "Search Console Clicks",
-        "value": "158",
-        "sub": "Last 3 months",
-        "class": "metric-success",
-        "color": "#10b981"
-      },
-      {
-        "label": "Impressions",
-        "value": "83,600",
-        "sub": "Last 3 months",
-        "class": "metric-info",
-        "color": "#06b6d4"
-      },
-      {
-        "label": "Click-Through Rate",
-        "value": "0.2%",
-        "sub": "Room for improvement",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      },
-      {
-        "label": "Pages Indexed",
-        "value": "181",
-        "sub": "Active in search",
-        "class": "metric-primary",
-        "color": "#3b82f6"
-      }
-    ],
-    "topKeywords": [
-      {
-        "keyword": "The Power of Multiple Logos",
-        "clicks": 36,
-        "impressions": 12646,
-        "trend": "top-performer"
-      }
-    ],
-    "semrushNote": "8 new optimization ideas received Mar 20. Implement these recommendations in upcoming blog posts and existing content to improve rankings and click-through rates.",
-    "dataNote": "Search Console data is from the last 3 months. Focus on increasing CTR (currently 0.2%) by improving title tags and meta descriptions. Consider testing variations of high-impression, low-click keywords."
-  },
-  "subscriptions": [
-    {
-      "name": "Kit (ConvertKit)",
-      "cost": "$39/mo",
-      "status": "DECISION NEEDED",
-      "notes": "Newsletter platform. ZERO sends since activation. Either send first newsletter by end of March or cancel to save $39/mo.",
-      "action": "Send first email or cancel",
-      "priority": "high"
+  "contentEngine": {
+    "blogsScheduled": 3,
+    "blogsPublishedThisWeek": 0,
+    "blogTrafficSpikes": 0,
+    "caseStudiesPublished": 0,
+    "seoOpportunities": 2,
+    "upcomingDeadlines": 2,
+    "topPerformingBlog": {
+      "title": "None published this week",
+      "views": 0,
+      "trend": "declining"
     },
-    {
-      "name": "Asana",
-      "cost": "$61/mo",
-      "status": "CANCEL SCHEDULED",
-      "notes": "Task management. All tasks migrated to Notion. Cancellation scheduled Wed 3/26.",
-      "action": "Cancelled Wed 3/26 (saves $61/mo)",
-      "priority": "high"
-    },
-    {
-      "name": "Outscraper",
-      "cost": "Pay-as-you-go",
-      "status": "ACTIVE",
-      "notes": "$86.51 charged this week for Q2 campaign leads (pool cleaning, pressure washing, competitors).",
-      "action": "Continue using for lead generation",
-      "priority": "medium"
-    },
-    {
-      "name": "Zoom",
-      "cost": "$13.33/mo",
-      "status": "ACTIVE",
-      "notes": "Video conferencing for client meetings and discovery calls.",
-      "action": "Maintain subscription",
-      "priority": "medium"
-    },
-    {
-      "name": "Anthropic Claude",
-      "cost": "Active",
-      "status": "ACTIVE",
-      "notes": "AI assistant. Receipt received Mar 19. Essential for operations.",
-      "action": "Maintain subscription",
-      "priority": "high"
-    },
-    {
-      "name": "Semrush",
-      "cost": "Active",
-      "status": "ACTIVE",
-      "notes": "SEO tool. Provided 8 optimization ideas Mar 20.",
-      "action": "Maintain subscription",
-      "priority": "high"
-    },
-    {
-      "name": "HoneyBook",
-      "cost": "Active",
-      "status": "ACTIVE",
-      "notes": "CRM and invoicing platform. Discovery calls booked here. Essential for client management.",
-      "action": "Maintain subscription",
-      "priority": "high"
-    },
-    {
-      "name": "Squarespace",
-      "cost": "Active",
-      "status": "ACTIVE",
-      "notes": "Client website hosting platform.",
-      "action": "Maintain subscription",
-      "priority": "high"
-    },
-    {
-      "name": "Google Workspace",
-      "cost": "Active",
-      "status": "ACTIVE",
-      "notes": "Email and productivity suite. Invoice Peleta for $99 on Wed 3/26.",
-      "action": "Maintain subscription",
-      "priority": "high"
-    }
-  ],
-  "authority": {
-    "metrics": [
+    "contentCalendar": [
       {
-        "label": "LinkedIn Followers",
-        "value": "701",
-        "sub": "500+ connections",
-        "class": "metric-success",
-        "color": "#10b981"
+        "date": "2026-04-11",
+        "title": "Peleta Henderson / Jus' Poetic - Blog/SEO upsell meeting (Friday 1 PM, $300/mo pitch)",
+        "status": "scheduled"
       },
       {
-        "label": "LinkedIn Posts",
-        "value": "None",
-        "sub": "2+ weeks without posting",
-        "class": "metric-warning",
-        "color": "#f59e0b"
+        "date": "2026-04-07",
+        "title": "Publish 3 highest-priority blog posts from Notion backlog",
+        "status": "pending"
       },
       {
-        "label": "Company Page Followers",
-        "value": "12",
-        "sub": "Room to grow",
-        "class": "metric-info",
-        "color": "#06b6d4"
-      },
-      {
-        "label": "Instagram DMs",
-        "value": "5 Unread",
-        "sub": "Including from brycegoesdigital",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      }
-    ],
-    "growthOpps": "<p><strong>LinkedIn Authority:</strong> You have 701 followers and strong engagement potential. Post at least 2x per week to build authority. Consider sharing client case studies and design insights. <strong>Newsletter:</strong> Kit at $39/mo is unused — either activate it with your first send or cancel. <strong>Instagram:</strong> 5 unread DMs (including brycegoesdigital) — respond this week. <strong>SparkLoop:</strong> 2 newsletter partnership invitations waiting for review.</p>",
-    "socialLinks": [
-      {
-        "platform": "LinkedIn",
-        "followers": "701",
-        "url": "#",
-        "action": "Post 2x this week (content ideas: case studies, design tips, Q2 campaign insights)"
-      },
-      {
-        "platform": "Instagram",
-        "followers": "Active",
-        "url": "#",
-        "action": "Respond to 5 unread DMs"
-      },
-      {
-        "platform": "Newsletter (Kit)",
-        "subscribers": "0",
-        "url": "#",
-        "action": "Send first email or cancel ($39/mo)"
-      },
-      {
-        "platform": "SparkLoop",
-        "invitations": "2 pending",
-        "url": "#",
-        "action": "Review partnership opportunities"
+        "date": "2026-04-10",
+        "title": "Build Squarespace service page (1 of 7 - one every 3 days)",
+        "status": "pending"
       }
     ]
   },
-  "email": {
-    "metrics": [
-      {
-        "label": "Unread (Primary)",
-        "value": "0",
-        "sub": "All caught up",
-        "class": "metric-success",
-        "color": "#10b981"
-      },
-      {
-        "label": "Unread (Total)",
-        "value": "~30",
-        "sub": "Mostly updates, receipts, promotions",
-        "class": "metric-info",
-        "color": "#06b6d4"
-      },
-      {
-        "label": "Draft Emails Ready",
-        "value": "201+",
-        "sub": "Large outreach campaign ready",
-        "class": "metric-warning",
-        "color": "#f59e0b"
-      },
-      {
-        "label": "Key Conversations",
-        "value": "Tracked",
-        "sub": "See summary below",
-        "class": "metric-primary",
-        "color": "#3b82f6"
-      }
-    ],
-    "summary": "<p><strong>Key Updates:</strong> Peleta confirmed newsletter working smoothly (Fri 11 PM). HoneyBook meeting notes from Peleta call ready. Alignable inquiry about small business websites (potential lead). Contra selected you to apply for Kajabi Expert gig. 5 Instagram DMs including from brycegoesdigital. WordPress developer Ram cold-emailed about subcontracting.</p><p><strong>Drafts Ready to Send — NEW COLD OUTREACH:</strong> Mr. Handyman (Rob), SpringClear Pool & Spa, In Bloom Lawn & Landscape (Jim - 2 drafts: initial + follow-up), Alberti's On Main, FresKo FadeZ BarberShop, Sarasota Automotive, Magate Sekonya follow-up, Bellagena Med Spa (Julia), Phoenix Massage Spas.</p><p><strong>Drafts Ready to Send — CLIENT WORK:</strong> Peleta (Sneak Peak meta description reply), Nakeitha (Mar 27 meeting confirmation), Wendy (2 versions: Website Updates + Photoshoot, Kolby Foundation), Clay (Q2 Newsletter content request), Brooke VMC (rack card check-in). Auto-generated briefing drafts to self also included.</p>"
+  "authorityGrowth": {
+    "linkedinPostsThisWeek": 0,
+    "linkedinEngagement": 0,
+    "youtubeVideosPublished": 0,
+    "youtubeSubscriberGrowth": 0,
+    "newsletterScheduled": false,
+    "newsletterSubscribers": 0,
+    "contentMomentum": "stalled - no content published this week",
+    "linkedinTrend": [
+      {"day": "Mon", "impressions": 0},
+      {"day": "Tue", "impressions": 0},
+      {"day": "Wed", "impressions": 0}
+    ]
   },
   "opportunities": [
     {
-      "id": "opp1",
-      "class": "opp-high",
-      "priority": "HIGH",
-      "title": "Nakeitha Discovery Call Booked (Thu 3/27)",
-      "description": "First HoneyBook-scheduled call in weeks. Gallery walkthrough + blog discussion planned. This is a reactivation opportunity for a client at risk.",
-      "value": "TBD (relationship + revenue potential)",
-      "timeline": "This Thursday 1 PM",
-      "action": "Prepare talking points for gallery tour and blog strategy"
+      "type": "revenue-at-risk",
+      "title": "Resend Angela Jones Email ($1K Logo)",
+      "description": "Email to angela.jones013p@gmail.com bounced. High-value lead at risk of being lost. Resend today with apology for email issue.",
+      "priority": "high"
     },
     {
-      "id": "opp2",
-      "class": "opp-high",
-      "priority": "HIGH",
-      "title": "Clay Q1 Invoice + Rush Fee = $500+ Immediate Revenue",
-      "description": "Retainer locked through Dec 2026 at $600/mo. Relationship is strong. Rush fee for Bound Presentation ($300-500) due. Invoice scheduled Wed 3/26.",
-      "value": "$300-500",
-      "timeline": "Invoice Wed 3/26",
-      "action": "Prepare Q1 invoice + Rush fee breakdown"
+      "type": "revenue-reactivation",
+      "title": "Re-engage Nancy Pile-Griffin (Trinity UMC $250 Logo)",
+      "description": "6+ weeks without response. Lead going cold. Pastor Dan Kim wants to work with Faye. Send friendly follow-up today.",
+      "priority": "high"
     },
     {
-      "id": "opp3",
-      "class": "opp-high",
-      "priority": "HIGH",
-      "title": "Nancy Trinity UMC + Peanut Business = $650+ Revenue",
-      "description": "Logo $300 + Peanut branding $350-500. Both are warm. Logo approved by committee, Pastor Dan ready. Peanut business is new branding opportunity. Reply Wed 3/26.",
-      "value": "$300-500",
-      "timeline": "Reply Wed 3/26, Work Thu 3/27",
-      "action": "Send positive reply + samples, book design call"
+      "type": "client-meeting",
+      "title": "Review Wendy Ellis Zoom Meeting Notes (Apr 6)",
+      "description": "Zoom meeting with Dr. Wendy Ellis happened yesterday at 2 PM EDT. HoneyBook notetaker captured it. Review notes and update Notion with key takeaways and action items.",
+      "priority": "high"
     },
     {
-      "id": "opp4",
-      "class": "opp-med",
-      "priority": "MEDIUM",
-      "title": "VMC Headshot Session (Sun 3/23)",
-      "description": "Building momentum with Dr. Wendy Ellis. Fresh photos for website refresh. Tour section billable work ($200) follows.",
-      "value": "$200+",
-      "timeline": "Sun 3/23 (2-4 PM), Invoice Thu 3/27",
-      "action": "Prepare headshot shot list, follow up with tour section work"
+      "type": "operations-urgent",
+      "title": "Mailchimp Trial Decision - EXPIRES TOMORROW (Apr 8)",
+      "description": "Mailchimp trial ends in 1 day. Decide whether to add billing info or cancel. Make decision today to avoid service interruption.",
+      "priority": "high"
     },
     {
-      "id": "opp5",
-      "class": "opp-med",
-      "priority": "MEDIUM",
-      "title": "Outscraper Leads Ready for Outreach",
-      "description": "New pool cleaning + pressure washing batches ready. Upload today (7 AM), begin outreach next week. 174+ leads already in pipeline.",
-      "value": "$10,000+ pipeline potential",
-      "timeline": "Upload today, Outreach starts next week",
-      "action": "Upload leads today, send HoneyBook discovery call templates Mon/Tue"
+      "type": "revenue-verification",
+      "title": "Verify Clay Griffin ACH Payment ($600)",
+      "description": "Clay's $600 monthly retainer (ACH on the 6th) should have cleared yesterday. Check bank account and mark HoneyBook invoice as paid.",
+      "priority": "high"
     },
     {
-      "id": "opp6",
-      "class": "opp-med",
-      "priority": "MEDIUM",
-      "title": "Contra Kajabi Expert Opportunity",
-      "description": "Selected to apply for Kajabi Expert Platform Assistance gig. Worth reviewing for potential freelance income stream.",
-      "value": "Freelance income potential",
-      "timeline": "Review this week",
-      "action": "Review application requirements, decide by end of week"
+      "type": "client-upsell",
+      "title": "Prepare for Peleta Henderson Upsell Meeting (Friday Apr 11, 1 PM)",
+      "description": "Jus' Poetic upsell: Blog/SEO retainer at $300/month. 8 website revision items still pending. Review notes and prep pitch.",
+      "priority": "medium"
+    },
+    {
+      "type": "seo-technical",
+      "title": "Fix Semrush Sitemap Issues",
+      "description": "constantcreates.com: Only 70 of 1,280 sitemap pages crawled (major issue). hallwood-usa.com: 25 of 28 pages crawled (minor). Investigate sitemap.xml for CC site.",
+      "priority": "medium"
+    },
+    {
+      "type": "client-critical",
+      "title": "Follow Up: Call Wendy's IT Guy (Robert Seal) - Domain Transfer",
+      "description": "VERY OVERDUE since Mar 25. Colby Animal Foundation nonprofit site ($1,200) on hold pending IT department. Schedule call with Robert Seal today.",
+      "priority": "high"
     }
   ],
-  "actions": [
+  "recommendedActions": [
     {
-      "id": "act1",
-      "rank": 1,
-      "priority": "NOW",
-      "title": "Enjoy Your Date Day with Squilliam!",
-      "description": "Today is YOUR day. You have a local date in Bradenton from 8 AM to 10 PM. This is the priority. All work is pre-scheduled for tomorrow and beyond. Enjoy!",
-      "tag": "personal",
-      "timeEstimate": "All day",
-      "completed": false
+      "action": "Check if Clay's $600 ACH cleared yesterday (Apr 6). Verify in bank account and mark HoneyBook invoice as received/paid.",
+      "category": "revenue",
+      "impact": "high",
+      "timeEstimate": "5 min"
     },
     {
-      "id": "act2",
-      "rank": 2,
-      "priority": "TODAY",
-      "title": "Upload Outscraper Leads to Claude at 7 AM",
-      "description": "Quick work task before your date. Upload pool cleaning + pressure washing + competitor cities batches from Outscraper. This takes 30 minutes max.",
-      "tag": "operations",
-      "timeEstimate": "30 min",
-      "completed": false
+      "action": "Review Wendy Ellis Zoom meeting notes from yesterday (Apr 6, 2 PM). Update Notion with key takeaways, decisions, and next steps.",
+      "category": "client",
+      "impact": "high",
+      "timeEstimate": "10 min"
     },
     {
-      "id": "act3",
-      "rank": 3,
-      "priority": "TOMORROW",
-      "title": "Clay Hallwood Bound Presentation + Rush Revisions ($500 revenue)",
-      "description": "Client deliverable due. Design work for Bound Presentation. Rush fee billable ($300-500). Invoice on Wed 3/26.",
-      "tag": "revenue",
-      "timeEstimate": "~3 hrs",
-      "completed": false
+      "action": "Make Mailchimp trial decision TODAY: Add billing info or cancel before Apr 8 expiration. Document decision in Notion.",
+      "category": "operations",
+      "impact": "high",
+      "timeEstimate": "5 min"
     },
     {
-      "id": "act4",
-      "rank": 4,
-      "priority": "TOMORROW",
-      "title": "VMC Staff Headshots at Lakewood Ranch 2-4 PM",
-      "description": "Client photo session with Dr. Wendy Ellis. Fresh images for website refresh. Follow up with $200 tour section billable work Thu 3/27.",
-      "tag": "client",
-      "timeEstimate": "2 hrs",
-      "completed": false
+      "action": "Resend Angela Jones email to angela.jones013p@gmail.com with apology for previous bounce. Include $1K logo brief.",
+      "category": "revenue",
+      "impact": "high",
+      "timeEstimate": "10 min"
     },
     {
-      "id": "act5",
-      "rank": 5,
-      "priority": "MON 3/24",
-      "title": "Revenue Sprint — Scan CRM for Quick-Win Prospects",
-      "description": "Target: $1,000 in 2 weeks. Monthly goal is $9,674. Currently at $2,600 (27%). Gap: $7,074. Daily need: ~$707/day. Scan for quick wins in HoneyBook.",
-      "tag": "revenue",
-      "timeEstimate": "30 min",
-      "completed": false
+      "action": "Send friendly follow-up to Nancy Pile-Griffin re: Trinity UMC logo. Mention Pastor Dan Kim's interest in working with Faye.",
+      "category": "revenue",
+      "impact": "high",
+      "timeEstimate": "10 min"
     },
     {
-      "id": "act6",
-      "rank": 6,
-      "priority": "MON 3/24",
-      "title": "Respond to Magate Sekonya Inquiry",
-      "description": "Warm lead via HoneyBook. Draft response created but unsent. Send today.",
-      "tag": "outreach",
-      "timeEstimate": "15 min",
-      "completed": false
+      "action": "Test lead funnel Notion pipeline end-to-end. Mark as complete. (OVERDUE since Apr 3)",
+      "category": "operations",
+      "impact": "high",
+      "timeEstimate": "15 min"
     },
     {
-      "id": "act7",
-      "rank": 7,
-      "priority": "WED 3/26",
-      "title": "Invoice Clay Q1 + Rush Fee ($300-500)",
-      "description": "Retainer client. Q1 invoice + Rush fee for Bound Presentation. Strong relationship. Client expects invoice this week.",
-      "tag": "revenue",
-      "timeEstimate": "30 min",
-      "completed": false
+      "action": "Attempt to call Wendy's IT guy (Robert Seal) re: domain transfer for Colby Animal Foundation. Schedule callback if unavailable. (OVERDUE since Mar 25)",
+      "category": "client",
+      "impact": "high",
+      "timeEstimate": "5 min"
     },
     {
-      "id": "act8",
-      "rank": 8,
-      "priority": "WED 3/26",
-      "title": "Reply to Nancy Trinity UMC + Peanut Business Pitch ($300+)",
-      "description": "Logo approved by committee, Pastor Dan ready. Also discuss peanut business branding ($350-500). 30 days without response — urgent. This is a warming lead at risk.",
-      "tag": "outreach",
-      "timeEstimate": "30 min reply + follow-up design work",
-      "completed": false
+      "action": "Check Instagram DMs (5 unread from Bryce Goes Digital and others). Respond to any client inquiries.",
+      "category": "growth",
+      "impact": "medium",
+      "timeEstimate": "5 min"
     },
     {
-      "id": "act9",
-      "rank": 9,
-      "priority": "WED 3/26",
-      "title": "Cancel Asana Subscription (saves $61/mo)",
-      "description": "All tasks migrated to Notion. Asana is no longer needed. Cancellation scheduled for Wed 3/26.",
-      "tag": "operations",
-      "timeEstimate": "15 min",
-      "completed": false
+      "action": "Investigate Semrush sitemap crawl issue for constantcreates.com (only 70/1280 pages). Check robots.txt and sitemap.xml in Vercel.",
+      "category": "operations",
+      "impact": "medium",
+      "timeEstimate": "10 min"
     },
     {
-      "id": "act10",
-      "rank": 10,
-      "priority": "THU 3/27",
-      "title": "Nakeitha Discovery Call 1 PM via HoneyBook/Zoom",
-      "description": "First HoneyBook discovery call in weeks. Zoom link: https://us06web.zoom.us/j/81066393062?pwd=Pf5BUx5M2jpFBnq8a2Qe0C0QfsYDYF.1. Gallery walkthrough + blog strategy discussion. Check outstanding balance.",
-      "tag": "client",
-      "timeEstimate": "45 min",
-      "completed": false
+      "action": "Prep for Peleta Henderson Friday upsell meeting (Apr 11, 1 PM). Review 8 pending website revisions and blog/SEO pitch ($300/mo).",
+      "category": "revenue",
+      "impact": "medium",
+      "timeEstimate": "10 min"
     }
   ],
-  "clients": [
-    {
-      "id": "client1",
-      "name": "Clay Griffin / Hallwood Marketing",
-      "status": "Excellent",
-      "retainer": "$600/mo",
-      "retainerStatus": "Active through Dec 2026",
-      "engagement": "Very active, responsive",
-      "recentActivity": "Newsletter content received. Bound Presentation due Sun 3/23. Rush fee billable.",
-      "nextAction": "Invoice Q1 + Rush fee Wed 3/26 ($300-500)",
-      "daysSinceContact": 1,
-      "relationship": "Strong — spouse relationship with Nancy (Trinity UMC lead). Keep this client very happy.",
-      "color": "#10b981"
-    },
-    {
-      "id": "client2",
-      "name": "Dr. Wendy Ellis / VMC (Veterinary Medical Center)",
-      "status": "Re-engaging",
-      "retainer": "Project-based",
-      "retainerStatus": "Active",
-      "engagement": "Moderate — Headshots scheduled.",
-      "recentActivity": "Headshots scheduled Sun 3/23 at Lakewood Ranch. Website tour section needs update ($200 billable).",
-      "nextAction": "Headshot session Sun 3/23, Invoice tour section work Thu 3/27",
-      "daysSinceContact": 1,
-      "relationship": "Good — building momentum with headshots and fresh content. Check in regularly.",
-      "color": "#f59e0b"
-    },
-    {
-      "id": "client3",
-      "name": "Peleta Henderson / Jus' Poetic",
-      "status": "Active",
-      "retainer": "Project-based + Newsletter",
-      "retainerStatus": "Active",
-      "engagement": "High — responsive, engaged",
-      "recentActivity": "Newsletter confirmed working (Fri 11 PM). Website revisions from Mar 16 meeting. Blog package offered ($300/mo) — declined for now.",
-      "nextAction": "Invoice Google Workspace $99 Wed 3/26, Website revisions Thu 3/27",
-      "daysSinceContact": 2,
-      "relationship": "Strong — good upsell potential with blog package. Continue nurturing.",
-      "color": "#10b981"
-    },
-    {
-      "id": "client4",
-      "name": "Nakeitha Anyamele-Latney / Nikki Nyx",
-      "status": "At Risk",
-      "retainer": "Project-based",
-      "retainerStatus": "Active (payment check needed)",
-      "engagement": "Low — Discovery Call booked.",
-      "recentActivity": "Discovery call booked via HoneyBook for Thu 3/27 at 1 PM. Outstanding balance needs clarification. Draft emails ready.",
-      "nextAction": "Discovery Call Thu 3/27 — Gallery walkthrough + blog strategy",
-      "daysSinceContact": 2,
-      "relationship": "At risk — reactivation opportunity. Prepare strong value proposition for discovery call.",
-      "color": "#f59e0b"
-    },
-    {
-      "id": "client5",
-      "name": "Nancy Pile-Griffin / Trinity UMC (+ Peanut Business)",
-      "status": "Going Cold",
-      "retainer": "Project-based",
-      "retainerStatus": "Active",
-      "engagement": "Low — 30 days without response (was 27 on Mar 18)",
-      "recentActivity": "Logo approved by committee. Pastor Dan ready to proceed. Also has peanut business branding opportunity ($350-500). No response since Feb 19.",
-      "nextAction": "Reply Wed 3/26 with updated samples + enthusiasm",
-      "daysSinceContact": 30,
-      "relationship": "At risk — CRITICAL. This is Clay's wife (retainer client). Losing Nancy could affect Clay relationship. Respond immediately with value + excitement.",
-      "color": "#ef4444"
-    },
-    {
-      "id": "client6",
-      "name": "Brooke Kommuck / VMC",
-      "status": "Needs Follow-up",
-      "retainer": "Project-based",
-      "retainerStatus": "Active",
-      "engagement": "Low — No recent activity",
-      "recentActivity": "Rack card template needed. Draft emails ready for follow-up.",
-      "nextAction": "Send rack card follow-up email (2 versions ready)",
-      "daysSinceContact": 31,
-      "relationship": "Good — quick follow-up will re-engage.",
-      "color": "#ef4444"
-    }
-  ],
-  "footer": {
-    "lastUpdated": "Saturday, March 21 at 5:00 AM ET",
-    "url": "https://cc-daily-brief.vercel.app",
-    "credits": "Daily Brief for Constant Creates | Built for Faye Constant, Founder"
-  }
+  "strategicSuggestions": [
+    "Google Business Profile Emergency: Zero engagement (0 interactions, 75 views -8% YoY) is a critical red flag for local visibility. Immediately audit GBP listing, ensure all information is complete and verified, add high-quality photos/videos, and post weekly updates. This directly impacts inbound lead quality.",
+    "Pipeline Engagement Crisis: With only 4 warm leads and declining reply rates, consider a structured outreach sequence (email-LinkedIn-phone) for cold-warming. Nancy (6+ weeks silent) and Angela (bounced email) are immediate revenue at risk.",
+    "Q2 Content Strategy: Zero blog posts published this week despite 3 scheduled and 7 Squarespace service pages pending. Dedicate recurring time block (Tuesdays 10-11 AM post-Rooks?) to content publishing to fuel organic traffic and authority growth.",
+    "Mailchimp Decision: If keeping email newsletter, migrate to affordable tier (Brevo/ConvertKit) to reduce monthly costs. If pausing, document subscriber list for future use.",
+    "Sitemap Technical Debt: Only 70 of 1,280 pages crawled on constantcreates.com is a major SEO issue. Fix sitemap.xml, remove non-indexable pages, and prioritize crawlable content. This blocks organic discovery.",
+    "Revenue Target at Risk: April pace ($1,200 in 7 days = ~$5,140/month projected) is on track for $5K goal, but only with retained clients. Focus energy on closing Angela ($1K), reactivating Nancy ($250), and Peleta upsell ($300) to build safety margin.",
+    "Wendy Ellis (VMC) - $2K/month Client: Meeting notes from yesterday likely contain critical action items for website redesign (photo updates, metadata SEO, page revisions). Prioritize review to keep momentum and avoid delays.",
+    "Domain Transfer Blocker: Colby Animal Foundation nonprofit site ($1,200) is stalled waiting for Wendy's IT department. One phone call to Robert Seal could unblock $1,200 in immediate revenue. This is overdue 12+ days.",
+    "Limited CC Time Constraint: Tuesday is a Rooks full day with only ~1 hour CC window (5:30-6:30 PM). Be ruthless about prioritization. Today: verification, follow-ups, and testing only. Complex strategy work moves to lower-Rooks days.",
+    "Q2 Authority Push: Reactivate LinkedIn + blog content engine to establish thought leadership and warm up cold pipeline. Consider 1-2 LinkedIn posts/week + 2 blog posts/month minimum to drive inbound and SEO growth."
+  ]
 }
