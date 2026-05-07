@@ -1,1 +1,12 @@
-{"history":[{"date":"2026-05-06","tasks":["Eat a high-protein meal before noon","Pick out tomorrow's outfit tonight"]}]}
+{
+  "history": [
+    {
+      "date": "2026-05-07",
+      "task": "Eat a high-protein meal before noon"
+    },
+    {
+      "date": "2026-05-07",
+      "task": "5-minute desk reset before close of day"
+    }
+  ]
+}
