@@ -3,49 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CC Daily Brief — Wednesday, May 13, 2026</title>
+<title>CC Daily Brief — Thursday, May 14, 2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@700;900&display=swap');
+
   :root {
-    --bg: #0e0e11; --surface: #17171c; --surface-raised: #1e1e25; --border: #2a2a35;
-    --text: #e8e6e3; --text-muted: #8a8a96; --text-dim: #5e5e6a;
-    --accent: #c9a45c; --accent-glow: rgba(201,164,92,0.15);
-    --critical: #ef4444; --critical-bg: rgba(239,68,68,0.10);
-    --urgent: #f97316; --urgent-bg: rgba(249,115,22,0.10);
-    --high: #eab308; --high-bg: rgba(234,179,8,0.08);
-    --warning: #f59e0b; --warning-bg: rgba(245,158,11,0.08);
-    --medium: #3b82f6; --medium-bg: rgba(59,130,246,0.08);
-    --done: #22c55e; --done-bg: rgba(34,197,94,0.10);
-    --green: #22c55e; --graphite: #6b7280; --lavender: #a78bfa;
-    --blue: #3b82f6; --yellow-pill: #facc15;
+    --bg: #0e0e11;
+    --surface: #17171c;
+    --surface-raised: #1e1e25;
+    --border: #2a2a35;
+    --text: #e8e6e3;
+    --text-muted: #8a8a96;
+    --text-dim: #5e5e6a;
+    --accent: #c9a45c;
+    --accent-glow: rgba(201,164,92,0.15);
+    --critical: #ef4444;
+    --critical-bg: rgba(239,68,68,0.10);
+    --urgent: #f97316;
+    --urgent-bg: rgba(249,115,22,0.10);
+    --high: #eab308;
+    --high-bg: rgba(234,179,8,0.08);
+    --warning: #f59e0b;
+    --warning-bg: rgba(245,158,11,0.08);
+    --medium: #3b82f6;
+    --medium-bg: rgba(59,130,246,0.08);
+    --done: #22c55e;
+    --done-bg: rgba(34,197,94,0.10);
+    --green: #22c55e;
+    --graphite: #6b7280;
+    --lavender: #a78bfa;
+    --blue: #3b82f6;
+    --yellow-pill: #facc15;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', system-ui, sans-serif; line-height: 1.6; min-height: 100vh; }
-  .noise { position: fixed; inset:0; z-index:0; pointer-events:none; opacity:0.03;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-  .container { position: relative; z-index: 1; max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
-  header.brief-header { border-bottom: 1px solid var(--border); padding-bottom: 28px; margin-bottom: 32px; }
-  .eyebrow { color: var(--accent); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
-  h1 { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 44px; line-height: 1.1; margin-top: 8px; letter-spacing: -0.01em; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .noise {
+    position: fixed; inset:0; z-index:0; pointer-events:none; opacity:0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .container {
+    position: relative; z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  header.brief-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.1;
+    margin-top: 8px;
+    letter-spacing: -0.01em;
+  }
   h1 .accent { color: var(--accent); font-style: italic; }
-  .subtitle { color: var(--text-muted); margin-top: 12px; font-size: 15px; }
-  .meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-  .meta span { background: var(--surface); border: 1px solid var(--border); padding: 7px 12px; border-radius: 999px; font-size: 12px; color: var(--text-muted); }
+  .subtitle {
+    color: var(--text-muted);
+    margin-top: 12px;
+    font-size: 15px;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+  }
+  .meta span {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
   .meta span strong { color: var(--text); font-weight: 700; }
-  section.block { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 18px; }
-  section.block h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; margin-bottom: 14px; color: var(--text); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-  section.block h2 .count { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em; }
-  section.block .section-intro { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; font-style: italic; }
-  .item { background: var(--surface-raised); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+
+  section.block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 18px;
+  }
+  section.block h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  section.block h2 .count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  section.block .section-intro {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .item {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
   .item:last-child { margin-bottom: 0; }
   .item .row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-  .item .title { font-weight: 700; color: var(--text); font-size: 15px; margin-bottom: 4px; }
-  .item .desc { color: var(--text-muted); font-size: 14px; line-height: 1.55; }
+  .item .title {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .item .desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
   .item .desc strong { color: var(--text); font-weight: 600; }
-  .item .meta-line { margin-top: 8px; font-size: 12px; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+  .item .meta-line {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    display: flex; flex-wrap: wrap; gap: 8px 14px;
+    align-items: center;
+  }
   .item a { color: var(--accent); text-decoration: none; border-bottom: 1px dashed rgba(201,164,92,0.3); }
   .item a:hover { color: #e5c688; }
-  .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .pill {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
   .pill.critical { background: var(--critical-bg); color: var(--critical); border: 1px solid rgba(239,68,68,0.3); }
   .pill.urgent { background: var(--urgent-bg); color: var(--urgent); border: 1px solid rgba(249,115,22,0.3); }
   .pill.high { background: var(--high-bg); color: var(--high); border: 1px solid rgba(234,179,8,0.3); }
@@ -56,39 +176,142 @@
   .pill.gray { background: rgba(107,114,128,0.10); color: var(--graphite); border: 1px solid rgba(107,114,128,0.3); }
   .pill.lavender { background: rgba(167,139,250,0.10); color: var(--lavender); border: 1px solid rgba(167,139,250,0.3); }
   .pill.yellow { background: rgba(250,204,21,0.10); color: var(--yellow-pill); border: 1px solid rgba(250,204,21,0.3); }
-  .tag { display:inline-block; padding: 1px 7px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; border-radius: 4px; margin-right: 6px; }
+
+  .tag {
+    display:inline-block;
+    padding: 1px 7px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    margin-right: 6px;
+  }
   .tag.revenue { background: rgba(34,197,94,0.12); color: var(--green); }
   .tag.urgency { background: rgba(249,115,22,0.12); color: var(--urgent); }
   .tag.recommended { background: var(--accent-glow); color: var(--accent); }
-  .progress-bar { background: rgba(255,255,255,0.06); border-radius: 999px; height: 8px; overflow: hidden; margin-top: 6px; margin-bottom: 4px; }
-  .progress-bar .fill { background: linear-gradient(90deg, var(--accent), #e5c688); height: 100%; border-radius: 999px; transition: width 0.4s ease; }
-  .progress-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
-  .progress-row span:last-child { color: var(--accent); font-weight: 600; }
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  @media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
-  .schedule-line { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
-  .schedule-line:last-child { border-bottom: none; }
-  .schedule-line .time { font-weight: 700; color: var(--accent); min-width: 130px; font-size: 13px; font-feature-settings: "tnum"; }
-  .schedule-line .what { font-size: 14px; color: var(--text); }
-  .schedule-line .what .where { font-size: 12px; color: var(--text-muted); display:block; margin-top: 2px; }
-  .health-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
-  .health-card { background: var(--surface-raised); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
-  .health-card .name { font-weight: 700; font-size: 14px; color: var(--text); margin-bottom: 4px; }
-  .health-card .biz { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-  .health-card .status { font-size: 12px; line-height: 1.5; color: var(--text-muted); }
-  .health-card .status strong { color: var(--text); font-weight: 600; }
-  .cashflow { background: var(--surface-raised); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
-  .cashflow .row { display:flex; justify-content:space-between; padding: 6px 0; font-size: 14px; border-bottom: 1px dashed var(--border); }
-  .cashflow .row:last-child { border-bottom: none; }
-  .cashflow .row .amt { color: var(--accent); font-weight: 700; font-feature-settings: "tnum"; }
-  .cashflow .row.total { padding-top: 12px; margin-top: 6px; border-top: 1px solid var(--border); font-weight: 700; }
-  .cashflow .row.total .amt { font-size: 16px; }
-  .ten-list { counter-reset: tenlist; }
-  .ten-list .item { counter-increment: tenlist; position: relative; padding-left: 44px; }
-  .ten-list .item::before { content: counter(tenlist, decimal-leading-zero); position: absolute; left: 16px; top: 14px; font-family: 'Playfair Display', serif; font-size: 16px; color: var(--accent); font-weight: 700; font-feature-settings: "tnum"; }
-  .footer-note { color: var(--text-dim); font-size: 12px; text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
-  .footer-note .quote { font-family: 'Playfair Display', serif; font-style: italic; color: var(--text-muted); font-size: 14px; margin-bottom: 10px; }
-  .small-note { font-size: 11px; color: var(--text-dim); font-style: italic; margin-top: 8px; }
+
+  .progress-bar {
+    background: rgba(255,255,255,0.06);
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+    margin-top: 6px;
+    margin-bottom: 4px;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), #e5c688);
+    border-radius: 999px;
+  }
+  .progress-row { margin-bottom: 14px; }
+  .progress-row:last-child { margin-bottom: 0; }
+  .progress-row .label-line {
+    display: flex; justify-content: space-between; gap: 12px;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .progress-row .label-line .label { color: var(--text); font-weight: 600; }
+  .progress-row .label-line .value { color: var(--accent); font-weight: 700; }
+  .progress-row .progress-note { font-size: 12px; color: var(--text-muted); }
+
+  .schedule-item {
+    display: flex; gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .schedule-item:last-child { border-bottom: none; }
+  .schedule-item .time {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 13px;
+    min-width: 110px;
+    flex-shrink: 0;
+  }
+  .schedule-item .event { font-size: 14px; color: var(--text); }
+  .schedule-item .event .note { display:block; color: var(--text-muted); font-size:12px; margin-top:2px; }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .stat-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .stat-card .lbl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .stat-card .val { font-size: 22px; color: var(--accent); font-weight: 700; font-family: 'Playfair Display', serif; margin-top: 4px; }
+  .stat-card .sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+  .client-grid {
+    display: grid; gap: 10px;
+    grid-template-columns: 1fr;
+  }
+  .client-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .client-card .header-row { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .client-card .name { font-weight: 700; color: var(--text); font-size: 15px; }
+  .client-card .business { color: var(--text-muted); font-size: 12px; margin-top: 1px; }
+  .client-card .notes { color: var(--text-muted); font-size: 13px; margin-top: 8px; line-height: 1.5; }
+  .client-card .last-contact { font-size: 11px; color: var(--text-dim); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  .courses-list { display: flex; flex-direction: column; gap: 6px; }
+  .course-row {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .course-row .nm { color: var(--text); }
+  .course-row .badge { font-size: 10px; padding: 2px 7px; border-radius: 4px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .course-row .badge.built { background: rgba(34,197,94,0.15); color: var(--green); }
+  .course-row .badge.building { background: rgba(234,179,8,0.15); color: var(--high); }
+  .course-row .badge.tostart { background: rgba(107,114,128,0.15); color: var(--graphite); }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .small-note {
+    font-size: 12px; color: var(--text-muted); font-style: italic;
+  }
+
+  ul.bullets { list-style:none; padding-left:0; }
+  ul.bullets li { padding: 6px 0; border-bottom: 1px dashed var(--border); font-size: 14px; color: var(--text); }
+  ul.bullets li:last-child { border-bottom: none; }
+  ul.bullets li .sub { display:block; color: var(--text-muted); font-size: 12px; margin-top:3px; }
+
+  .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+  .tool-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .tool-card .nm { color: var(--text); font-weight: 600; }
+  .tool-card .role { color: var(--text-muted); font-size: 11px; margin-top: 2px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    .container { padding: 24px 16px 60px; }
+    section.block { padding: 18px; }
+    .schedule-item { flex-direction: column; gap: 2px; }
+    .schedule-item .time { min-width: auto; }
+  }
 </style>
 </head>
 <body>
@@ -96,490 +319,552 @@
 <div class="container">
 
 <header class="brief-header">
-  <div class="eyebrow">CC Daily Brief</div>
-  <h1>Wednesday — May <span class="accent">13</span>, 2026</h1>
-  <p class="subtitle">Heavy logistics day: Rooks shoot at 9, dentist at 1, Busy Bee shoot at 2. Cherry build needs to be closed out. Brochure starts at 5. Eat before the dentist chair.</p>
+  <div class="eyebrow">CC Daily Brief · Thursday</div>
+  <h1>May 14, 2026 <span class="accent">— Send the Nancy YES.</span></h1>
+  <p class="subtitle">Rooks day. The brief is built around the things you can actually move tonight in the 5:30 quick-tasks window: Nancy's HoneyBook scheduler, Wilson's Friday-call confirm, the sticker pack lock. Tomorrow is a six-deliverable Friday — every minute saved today buys back a Friday minute.</p>
   <div class="meta">
-    <span>MRR <strong>$3,200</strong></span>
-    <span>Goal <strong>$6,000 by Jun 1</strong></span>
-    <span>Gap <strong>$2,800</strong></span>
-    <span>Days to Rooks exit <strong>18</strong></span>
-    <span>Active retainers <strong>3</strong> (VMC, Hallwood, Busy Bee)</span>
+    <span>Generated <strong>05:00 ET</strong></span>
+    <span>MRR <strong>$3,200</strong> · Gap to $6K <strong>$2,800</strong></span>
+    <span>Pipeline <strong>Nancy YES (HOT)</strong></span>
+    <span>Active retainers <strong>3</strong> · Discovery Fri 5/15 <strong>Wilson 2 PM</strong></span>
   </div>
 </header>
 
 <!-- 1. URGENT ACTIONS -->
 <section class="block">
-  <h2>🔥 Urgent Actions <span class="count">— time-sensitive or revenue-blocking only</span></h2>
-  <div class="section-intro">Three items that move money or unblock a launch. The rest of the day is logistics.</div>
-
+  <h2>🚨 Urgent Actions <span class="count">3 truly urgent today</span></h2>
   <div class="item">
-    <div class="row"><div class="title">Mark Cherry / Brooke financial-options page DONE in Notion + ping McKenna for $50 gift card</div><span class="pill critical">Critical · 5d past due</span></div>
-    <div class="desc">Per your 5/12 reply to Brooke, the Cherry pay-over-time page and the broader finance-options page are <strong>both built</strong>. The Notion task is still flagged "To Do" / 5 days overdue. Close the task. Then email McKenna at <strong>msciacca@withcherry.com</strong> with the live URL to trigger the $50 gift card. Pure admin — under 10 minutes.</div>
-    <div class="meta-line"><span class="pill gold">Revenue · $50 + VMC trust</span><span><a href="https://www.notion.so/355c2960fceb8115a4b2d2fff25e5f56">Notion task</a></span></div>
+    <div class="row">
+      <div>
+        <div class="title">Send Nancy Pile-Griffin BSTC re-engagement draft</div>
+        <div class="desc">Nancy replied YES 5/13 12:27 PM: <em>"Yes it's time to get off the pot... interested in your help moving forward."</em> Draft <strong>19e237e9301fb815</strong> is queued and verified in Gmail — acknowledges puppy chaos warmly, sends the HoneyBook scheduler, asks for the earlier Buzzard Springs sketch. <strong>This is a $3,000 Option-1 all-in-one site green light + Trinity UMC logo still active.</strong> Don't let it cool overnight.</div>
+        <div class="meta-line">
+          <span class="pill critical">SEND TODAY</span>
+          <span>📧 griffinzoo007@gmail.com</span>
+          <span>Revenue: $3,000+ one-time, retainer potential</span>
+        </div>
+      </div>
+    </div>
   </div>
-
   <div class="item">
-    <div class="row"><div class="title">Adam Godwin (AG FunnyMan) — SEND OR DELETE the warm re-engagement draft today</div><span class="pill urgent">Decision today · 28d silent · draft 6d old</span></div>
-    <div class="desc">Draft <em>"Hey Adam — quick hello :)"</em> has been sitting since 5/7. Adam's last contact was 4/15. Re-engagement window is closing. The draft is well-written (archive nostalgia for AG FunnyMan tees, soft starter pitch $250-$500). Either send it this morning before the AOC shoot, or delete it and re-enter Adam in the cold pool. <strong>Don't let it sit a 7th day.</strong></div>
-    <div class="meta-line"><span class="pill gold">Revenue · $500-$2K starter potential</span><span>Gmail draft id 19e01ace4e71763d</span></div>
+    <div class="row">
+      <div>
+        <div class="title">Send Wilson Friday-call confirmation (T-44h to Discovery Call)</div>
+        <div class="desc">Friday 5/15 2:00 PM EDT Zoom is now ~44 hours out. Three Wilson drafts queued — <strong>send the Friday-call confirm first</strong> (draft 19e1ca29d11e3ca5), then the "further images" reply and the pre-launch DI page review. He's a Royal Vet Imaging partner; this call could open a referral channel for VMC + future veterinary clients.</div>
+        <div class="meta-line">
+          <span class="pill critical">T-44h</span>
+          <span>📧 nwilson@royalvetimaging.com</span>
+          <span>3 drafts queued</span>
+        </div>
+      </div>
+    </div>
   </div>
-
   <div class="item">
-    <div class="row"><div class="title">Confirm Busy Bee shoot time with Derek after the dentist</div><span class="pill warning">Logistics · today</span></div>
-    <div class="desc">Per the 5/12 text thread logged to Notion: Derek confirmed roughly 2 PM works for the smaller second move. You told him you had a 9 AM dentist appointment, but the actual appointment is at 1 PM. <strong>Don't correct the discrepancy</strong> — just text Derek once you're out of the chair (around 2 PM) to lock in arrival time and address. Bring backup batteries.</div>
-    <div class="meta-line"><span class="pill gold">Retainer · Busy Bee $600/mo</span></div>
+    <div class="row">
+      <div>
+        <div class="title">Send Gus VMC HBOT page acknowledgment</div>
+        <div class="desc">Gus reviewed the Hyperbaric Oxygen Therapy page and flagged one correction: sessions are 35–45 min (not 90), repeatable same-day after a 4-hr gap. Draft <strong>19e1e0716fa318f8</strong> already thanks him and commits to the fix pre-launch. Sending this today unblocks Friday's VMC photo+video edit block.</div>
+        <div class="meta-line">
+          <span class="pill urgent">SEND TODAY</span>
+          <span>📧 gus1895@gmail.com</span>
+          <span>Unblocks VMC launch</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 2. TODAY'S SCHEDULE -->
 <section class="block">
-  <h2>📅 Today's Schedule <span class="count">— Wednesday, May 13</span></h2>
-  <div class="section-intro">The 1 PM dentist + 2 PM Derek shoot eats both Rooks afternoon blocks. Take it as PTO or floating-hour swap and don't try to make Rooks happy with multitasking.</div>
-
-  <div class="schedule-line"><div class="time">8:00 AM</div><div class="what">[LinkedIn Article] "What I Wish Every Small Business Owner Knew About Brand Pricing" — auto-publish slot<span class="where">Notion-written, copy-paste or schedule before the shoot</span></div></div>
-  <div class="schedule-line"><div class="time">9:00–10:30 AM</div><div class="what">AOC shoot at Rooks (meet David + Bri)<span class="where">Exception to usual remote Wednesday — back to remote after</span></div></div>
-  <div class="schedule-line"><div class="time">9:00 AM</div><div class="what">[SFV] "The 3-Second Brand Test" — content scheduled slot<span class="where">Reel; written; cross-post handles set</span></div></div>
-  <div class="schedule-line"><div class="time">10:30 AM–12:00 PM</div><div class="what">Rooks remote — flex morning block<span class="where">Where you'd typically also slot the Cherry close-out</span></div></div>
-  <div class="schedule-line"><div class="time">12:00–1:00 PM</div><div class="what">VMC: Reply to Brooke + Cherry confirmation (auto-blocked, 60 min)<span class="where">Close the task in Notion and email McKenna — see Urgent Actions</span></div></div>
-  <div class="schedule-line"><div class="time">1:00–2:00 PM</div><div class="what">Dentist at Fort Hammer Dental<span class="where">Routine — Rooks afternoon block displaced</span></div></div>
-  <div class="schedule-line"><div class="time">2:00–3:30 PM</div><div class="what">Busy Bee shoot with Derek (second move location, smaller job)<span class="where">Confirm arrival time + address via text once you're out of dentist</span></div></div>
-  <div class="schedule-line"><div class="time">3:30–5:00 PM</div><div class="what">Rooks remote — partial afternoon block recovered<span class="where">Light Rooks tasks; do not promise heavy turnaround</span></div></div>
-  <div class="schedule-line"><div class="time">5:00–6:00 PM</div><div class="what">CC: Half-page two-fold "What I Do" brochure — start Inside Left + Inside Right<span class="where">Due 5/22. Canva or InDesign. Don't iterate the cover yet.</span></div></div>
-  <div class="schedule-line"><div class="time">6:00 PM</div><div class="what">[IG Carousel] "Before You Hire a Brand Designer: 7 Things to Have Ready" — scheduled slot<span class="where">Transparent block — written, ready</span></div></div>
+  <h2>📅 Today's Schedule <span class="count">Thursday — Rooks day, light CC window</span></h2>
+  <div class="schedule-item">
+    <div class="time">9:00 AM – 5:00 PM</div>
+    <div class="event">Rooks — In Office <span class="note">Single 9-5 block, no lunch break. No CC meetings or client calls scheduled.</span></div>
+  </div>
+  <div class="schedule-item">
+    <div class="time">5:30 – 6:30 PM</div>
+    <div class="event">Sticker pack final selection + Sticker Mule order prep <span class="note">CC Quick Tasks at Panera. Confirm V3 Top 5, hex codes, sizes (matte vinyl all), per-design quantities, single batch vs separate. Due was 5/8 — overdue.</span></div>
+  </div>
+  <div class="schedule-item">
+    <div class="time">7:00 – 10:00 PM</div>
+    <div class="event">Celine Hangout <span class="note">Non-negotiable. No work, no calls, no exceptions.</span></div>
+  </div>
+  <p class="small-note" style="margin-top:10px;">⏱ Only useful CC window is 5:30–6:30 PM. Treat the Urgent Actions above as phone-friendly tasks doable during Rooks lunch break or transitions if any open up.</p>
 </section>
 
 <!-- 3. OUTREACH DRAFTS -->
 <section class="block">
-  <h2>✉️ Outreach Drafts <span class="count">— curated for today, in priority order</span></h2>
-  <div class="section-intro">Focus on three drafts and two warm-touch social moves. The rest of the draft queue can wait until the Friday batch.</div>
+  <h2>✉️ Outreach Drafts <span class="count">5 drafts to send + 2 social actions</span></h2>
+  <p class="section-intro">Curated daily outreach plan. Revenue impact first → relationship maintenance → cold outreach. Phone-friendly where possible since today is a Rooks day.</p>
 
   <div class="item">
-    <div class="row"><div class="title">1 · Adam Godwin — send the 6-day-old warm hello</div><span class="pill urgent">Revenue · decide today</span></div>
-    <div class="desc"><strong>To:</strong> adamg1016@yahoo.com · <strong>Channel:</strong> Email (draft 19e01ace4e71763d) · <strong>What it says:</strong> Casual nostalgia about the AG FunnyMan t-shirt files in your archive, soft door-open for a logo refresh / single-piece project, no pressure either way. <strong>Why today:</strong> The 14-day re-engagement window doubled. Either commit or delete.</div>
+    <div class="row">
+      <div>
+        <div class="title">1. Nancy Pile-Griffin — Buzzard Springs/BSTC YES reply <span class="pill critical">HOT · $3K+</span></div>
+        <div class="desc"><strong>To:</strong> griffinzoo007@gmail.com · <strong>Draft:</strong> 19e237e9301fb815<br>What it says: warm acknowledgment of the puppy chaos, shares the HoneyBook scheduler for a quick kickoff call, asks for the earlier Buzzard Springs sketch she had drafted. Why today: she just said yes — every day cold = the YES gets older.</div>
+        <div class="meta-line"><span class="pill gold">REVENUE IMPACT</span><span>~3 min to send</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="item">
-    <div class="row"><div class="title">2 · Pastor Dan (Trinity UMC) — send the bell tower follow-up</div><span class="pill high">Relationship · 5d draft age</span></div>
-    <div class="desc"><strong>To:</strong> pastor@mytrinity.org · <strong>Channel:</strong> Email (draft 19e058bd1ce7345b) · <strong>What it says:</strong> Soft check-in on the bell tower concepts sent in April, acknowledges his church transition, offers to wrap up or pause cleanly on his timeline. <strong>Why today:</strong> 10 days since last contact and Nancy is your warm referral channel — graceful close-out preserves the Hallwood / Buzzard Springs trust web.</div>
+    <div class="row">
+      <div>
+        <div class="title">2. Wilson — Friday-call confirmation <span class="pill critical">SEND FIRST</span></div>
+        <div class="desc"><strong>To:</strong> nwilson@royalvetimaging.com · <strong>Draft:</strong> 19e1ca29d11e3ca5<br>What it says: confirms Fri 5/15 2 PM EDT, includes Zoom link, flags the notetaker so nothing falls through cracks. Why today: T-44h, no other prep is useful without him locked. Two follow-up Wilson drafts (further-images reply + DI page review) can go right after.</div>
+        <div class="meta-line"><span class="pill gold">REVENUE PIPELINE</span><span>Royal Vet Imaging partner channel</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="item">
-    <div class="row"><div class="title">3 · Nick Gerald (L&G Service On The Go) — send the bump</div><span class="pill medium">Relationship · 5d draft age</span></div>
-    <div class="desc"><strong>To:</strong> nicholasgerald2002@outlook.com · <strong>Channel:</strong> Email (draft 19e058be1ed4a34a) · <strong>What it says:</strong> Friendly bump on the April note, no-pressure check on whether L&G needs anything (flyer, social, refresh). <strong>Why today:</strong> Past warm contact, low-effort send, fills outreach quota without forcing a cold pitch.</div>
+    <div class="row">
+      <div>
+        <div class="title">3. Gus / VMC — HBOT page review acknowledgment</div>
+        <div class="desc"><strong>To:</strong> gus1895@gmail.com · <strong>Draft:</strong> 19e1e0716fa318f8<br>What it says: thanks Gus for the catch, confirms the 35–45 min / 4-hr-gap fix lands pre-launch. Why today: closes the loop so the Friday photo+video block isn't carrying email overhead.</div>
+        <div class="meta-line"><span class="pill high">CLIENT RETENTION</span><span>Active retainer</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="item">
-    <div class="row"><div class="title">📱 Social move 1 · Like + comment on Derek's most recent Busy Bee Instagram post before the 2 PM shoot</div><span class="pill gold">Relationship · 2 min</span></div>
-    <div class="desc">Builds rapport before you show up on the job site. Comment something specific to whatever he posted last (don't generic-emoji it). Derek prefers texting / lives on his phone, so a real comment lands.</div>
+    <div class="row">
+      <div>
+        <div class="title">4. Clay Griffin — consolidate the flyer/LinkedIn/Cherry thread reply</div>
+        <div class="desc"><strong>To:</strong> claygriffin@hallwood-usa.com · <strong>4 drafts (!) on the same thread</strong> 19e178bf27b5aee6<br>What to do: pick the most recent draft (19e2153810de36e6, 5/13 12:33), delete the older 3, and send. Clay is in active back-and-forth and an overdrafted thread is worse than a 1-day delayed thread. Why today: he replied 5/13 wanting the LinkedIn drafts back; respecting the cadence keeps the $600/mo retainer relationship warm.</div>
+        <div class="meta-line"><span class="pill high">CLIENT RETENTION</span><span>$600/mo retainer · ACH on the 6th</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="item">
-    <div class="row"><div class="title">📱 Social move 2 · Pin Peleta's 5-star Google review to Constant Creates LinkedIn before the Friday 1 PM blog/SEO retainer meeting</div><span class="pill gold">Revenue setup · 5 min</span></div>
-    <div class="desc">"Well done!!! The professionalism, seamless flow, and communication was a breath of fresh air…" — that review is your warmest social proof in the Bradenton/Sarasota orbit. Surface it ahead of the $300/mo upsell conversation Friday so Peleta sees you treating her win as a public marker.</div>
+    <div class="row">
+      <div>
+        <div class="title">5. Toreon Sears — past-client re-engagement <span class="pill warning">STALE 1d</span></div>
+        <div class="desc"><strong>To:</strong> toreonx@gmail.com · <strong>Draft:</strong> 19e2140ce54de273 (5/13)<br>What it says: warm "long time no talk" re-open. Why today: warm past client, draft has been sitting one day. Tuesday outreach run flagged him with a 5/19 cold-call deadline — send while it's still a "drop you a note" rather than a "cold call."</div>
+        <div class="meta-line"><span class="pill medium">RELATIONSHIP</span><span>Past client · cold-call deadline 5/19</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="row">
+      <div>
+        <div class="title">📱 Social Action A — Comment on Toreon's latest LinkedIn post <em>before</em> sending the re-engagement email</div>
+        <div class="desc">30-second pre-warm. A genuine comment on whatever he posted last makes the inbox email feel like a continuation, not a cold restart. If he hasn't posted recently, like the last 2 posts.</div>
+        <div class="meta-line"><span class="pill lavender">SOCIAL</span><span>~60 seconds · pairs with draft #5</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="row">
+      <div>
+        <div class="title">📱 Social Action B — Like/comment on Derek's latest Instagram post (Busy Bee Movers)</div>
+        <div class="desc">Derek's last comm was 5/2 — 12 days ago, in soft-warning territory. He prefers texting, but a quick IG touch keeps presence visible without yet escalating to "did you get my last text?" The "Behind the Brand" video pitch and 4/11 reschedule date are both still open on his end; the content calendar is the bigger overdue (27 days) but that goes in the 10-task list, not outreach.</div>
+        <div class="meta-line"><span class="pill lavender">SOCIAL</span><span>~30 seconds · soft-warning client</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- 4. ACTIVE CLIENT HEALTH -->
 <section class="block">
-  <h2>💼 Active Client Health</h2>
-  <div class="section-intro">All retainer clients are within their contact windows. Derek is the only soft warning, and the shoot today resets him to zero.</div>
-  <div class="health-grid">
-    <div class="health-card">
-      <div class="name">Dr. Wendy Ellis · VMC</div>
-      <div class="biz">$2,000/mo · last contact 5/11 (2d)</div>
-      <div class="status"><span class="pill done">Healthy</span> · Pre-launch reviews out to Kline, Gus, Redavid, Diaz, Wilson. HBOT page draft to Gus in flight. Site approaching launch; awaiting clinician sign-off. <strong>Don't lose Kat texts</strong> — she's the new ER manager you've been coordinating photos with.</div>
+  <h2>💼 Active Client Health <span class="count">3 retainers + Trinity UMC project + VMC sub-contact</span></h2>
+  <div class="client-grid">
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Dr. Wendy Ellis — VMC</div>
+          <div class="business">$2,000/mo retainer · Lakewood Ranch</div>
+        </div>
+        <span class="pill done">✅ HEALTHY · 1d</span>
+      </div>
+      <div class="notes">HoneyBook session 5/5. Pre-launch website review call 5/11 captured (grief context — she lost her other dog, hit harder than expected; treat with care). Cherry page overdue 5/8 → calendar-blocked Fri 5/15 9 AM. Photo + video edits Fri 5/15 10 AM (header videos, Blood Bank). Renewal protection workstream active (How-did-you-hear field + monthly metrics cadence).</div>
+      <div class="last-contact">Last contact: 5/13 (Wendy text)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Brooke Kommuck · VMC (secondary)</div>
-      <div class="biz">via VMC retainer · last contact 5/11 (2d)</div>
-      <div class="status"><span class="pill done">Healthy</span> · Cherry + Care Credit + Scratch Pay page <strong>built</strong>. Notion task still says To Do — close it today (see Urgent Actions).</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Clay Griffin — Hallwood Enterprises</div>
+          <div class="business">$600/mo retainer · ACH on the 6th</div>
+        </div>
+        <span class="pill done">✅ HEALTHY · 1d</span>
+      </div>
+      <div class="notes">Biweekly Zoom 5/11 logged. Mar-Apr-May 2026 paid. Active thread: flyer + LinkedIn drafts + Cherry follow-up — <strong>4 drafts stacked on one thread, needs consolidation today.</strong> RUSH 10-year doc accepted 3/19. LinkedIn work is the priority over invoice reminders per current rules.</div>
+      <div class="last-contact">Last contact: 5/13 (4 outbound drafts queued)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Clay Griffin · Hallwood Enterprises</div>
-      <div class="biz">$600/mo · last contact 5/11 (2d)</div>
-      <div class="status"><span class="pill done">Healthy</span> · Biweekly Zoom 5/11 ran cleanly. Flyer + 5 weeks of LinkedIn posts + 2 interview Qs for 5/25 delivered same day. <strong>Still waiting on Clay's Q2 newsletter email list.</strong> May ACH retainer ($600) due 5/6 — confirm posting.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Derek Mardones — Busy Bee Movers</div>
+          <div class="business">$600/mo Social Media Starter</div>
+        </div>
+        <span class="pill warning">⚠️ SOFT WARNING · 12d</span>
+      </div>
+      <div class="notes">Last comm 5/2 (Metricool invite + May content cal sent at 12:51 AM). Derek prefers texting, so absence of email reply ≠ silence — but no inbound either. <strong>14-day threshold = tomorrow 5/15</strong>; if still no inbound, send a gentle SMS nudge then. Content calendar (May/June) is 27 days overdue — Hot Money — schedule for Fri 1-4 PM Flex block. Reschedule date for monthly photo session also still open. Behind-the-Brand pitch awaiting response.</div>
+      <div class="last-contact">Last contact: 5/2 (outbound only)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Derek Mardones · Busy Bee Movers</div>
-      <div class="biz">$600/mo · last contact 5/2 (11d) + 5/12 text</div>
-      <div class="status"><span class="pill warning">Soft warning · resets today</span> · Email LCD is 11d but 5/12 text thread is logged. Shoot at 2 PM resets the clock. Behind-the-Brand pitch still open. May content delivered via Metricool 5/2.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Brooke Kommuck — VMC (sub-contact)</div>
+          <div class="business">Practice Manager, routes through Wendy</div>
+        </div>
+        <span class="pill done">✅ HEALTHY · 1d</span>
+      </div>
+      <div class="notes">Cherry/Care Credit/Scratch Pay financial-options page commitment: <strong>live by Fri 5/8</strong> — slipped, now scheduled Fri 5/15 9 AM block. Reply drafts in queue. Memorial print for Wendy still in personal-project pipeline. Biweekly Brooke check-in cadence pitch goes Mon 5/18.</div>
+      <div class="last-contact">Last contact: 5/13 (texts re: photo gift coordination)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Peleta Henderson · Jus' Poetic</div>
-      <div class="biz">Wrap-up + retainer pitch · last contact 5/8 (5d)</div>
-      <div class="status"><span class="pill done">Healthy</span> · <strong>Blog/SEO retainer pitch meeting Friday 1 PM</strong> — $300/mo. 5-star Google review live. Cover edit + Squarespace Email unsub handled.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Nancy Pile-Griffin · Trinity UMC / Buzzard Springs</div>
-      <div class="biz">Warm lead (referred by Clay) · last contact 5/11 (2d)</div>
-      <div class="status"><span class="pill warning">Watch</span> · Buzzard Springs umbrella site nudge sent 5/11. <strong>Mailer-daemon delivery delay</strong> noted on griffinzoo007@gmail.com — watch the 47-hour retry result; address may be stale.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Pastor Dan / Nancy — Trinity UMC logo</div>
+          <div class="business">$250 logo redesign · Clay's referral</div>
+        </div>
+        <span class="pill warning">⚠️ NUDGED · 1d</span>
+      </div>
+      <div class="notes">Pastor Dan pinged 5/13 11:13 UTC re: bell tower concepts. Project is in concept refinement. This is the smaller revenue line but the larger relationship line — it sits next to the Nancy Pile-Griffin BSTC $3K green-light, both flowing through the same family network. Win Trinity, win BSTC, win the network.</div>
+      <div class="last-contact">Last contact: 5/13 (Pastor Dan nudge)</div>
     </div>
   </div>
 </section>
 
 <!-- 5. PROSPECTIVE CLIENT HEALTH -->
 <section class="block">
-  <h2>🎯 Prospective Client Health <span class="count">— accurate pipeline status</span></h2>
-  <div class="section-intro">No active HoneyBook proposals/contracts out. "Outreach" and "Re-engagement" are the right labels here — nothing here is "proposal sent."</div>
+  <h2>🌱 Prospective Client Health <span class="count">Pipeline — accurate temperatures, no proposal misclassification</span></h2>
+  <p class="section-intro">"Proposal" only used when a HoneyBook contract/proposal is created. Everything pre-HoneyBook is "Initial Outreach Sent" or "Follow-up Sent."</p>
+  <div class="client-grid">
 
-  <div class="health-grid">
-    <div class="health-card">
-      <div class="name">Dr. Nedra Wilson · Royal Vet Imaging</div>
-      <div class="biz">Referral via VMC · last contact 5/12 (1d)</div>
-      <div class="status"><span class="pill done">Active conversation</span> · 5/15 2 PM discovery call booked. Reply draft on Diagnostic Imaging review in flight. Two more drafts to her also queued.</div>
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Nancy Pile-Griffin — BSTC + Griffin Farms + Lemon Beagle</div>
+          <div class="business">Buzzard Springs Trading Company · Clay's wife</div>
+        </div>
+        <span class="pill critical">🔥 HOT · Two-way 5/13</span>
+      </div>
+      <div class="notes">Green-light reply 5/13: <em>"Yes it's time to get off the pot... interested in your help moving forward."</em> Action: <strong>send draft 19e237e9301fb815 + HoneyBook proposal for $3,000 Option 1 all-in-one site.</strong> Target launch before Sept-Dec holiday window. Trinity UMC logo runs in parallel via Pastor Dan.</div>
+      <div class="last-contact">Last contact: 5/13 (incoming YES — true two-way)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Pastor Dan Kim · Trinity UMC</div>
-      <div class="biz">$250 logo · last contact 5/3 (10d)</div>
-      <div class="status"><span class="pill medium">Replied stage</span> · Bell-tower mockups out since Apr 10. Follow-up draft ready (5d). Send today — see Outreach Drafts.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Wilson — Royal Vet Imaging</div>
+          <div class="business">Discovery Call Friday 5/15 2 PM EDT</div>
+        </div>
+        <span class="pill urgent">🔥 HOT · Call T-44h</span>
+      </div>
+      <div class="notes">Initial outreach sent + 3 drafts queued. He responded actively (further-images, also-a-good-website). Friday-call confirmation must go first. After the call there's a high-fit referral channel into VMC + future veterinary clients. NOT yet at proposal — pre-HoneyBook.</div>
+      <div class="last-contact">Last contact: 5/12 (3 outbound drafts pending)</div>
     </div>
-    <div class="health-card">
-      <div class="name">Adam Godwin · AG FunnyMan</div>
-      <div class="biz">Past client · last contact 4/15 (28d)</div>
-      <div class="status"><span class="pill critical">Re-engagement needed · decide today</span> · 6-day-old draft. Send or delete — see Urgent Actions.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Toreon Sears</div>
+          <div class="business">Past client · warm re-engagement</div>
+        </div>
+        <span class="pill warning">🌤 RE-ENGAGEMENT · draft 1d old</span>
+      </div>
+      <div class="notes">Re-engagement draft 19e2140ce54de273 sitting since 5/13. Cold-call deadline 5/19 per Tuesday outreach run. Past relationship is the asset — send before it gets stale.</div>
+      <div class="last-contact">Initial outreach drafted 5/13 — not yet sent</div>
     </div>
-    <div class="health-card">
-      <div class="name">Nakeitha · Nikki Nyx Karaoke</div>
-      <div class="biz">Past client + retainer pitch · last contact 5/5 (8d)</div>
-      <div class="status"><span class="pill medium">Initial outreach sent</span> · "Picking back up on the blog convo" 5/5. Within 14-day threshold. No action today.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Magate Sekonya</div>
+          <div class="business">Inquiry · incomplete client app form</div>
+        </div>
+        <span class="pill gray">❄️ COLD · Awaiting reply</span>
+      </div>
+      <div class="notes">Intro draft sent. No two-way comms yet. NOT warm — single outbound only. Hold position unless he replies; do not chase aggressively.</div>
+      <div class="last-contact">Last contact: outbound only</div>
     </div>
-    <div class="health-card">
-      <div class="name">Toreon Sears · Sak Wabbits</div>
-      <div class="biz">Re-engagement Needed · last contact 5/12 (1d)</div>
-      <div class="status"><span class="pill medium">Initial outreach sent</span> · 5/12 nudge sent with $1,500 Starter offer + free 2-3 page visibility check. Wait for reply.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Angela Jones — "A Clothing" logo</div>
+          <div class="business">$1K minimal luxury concept</div>
+        </div>
+        <span class="pill gray">❄️ RE-ENGAGEMENT NEEDED</span>
+      </div>
+      <div class="notes">Original reply 4/2 bounced (wrong address). NEEDS RESEND to angela.jones013p@gmail.com. Angela won't click links — all info must be in body. NOT counted in "warm" because no two-way comms exist.</div>
+      <div class="last-contact">Last contact: 4/2 bounced</div>
     </div>
-    <div class="health-card">
-      <div class="name">Kim Aristimuño · Sarasota Med Center</div>
-      <div class="biz">Re-engagement Needed · last contact 5/12 (1d)</div>
-      <div class="status"><span class="pill medium">Initial outreach sent</span> · 5/12 free-visibility-check follow-up sent. Wait for reply.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Roux / Aris Sullivan</div>
-      <div class="biz">Personal warm contact · last contact 5/12 (1d)</div>
-      <div class="status"><span class="pill medium">Initial outreach sent</span> · No-agenda check-in sent 5/12. Wait for reply.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Nick Gerald · L&G Service On The Go</div>
-      <div class="biz">Past contact · last contact ~4/20 (~23d)</div>
-      <div class="status"><span class="pill high">Re-engagement Needed</span> · 5-day-old bump draft ready. Send today — see Outreach Drafts.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Liz Folce · Nakery Beauty</div>
-      <div class="biz">Active project · draft ready</div>
-      <div class="status"><span class="pill medium">Reply pending</span> · "Nakery Social Video Draft Revise" draft sitting (7d). Send by EOW.</div>
+
+    <div class="client-card">
+      <div class="header-row">
+        <div>
+          <div class="name">Hot enrichment leads (5/13 batch)</div>
+          <div class="business">CRM enrichment week</div>
+        </div>
+        <span class="pill medium">📍 NOT CONTACTED</span>
+      </div>
+      <div class="notes">4 fresh-enriched leads ready for outreach: <strong>APX Barber Co</strong> (HBO/TLC/ABC features — brand refresh story), <strong>Oxford Barber Shop</strong> (skate+barber combo, Yahoo News, owner runs Classic Ink — referral chain), <strong>Timeless Soul Barber Studio</strong> (Lakewood Ranch premium, Quick Launch fit), <strong>Sarasota Automotive</strong> (Follow-Up 1 ready — website mismatch hook = strongest pitch in batch).</div>
+      <div class="last-contact">Status: Not Contacted (Sarasota Auto = Follow-Up 1)</div>
     </div>
   </div>
 </section>
 
 <!-- 6. CASH FLOW FORECAST -->
 <section class="block">
-  <h2>💰 Cash Flow Forecast <span class="count">— per-client MRR + pipeline + gap to $6K</span></h2>
-  <div class="section-intro">$2,800/mo gap. 18 days to Rooks exit. The Peleta Friday meeting + a Nakeitha yes would close 60% of the gap.</div>
-  <div class="cashflow">
-    <div class="row"><span>VMC (Dr. Wendy Ellis) — monthly retainer</span><span class="amt">$2,000</span></div>
-    <div class="row"><span>Hallwood (Clay Griffin) — lite retainer, ACH 6th of month</span><span class="amt">$600</span></div>
-    <div class="row"><span>Busy Bee (Derek Mardones) — Social Media Starter</span><span class="amt">$600</span></div>
-    <div class="row total"><span>Current MRR</span><span class="amt">$3,200</span></div>
-    <div class="row"><span>Goal MRR (by June 1)</span><span class="amt">$6,000</span></div>
-    <div class="row total"><span>Gap to close</span><span class="amt">$2,800</span></div>
+  <h2>💰 Cash Flow Forecast <span class="count">Per-client MRR + pipeline + gap to $6K</span></h2>
+  <div class="stat-grid">
+    <div class="stat-card"><div class="lbl">Current MRR</div><div class="val">$3,200</div><div class="sub">3 retainers</div></div>
+    <div class="stat-card"><div class="lbl">Goal (Jun 1)</div><div class="val">$6,000</div><div class="sub">Quit Rooks trigger</div></div>
+    <div class="stat-card"><div class="lbl">Gap</div><div class="val">$2,800</div><div class="sub">17 days out</div></div>
+    <div class="stat-card"><div class="lbl">Pipeline (one-time)</div><div class="val">~$3,000</div><div class="sub">Nancy BSTC if booked</div></div>
   </div>
-  <h2 style="margin-top:18px;font-size:18px;">Pipeline potential (realistic, not optimistic)</h2>
-  <div class="cashflow">
-    <div class="row"><span>Peleta blog/SEO retainer — Fri 1 PM pitch</span><span class="amt">$300/mo</span></div>
-    <div class="row"><span>Nakeitha blog/SEO retainer — Option A or B</span><span class="amt">$300–600/mo</span></div>
-    <div class="row"><span>VMC broader retainer expansion (May target per Wendy)</span><span class="amt">+$1,000/mo</span></div>
-    <div class="row"><span>Trinity UMC logo (one-time) + future Nancy work</span><span class="amt">$250</span></div>
-    <div class="row"><span>Clay / Buzzard Springs Option 1 site (one-time, hesitant)</span><span class="amt">$3,000</span></div>
-    <div class="row total"><span>If Peleta + Nakeitha + VMC expansion all hit</span><span class="amt">+$1,600–1,900/mo</span></div>
-  </div>
-  <div class="small-note">Conservative read: closing the $2,800 gap by June 1 requires VMC's broader retainer expansion AND either Peleta or Nakeitha. Both being in active outreach right now is on track but not banked.</div>
+  <ul class="bullets">
+    <li><strong>VMC retainer</strong> — $2,000/mo · paid current · expected to grow ~$1,000/mo soon (broader retainer pitch land)<span class="sub">Confirmed active. Cherry page + photo edits unblocks next phase.</span></li>
+    <li><strong>Hallwood retainer</strong> — $600/mo · ACH on the 6th · Mar/Apr/May paid<span class="sub">Q1 invoice $925 paid 5/2 (mark Done in Master Task List on next sweep).</span></li>
+    <li><strong>Busy Bee Movers</strong> — $600/mo · 50% deposit collected<span class="sub">Behind 27 days on content calendar — protect retainer by delivering Sheets-only this week, even without FB admin.</span></li>
+    <li><strong>Nancy / BSTC pipeline</strong> — $3,000 one-time + retainer potential<span class="sub">$3K Option 1 all-in-one site. Send the YES reply today, send HoneyBook proposal this week.</span></li>
+    <li><strong>Wilson / Royal Vet Imaging</strong> — pipeline TBD post Fri 5/15 call<span class="sub">Could be a referral channel rather than direct retainer — value compounds.</span></li>
+    <li><strong>Outstanding invoices</strong> — HoneyBook past-due payments report (5/13) needs Faye eyes<span class="sub">Open report, identify clients to nudge — separate from Clay (forgiven legacy) and Wendy (paid current).</span></li>
+  </ul>
+  <p class="small-note" style="margin-top:14px;">Path to $6K by 6/1: Land Nancy/BSTC retainer follow-on + Peleta blog retainer ($300/mo) + Nakeitha retainer Option A ($300/mo) = +$2,100/mo. Wendy retainer growth carries the rest. Tight but reachable.</p>
 </section>
 
 <!-- 7. 10-TASK GUARANTEE -->
 <section class="block">
-  <h2>✅ Today's 10-Task Guarantee <span class="count">— revenue, admin, quick wins</span></h2>
-  <div class="section-intro">10 tangible asks for the day. If you only get 4 done, get the first 4.</div>
-  <div class="ten-list">
-    <div class="item"><span class="tag revenue">Revenue</span><span class="title">Close the Cherry / Brooke task in Notion + email McKenna for the $50 gift card</span><div class="desc">Under 10 minutes. See Urgent Actions.</div></div>
-    <div class="item"><span class="tag revenue">Revenue</span><span class="title">Send or delete the Adam Godwin draft (28d silent)</span><div class="desc">Decide today. Don't let it sit a 7th day.</div></div>
-    <div class="item"><span class="tag urgency">Logistics</span><span class="title">Text Derek post-dentist to lock in the 2 PM shoot location + arrival</span><div class="desc">Don't correct the 9 AM / 1 PM dentist discrepancy. Just confirm.</div></div>
-    <div class="item"><span class="tag revenue">Revenue</span><span class="title">Send the Pastor Dan bell tower follow-up draft</span><div class="desc">5-day-old draft. Either move it forward or pause cleanly.</div></div>
-    <div class="item"><span class="tag revenue">Revenue</span><span class="title">Send the Nick Gerald (L&G) bump draft</span><div class="desc">5-day-old draft. Low-effort send.</div></div>
-    <div class="item"><span class="tag urgency">Client work</span><span class="title">Start the half-page "What I Do" brochure — Inside Left + Inside Right panels</span><div class="desc">5–6 PM block. Due 5/22. Don't iterate cover yet.</div></div>
-    <div class="item"><span class="tag urgency">Client work</span><span class="title">Capture Derek shoot — bring backup batteries + smaller-job framing</span><div class="desc">Second move location, smaller job. Mind the timeline.</div></div>
-    <div class="item"><span class="tag urgency">Content</span><span class="title">Confirm [SFV] "3-Second Brand Test" + [IG Carousel] "7 Things to Have Ready" are queued in Metricool</span><div class="desc">Both scheduled for today. Verify before AOC shoot.</div></div>
-    <div class="item"><span class="tag urgency">Admin</span><span class="title">Send SparkLoop deletion request (draft ready)</span><div class="desc">9-hour-old draft. 60 seconds to send.</div></div>
-    <div class="item"><span class="tag revenue">Relationship</span><span class="title">Engage with Derek's most recent Busy Bee IG post before the shoot</span><div class="desc">Specific comment, not a generic emoji.</div></div>
-  </div>
+  <h2>🎯 10-Task Guarantee <span class="count">Mix of revenue, admin, quick wins</span></h2>
+  <p class="section-intro">Alternating [REVENUE] / [URGENCY] tags. Phone-friendly tasks prioritized for a Rooks day.</p>
+  <ol style="padding-left:18px; color:var(--text);">
+    <li style="margin-bottom:8px;"><span class="tag revenue">REVENUE</span> <strong>Send Nancy BSTC YES reply</strong> + HoneyBook scheduler. ~3 min, phone-friendly. (Draft 19e237e9301fb815)</li>
+    <li style="margin-bottom:8px;"><span class="tag urgency">URGENCY</span> <strong>Send Wilson Friday-call confirmation</strong> (draft 19e1ca29d11e3ca5) — T-44h Friday 2 PM Zoom.</li>
+    <li style="margin-bottom:8px;"><span class="tag revenue">REVENUE</span> <strong>Consolidate Clay's 4 stacked drafts → send the latest</strong>, delete the older 3. Active retainer hygiene.</li>
+    <li style="margin-bottom:8px;"><span class="tag urgency">URGENCY</span> <strong>Send Gus HBOT acknowledgment</strong> (draft 19e1e0716fa318f8) so Friday VMC photo block is clean.</li>
+    <li style="margin-bottom:8px;"><span class="tag revenue">REVENUE</span> <strong>Send Toreon re-engagement draft</strong> (19e2140ce54de273) before 5/19 cold-call deadline.</li>
+    <li style="margin-bottom:8px;"><span class="tag urgency">URGENCY</span> <strong>Tonight 5:30 PM:</strong> Sticker pack — lock V3 Top 5 + Sticker Mule order prep (overdue 6 days).</li>
+    <li style="margin-bottom:8px;"><span class="tag revenue">REVENUE</span> <strong>Like/comment Derek's latest IG</strong> + tee up content-calendar Sheets delivery for tomorrow's 1-4 PM Flex block (Hot Money, 27d overdue).</li>
+    <li style="margin-bottom:8px;"><span class="tag urgency">URGENCY</span> <strong>Confirm Newsletter Issue #4 ConvertKit send</strong> tomorrow 5/15 — preview, segment, hit send.</li>
+    <li style="margin-bottom:8px;"><span class="tag revenue">REVENUE</span> <strong>Open HoneyBook past-due payments report</strong> (5/13 alert) — identify 1-2 clients to nudge.</li>
+    <li><span class="tag urgency">URGENCY</span> <strong>Mark Clay's $925 Q1 invoice Done</strong> in Master Task List (already paid 5/2; cleans up the deadline alert).</li>
+  </ol>
 </section>
 
 <!-- 8. DEADLINES THIS WEEK -->
 <section class="block">
-  <h2>📌 Deadlines This Week</h2>
-  <div class="section-intro">Friday 5/15 is the load-bearing day. Plan now so it doesn't collapse.</div>
-  <div class="item"><div class="row"><div class="title">VMC: Cherry / Care Credit / Scratch Pay financial-options page</div><span class="pill critical">5d overdue · BUILT, needs close-out</span></div><div class="desc">Mark Notion task done + email McKenna today.</div></div>
-  <div class="item"><div class="row"><div class="title">Hallwood Q2 newsletter resend</div><span class="pill warning">Waiting on Clay's updated list</span></div><div class="desc">Soft target 5/13 11 AM ET if Clay's list arrives; otherwise reschedule.</div></div>
-  <div class="item"><div class="row"><div class="title">Royal Vet Imaging — Discovery call</div><span class="pill medium">Fri 5/15 2 PM</span></div><div class="desc">Wilson referred via VMC. Prep questions Thursday evening.</div></div>
-  <div class="item"><div class="row"><div class="title">Peleta — Blog/SEO retainer pitch meeting</div><span class="pill medium">Fri 5/15 1 PM</span></div><div class="desc">$300/mo proposal. Have the one-pager ready.</div></div>
-  <div class="item"><div class="row"><div class="title">CC Newsletter Issue #4 (Kit/ConvertKit)</div><span class="pill medium">Fri 5/15</span></div><div class="desc">"Read Your Homepage Out Loud — 5-Question Voice Audit" — 60-90 min draft + schedule.</div></div>
-  <div class="item"><div class="row"><div class="title">GBP fix — Constant Creates Google Business Profile</div><span class="pill urgent">5d overdue · blocked into Fri 5/15</span></div><div class="desc">10-step punch list. 90-min block 1:00–2:30 PM Fri. Won't get done today.</div></div>
-  <div class="item"><div class="row"><div class="title">Sticker pack — pick what to print</div><span class="pill urgent">4d overdue · blocked into Thu 5/14</span></div><div class="desc">V3 Top 5 + Nano Banana prompts ready. Decide hex codes, sizes, finish, quantity.</div></div>
-  <div class="item"><div class="row"><div class="title">Half-page "What I Do" brochure — Inside panels</div><span class="pill medium">Due 5/22 · start today</span></div><div class="desc">5–6 PM block on the calendar.</div></div>
+  <h2>⏰ Deadlines This Week <span class="count">6 deliverables flagged today</span></h2>
+  <ul class="bullets">
+    <li>🔴 <strong>Derek / Busy Bee Content calendar (May/June)</strong> — 27 days overdue, Urgent / Hot Money<span class="sub">Sheets-only delivery this week protects the retainer.</span></li>
+    <li>🔴 <strong>VMC Diagnostic Imaging page final draft</strong> — 6 days overdue, Urgent<span class="sub">Apply Dr. Wilson's feedback after Fri 2 PM Zoom.</span></li>
+    <li>🔴 <strong>VMC In-Home Euthanasia page final draft</strong> — 6 days overdue, High<span class="sub">Wendy in grief window — handle with care during review.</span></li>
+    <li>🔴 <strong>Tuesday outreach drafts (3 leads)</strong> — 2 days overdue, High<span class="sub">Toreon + 2 others. ~15 min total.</span></li>
+    <li>🟠 <strong>Fri 5/15 — VMC Cherry Financial Options page build</strong> — calendar-blocked 9 AM<span class="sub">Was due 5/8. Brooke + Wendy depend on this for the McKenna $50 gift card landing.</span></li>
+    <li>🟠 <strong>Fri 5/15 — GBP fix (services + categories + description)</strong> — Critical, was due 5/4<span class="sub">90-min calendar block 1-2:30 PM. Has been overdue 11 days.</span></li>
+    <li>📧 <strong>Fri 5/15 — CC Newsletter Issue #4 ConvertKit send</strong> — all-day calendar item</li>
+    <li>📋 <strong>Fri 5/15 — VMC photo + video edits</strong> (header videos, Blood Bank) — 10 AM block</li>
+    <li>📋 <strong>Fri 5/15 — VMC "How did you hear?" intake form field</strong> — 11 AM block</li>
+    <li>📅 <strong>Sat 5/23 — Busch Gardens trip starts</strong> — Airbnb still needs to be booked (personal task)</li>
+  </ul>
 </section>
 
 <!-- 9. SEO ACTION ITEMS -->
 <section class="block">
-  <h2>🔎 SEO Action Items <span class="count">— from Ahrefs (today's crawl)</span></h2>
-  <div class="section-intro">CC site error count ticked up by 2 overnight (340 total). Image weight is the top opportunity — both CC and Hallwood flagged.</div>
-  <div class="item">
-    <div class="row"><div class="title">CC: Compress 124 oversized images (NEW Ahrefs alert today)</div><span class="pill warning">Constantcreates · today's crawl</span></div>
-    <div class="desc">Image file size too large on 124 URLs. Run a batch compression pass (Squoosh or ShortPixel) — biggest single move on Health Score.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Hallwood: 2 oversized images (NEW)</div><span class="pill medium">Hallwood · today's crawl</span></div>
-    <div class="desc">Quick fix — compress + reupload. Health Score 92, will keep it climbing.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Jus' Poetic: Non-canonical page in sitemap (NEW)</div><span class="pill medium">Juspoeticllc · today's crawl</span></div>
-    <div class="desc">First Ahrefs crawl ran. Health Score 86. One sitemap canonical mismatch — clean it up while wrapping the Peleta project.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">CC: Refresh "free stock photos for commercial use" page</div><span class="pill high">Re-emerging at #37 (vol 3,200)</span></div>
-    <div class="desc">Highest-volume opportunity in the keyword set this week. Internal-link push + content refresh could move it into top 20.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">CC: Investigate loss of "squarespace email" from #28 (vol 800)</div><span class="pill medium">Investigate</span></div>
-    <div class="desc">Page may need a content refresh — was a steady ranker.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">VMC: Investigate drop of "lakewood ranch medical center" #15 → #21 (vol 2,400)</div><span class="pill warning">Homepage ranking</span></div>
-    <div class="desc">High-volume term, homepage-attributed. Worth a focused look before launch finalizes.</div>
-  </div>
+  <h2>🔍 SEO Action Items <span class="count">From Ahrefs weekly audit</span></h2>
+  <ul class="bullets">
+    <li><strong>CC — Refresh /blog/how-to-create-a-professional-email-on-squarespace-with-google-workspace</strong><span class="sub">"squarespace email" lost pos-28 ranking this week — 800/mo commercial term. Refresh content + add internal links.</span></li>
+    <li><strong>CC — Push "free stock photos for commercial use" page from pos 37 → top 20</strong><span class="sub">3,200/mo keyword re-emerging. Internal links from /diy-design-lab + content refresh. Could yield 50-150 visits/mo at pos 10-15.</span></li>
+    <li><strong>CC — Optimize SERP appearance for "character turnarounds"</strong><span class="sub">NEW pos-2 ranking but only 1 visit/wk. Tighten title + meta + schema to capture more of the 150 vol.</span></li>
+    <li><strong>CC — Resolve Brand Radar decision (overdue since 4/27)</strong><span class="sub">4 consecutive weeks of blind AI visibility. Either upgrade Ahrefs plan, find alternate tool, or formally retire the metric.</span></li>
+    <li><strong>CC — Sweep enforcement gap fix on CRM enrichment</strong><span class="sub">Switch from search-snippet inference → property-based filter ("Last SEO Audit IS NULL AND Website IS NOT NULL").</span></li>
+    <li><strong>Hallwood — Continue blog drafting</strong><span class="sub">Two outlined posts in Notion: "Built on Hallwood" (case study) + "The Virginia Advantage" (geo-modified terms). Move to Fri Flex if time.</span></li>
+    <li><strong>Jus' Poetic — Blog/SEO retainer pitch closeout</strong><span class="sub">Meeting was scheduled "Friday at 1 PM" to discuss $300/mo. Confirm this is the upcoming Friday.</span></li>
+    <li><strong>VMC — Phase 4 post-launch SEO review</strong><span class="sub">Once site launches, record findings in VMC SEO Command Center.</span></li>
+  </ul>
 </section>
 
 <!-- 10. CONTENT FOCUS -->
 <section class="block">
-  <h2>🎨 Content Focus — Wednesday</h2>
-  <div class="section-intro">Wednesday = LinkedIn Article publish + Reel ship + IG Carousel ship. Three pieces queued and ready.</div>
-  <div class="item"><div class="title">📰 LinkedIn Article (8 AM) — "What I Wish Every Small Business Owner Knew About Brand Pricing"</div><div class="desc">~1,800 words. Written. Bumped from May 12 to avoid conflict. Publish or schedule before the 9 AM shoot.</div></div>
-  <div class="item"><div class="title">🎬 SFV (9 AM) — "The 3-Second Brand Test"</div><div class="desc">Engagement-bait Reel. Cross-post to IG / TikTok / YT Shorts / FB Reels / Pinterest Idea Pin. LinkedIn becomes 5-slide carousel.</div></div>
-  <div class="item"><div class="title">🎴 IG Carousel (6 PM) — "Before You Hire a Brand Designer: 7 Things to Have Ready"</div><div class="desc">10 slides, 1080×1080 / 1080×1350. Evening slot for peak save rates.</div></div>
-  <div class="item"><div class="title">Tomorrow primer · Thu 5/14</div><div class="desc">[LinkedIn Article] "10 Questions to Ask Before You Hire a Brand Designer" at 8 AM + Kit Newsletter "Read Your Homepage Out Loud" at 11 AM.</div></div>
+  <h2>📝 Content Focus — Today<span class="count">Tight window, tight scope</span></h2>
+  <ul class="bullets">
+    <li><strong>Sticker pack — tonight 5:30 PM</strong>: lock V3 Top 5, hex codes, matte vinyl finish, per-design quantity, Sticker Mule batch decision. Print-ready means brochure batch can ride along to first event.</li>
+    <li><strong>Half-page "What I Do" brochure</strong> — continues Wednesday's start, but the calendar block is Fri 5/15 2:30 PM, not today. Just keep on the radar.</li>
+    <li><strong>Newsletter Issue #4 (ConvertKit)</strong> — sends tomorrow 5/15 all-day. Pre-flight the subject line + segment in the 5:30 window if Sticker Mule order is faster than expected.</li>
+    <li><strong>LinkedIn — repost or share one CC marketing piece</strong> mid-day from phone (Rooks bathroom break is fine). Pairs with the Recommended Personal Task suggestion of marketing yourself the way you market clients.</li>
+  </ul>
 </section>
 
 <!-- 11. WINS & MOMENTUM -->
 <section class="block">
-  <h2>🏆 Wins & Momentum</h2>
-  <div class="grid-2">
-    <div class="item"><div class="title">Peleta's 5-star Google review is your sharpest social proof in the region</div><div class="desc">Pin it to LinkedIn before Friday's $300/mo retainer meeting.</div></div>
-    <div class="item"><div class="title">Hallwood biweekly cadence is humming</div><div class="desc">Flyer + 5 weeks of LinkedIn content + interview Qs delivered same-day 5/11.</div></div>
-    <div class="item"><div class="title">Refdomains: largest single-week gain on record (+29 → 94)</div><div class="desc">Biggest organic backlink momentum CC has had. The content engine is working.</div></div>
-    <div class="item"><div class="title">NEW top-3 ranking: "character turnarounds" at #2 (vol 150)</div><div class="desc">Niche keyword conquered — commercial keyword share now at 50% (target was 25%).</div></div>
-    <div class="item"><div class="title">VMC site launch is in clinician-review phase</div><div class="desc">Kline, Gus, Redavid, Diaz, Wilson reviewing. End of the long build.</div></div>
-    <div class="item"><div class="title">Three drafts already in flight to Royal Vet Imaging</div><div class="desc">Wilson booked a 5/15 discovery call — VMC referral converting.</div></div>
-  </div>
+  <h2>🏆 Wins &amp; Momentum <span class="count">Don't lose sight</span></h2>
+  <ul class="bullets">
+    <li>🔥 <strong>Nancy Pile-Griffin said YES</strong> on Buzzard Springs/BSTC ($3K Option 1) yesterday — the slowest-moving warm lead in the pipeline just woke up.</li>
+    <li>🏅 <strong>Refdomains +29 in a single week</strong> — largest gain in audit history (65 → 94). Link-building is paying off.</li>
+    <li>🆕 <strong>NEW top-3 ranking</strong>: "character turnarounds" at pos 2 (150 vol). First new top-3 in weeks.</li>
+    <li>💬 <strong>Clay's "YOU ARE WONDERFUL" reply on 5/5</strong> — Hallwood retainer is in the warmest possible state heading into Q2.</li>
+    <li>⭐ <strong>Peleta's ⭐⭐⭐⭐⭐ Google review</strong> still sitting in the bank as testimonial gold — surface it on social + website this month.</li>
+    <li>🛠 <strong>CRM enrichment "pool exhausted" myth busted</strong> — 4 fresh leads recovered yesterday including the Sarasota Automotive mismatch hook (strongest consultative pitch in the batch).</li>
+    <li>🌱 <strong>Wendy's site work is days from launch</strong>, not weeks — Cherry page, photo edits, and DI page apply are the last gating items.</li>
+  </ul>
 </section>
 
-<!-- 11.5 PERSONAL TASKS -->
+<!-- 11.5 TODAY'S PERSONAL TASKS -->
 <section class="block">
-  <h2>📒 Today's Personal Tasks</h2>
-  <div class="section-intro">Whole-life check before the workday compresses. Two items.</div>
+  <h2>📒 Today's Personal Tasks <span class="count">1 real + 1 recommended</span></h2>
   <div class="item">
-    <div class="row"><div class="title">Book Airbnb for May 23–25 Busch Gardens trip</div><span class="pill medium">10 days out</span></div>
-    <div class="desc">Trip with Melly is the 23rd–25th. Lock in lodging before pricing creeps up. Pair with the "Send Melly Airbnb ideas" task in the same sit-down.</div>
-    <div class="meta-line"><span><a href="https://www.notion.so/341c2960fceb81628d5cd89a3c7db8e9">Notion task</a></span></div>
+    <div class="row">
+      <div>
+        <div class="title">Book Airbnb for May 23-25 Busch Gardens trip</div>
+        <div class="desc">9 days out — booking window closing. <em>Status: To Do · No due date set in Notion, but trip starts 5/23.</em></div>
+        <div class="meta-line"><span class="pill medium">PERSONAL</span><span>From Personal Task List</span><span><a href="https://www.notion.so/341c2960fceb81628d5cd89a3c7db8e9" target="_blank">Open in Notion ↗</a></span></div>
+      </div>
+    </div>
   </div>
   <div class="item">
-    <div class="row"><div class="title"><span class="tag recommended">💡 Recommended</span>Eat a high-protein meal before noon</div><span class="pill gold">Season-aligned</span></div>
-    <div class="desc">Dentist at 1 PM, then a moving-day shoot at 2 PM. Protein-first means you won't bonk halfway through Derek's job site.</div>
+    <div class="row">
+      <div>
+        <div class="title"><span class="tag recommended">💡 RECOMMENDED</span> Pick out tomorrow's outfit tonight</div>
+        <div class="desc">Friday is packed (Wendy block 9-11, dentist 11-12:45, Flex 1-4 with Cherry build + GBP fix + brochure) — a 2-min outfit choice tonight removes morning friction and supports the Type-A leveling-up season.</div>
+        <div class="meta-line"><span class="pill gold">RECOMMENDED</span><span>~2 min · Thursday evening fit</span></div>
+      </div>
+    </div>
   </div>
-  <div class="small-note"><em>Recommended tasks rotate from a season-aligned pool. Check off any that fit your day.</em></div>
+  <p class="footer-note"><em>Recommended tasks rotate from a season-aligned pool. Check off any that fit your day.</em></p>
 </section>
 
 <!-- 12. GOALS & PROGRESS -->
 <section class="block">
-  <h2>🎯 Goals & Progress</h2>
-
-  <div class="item">
-    <div class="row"><div class="title">Quit Rooks by June 1, 2026</div><span class="pill warning">18 days · 53% MRR</span></div>
-    <div class="progress-bar"><div class="fill" style="width:53.3%"></div></div>
-    <div class="progress-row"><span>$3,200 / $6,000 MRR</span><span>53%</span></div>
+  <h2>📈 Goals &amp; Progress</h2>
+  <div class="progress-row">
+    <div class="label-line"><span class="label">$6K MRR by June 1 (quit Rooks)</span><span class="value">$3,200 / $6,000 · 53%</span></div>
+    <div class="progress-bar"><div class="fill" style="width:53%"></div></div>
+    <div class="progress-note">17 days left. Nancy BSTC close + Peleta retainer + Nakeitha retainer = mathematically reachable.</div>
   </div>
-  <div class="item">
-    <div class="row"><div class="title">Hit consistent $6K months</div><span class="pill medium">Same MRR · different framing</span></div>
-    <div class="progress-bar"><div class="fill" style="width:53.3%"></div></div>
-    <div class="progress-row"><span>$3,200 / $6,000</span><span>53%</span></div>
+  <div class="progress-row">
+    <div class="label-line"><span class="label">$150K annual revenue (event sponsorship unlock)</span><span class="value">Tracking against ~$38K YTD est.</span></div>
+    <div class="progress-bar"><div class="fill" style="width:25%"></div></div>
+    <div class="progress-note">Currently ~25% of the way through CY26. Sponsorship still on hold until milestone.</div>
   </div>
-  <div class="item">
-    <div class="row"><div class="title">$150K annual revenue (unlocks sponsorship era)</div><span class="pill medium">Long arc</span></div>
-    <div class="progress-bar"><div class="fill" style="width:25.6%"></div></div>
-    <div class="progress-row"><span>$38,400 annualized at current MRR / $150,000</span><span>26%</span></div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Content machine — automated tasks running</div><span class="pill done">Active</span></div>
+  <div class="progress-row">
+    <div class="label-line"><span class="label">10-Task Guarantee — daily completion</span><span class="value">Today: 10 listed</span></div>
     <div class="progress-bar"><div class="fill" style="width:100%"></div></div>
-    <div class="progress-row"><span>102 scheduled tasks live</span><span>Live</span></div>
+    <div class="progress-note">Tracked above. Aim for 6/10 on a Rooks day — phone-friendly items only.</div>
   </div>
-  <div class="item">
-    <div class="row"><div class="title">CC brand DR (Ahrefs Domain Rating)</div><span class="pill medium">DR 28 · 4th wk flat · refdomain spike +29</span></div>
-    <div class="progress-bar"><div class="fill" style="width:28%"></div></div>
-    <div class="progress-row"><span>DR 28 / DR 100 ceiling</span><span>28%</span></div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">$10K emergency fund</div><span class="pill medium">In progress</span></div>
-    <div class="progress-bar"><div class="fill" style="width:30%"></div></div>
-    <div class="progress-row"><span>Building</span><span>30%</span></div>
+  <div class="progress-row">
+    <div class="label-line"><span class="label">VMC site launch</span><span class="value">~85% — last gates: Cherry page, photo edits, DI apply</span></div>
+    <div class="progress-bar"><div class="fill" style="width:85%"></div></div>
+    <div class="progress-note">All three gating items are scheduled on Fri 5/15.</div>
   </div>
 </section>
 
-<!-- 13. COURSES BUILT (FIP BUILDER CATALOG) -->
+<!-- 13. COURSES BUILT (after Goals, before Ideas Lab) -->
 <section class="block">
-  <h2>📚 Courses Built <span class="count">— 0 of 2 builders built</span></h2>
-  <div class="section-intro">Locked builders from the FIP Builder Catalog. Biweekly auto-build runs on anchor Sundays.</div>
-  <div class="item">
-    <div class="row"><div class="title">Belly Dancing: Mastery Course</div><span class="pill yellow">Building</span></div>
-    <div class="desc">Nested Mastery Course DB exists with multiple unit pages (Hip Isolations, Shimmy, Drum Solo, Choreography, Layering, Body Awareness, Filming + Personal Brand tie-in). 5★ Faye Recommendation.</div>
+  <h2>📚 Courses Built <span class="count">1 of 4 builders built</span></h2>
+  <div class="courses-list">
+    <div class="course-row"><span class="nm">Signature Style — The Faye Constant Approach</span><span class="badge built">Built</span></div>
+    <div class="course-row"><span class="nm">Belly Dancing: Mastery Course</span><span class="badge building">Building</span></div>
+    <div class="course-row"><span class="nm">Book Club Hosting: Mastery Course</span><span class="badge building">Building</span></div>
+    <div class="course-row"><span class="nm">Formal Multi-Course Dinner Parties</span><span class="badge tostart">To Start</span></div>
   </div>
-  <div class="item">
-    <div class="row"><div class="title">Book Club Hosting: Mastery Course</div><span class="pill yellow">Building</span></div>
-    <div class="desc">Nested Mastery Course DB exists (Why Host, Choosing First Book, Bringing in Guest Experts, Documenting What the Group Is Learning, FIP content tie-in).</div>
-  </div>
-  <div class="small-note">Next biweekly auto-build: <strong>Sunday, May 24, 2026</strong> (anchor 2026-05-10 + 14 days).</div>
+  <p class="footer-note">Next biweekly auto-build: <strong>Sun May 24, 2026</strong></p>
 </section>
 
 <!-- 14. IDEAS LAB SPOTLIGHT -->
 <section class="block">
-  <h2>💡 Ideas Lab Spotlight <span class="count">— quick wins, ≤30 min</span></h2>
-  <div class="section-intro">Wednesday rotation = Cost Savings. All three are doable in a Rooks lunch break.</div>
-  <div class="item">
-    <div class="row"><div class="title">Run Gmail filter `in:draft older_than:30d` to bulk-clear the March cold-outreach drift</div><span class="pill medium">~10 min</span></div>
-    <div class="desc">400+ stale cold drafts from the March drip sitting in the queue. One filter + select-all + delete = clean draft pipeline. Easy win.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Audit your 12-month SaaS receipts and cut 1 subscription you haven't opened in 60 days</div><span class="pill medium">~20 min</span></div>
-    <div class="desc">Semrush, Slack Pro, and Asana already gone. Next: SparkLoop (already in draft to cancel — send today). Then check the impact.com transition email and decide if Rakuten Advertising is worth keeping.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Compress the 124 oversized CC images flagged in today's Ahrefs crawl in a single Squoosh batch</div><span class="pill medium">~25 min</span></div>
-    <div class="desc">Biggest single move on CC Health Score. Combine with site refresh on the "free stock photos for commercial use" page while you're in Squarespace.</div>
-  </div>
+  <h2>💡 Ideas Lab Spotlight <span class="count">Quick wins, ≤30 min</span></h2>
+  <ul class="bullets">
+    <li><strong>Surface Peleta's 5-star review on the home page testimonials strip</strong><span class="sub">~20 min. Pull from GBP, drop into Squarespace block. Already-earned social proof working harder.</span></li>
+    <li><strong>Add "How did you hear?" dropdown to CC's own contact form</strong> (mirror the VMC field going live this week)<span class="sub">~15 min. Best-in-class metric for renewal/attribution stories. Eat the dog food.</span></li>
+    <li><strong>Save the Sarasota Automotive "website mismatch" insight as a Twitter/LinkedIn micro-post</strong><span class="sub">~10 min. Strongest consultative-pitch story in the batch. Reusable hook for cold outreach.</span></li>
+    <li><strong>Mark Q1 Hallwood $925 invoice Done</strong> in Master Task List<span class="sub">~2 min. Already paid 5/2; cleans up today's deadline alert.</span></li>
+  </ul>
 </section>
 
 <!-- 15. COMPETITOR WATCH -->
 <section class="block">
-  <h2>👀 Competitor Watch <span class="count">— one easy action each</span></h2>
-  <div class="item">
-    <div class="row"><div class="title">Angotti Design — ranks #3 for "sarasota brand design"</div><span class="pill warning">Direct keyword competitor</span></div>
-    <div class="desc"><strong>Easy action:</strong> Write one CC blog post targeting "sarasota brand designer" (local + service) — Angotti's niche is construction; CC has zero local-keyword content that competes head-on.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Dinko Design — active social media presence</div><span class="pill medium">Watch + outpace</span></div>
-    <div class="desc"><strong>Easy action:</strong> Spend 5 minutes scanning Dinko's top 3 Instagram posts from the last 30 days — note format + caption length. Steal-the-format on next week's CC carousel.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Captivation Agency — #1 for "sarasota branding agency", no GBP posts</div><span class="pill high">GBP wedge</span></div>
-    <div class="desc"><strong>Easy action:</strong> Make the CC GBP fix the Friday 1–2:30 PM block reality — Captivation's GBP is fallow. One steady CC posting cadence is a real wedge against the #1 ranker.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Marketing By Design of Sarasota — broad service offering</div><span class="pill medium">Niche advantage</span></div>
-    <div class="desc"><strong>Easy action:</strong> Pin the CC "$2,500 Brand Identity — Transparent Breakdown" LinkedIn article to your profile. They don't publish pricing. You do. Make it visible.</div>
+  <h2>👀 Competitor Watch <span class="count">3 highlighted from Notion DB</span></h2>
+  <div class="client-grid">
+    <div class="client-card">
+      <div class="header-row">
+        <div><div class="name">Dinko Design</div><div class="business">Web & Marketing · Sarasota area</div></div>
+      </div>
+      <div class="notes">Webflow shops + branding + local SEO + content + paid ads + photography + video. Their pricing page is transparent — CC's isn't. <strong>Action item:</strong> draft a transparent "starting prices" block for CC's services page this week (15 min, evergreen lift).</div>
+    </div>
+    <div class="client-card">
+      <div class="header-row">
+        <div><div class="name">Captivation Agency</div><div class="business">Video + WordPress + branding</div></div>
+      </div>
+      <div class="notes">Still does not appear in CC's organic competitor list per Ahrefs (CC's footprint is too small to surface peers). <strong>Action item:</strong> manually add Captivation as a tracked competitor in Notion so they don't disappear from radar entirely.</div>
+    </div>
+    <div class="client-card">
+      <div class="header-row">
+        <div><div class="name">Marketing By Design of Sarasota</div><div class="business">Strategic planning + design + media buying</div></div>
+      </div>
+      <div class="notes">Press relations is a service CC doesn't offer. <strong>Action item:</strong> spend 5 minutes scanning their portfolio to identify the lowest-effort case-study format CC could mimic for the existing client list.</div>
+    </div>
   </div>
 </section>
 
 <!-- 16. MARKET INSIGHTS & TRENDS -->
 <section class="block">
-  <h2>📈 Market Insights & Trends <span class="count">— one easy action each</span></h2>
-  <div class="item">
-    <div class="row"><div class="title">Metricool just published a 2026 TikTok organic-reach study (in inbox)</div><span class="pill medium">Fresh today</span></div>
-    <div class="desc"><strong>Easy action:</strong> Skim the study in 5 minutes, pull one stat, write it into the [SFV] caption for next Wednesday's 60/30/10 Reel as the social-proof anchor.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Brand Voice content week is mid-rollout</div><span class="pill medium">Funnel pairing</span></div>
-    <div class="desc"><strong>Easy action:</strong> Confirm Thursday's Kit newsletter "Read Your Homepage Out Loud" links to <strong>both</strong> the Friday blog post AND the Monday LinkedIn article — three-touch sequence is the whole point.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Pricing transparency is the highest-converting CC LinkedIn angle</div><span class="pill medium">Pattern repeating</span></div>
-    <div class="desc"><strong>Easy action:</strong> Add the $400 Brand Audit price point to the CC homepage hero today during the brochure block — surfaces a low-friction entry point above $2,500.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">HARO / Qwoted / SOS / Featured: 4 media platforms with active opportunities in inbox</div><span class="pill medium">Visibility</span></div>
-    <div class="desc"><strong>Easy action:</strong> Pick ONE Qwoted opportunity that fits a CC content lane (homepage design, brand pricing, voice) and submit a 4-sentence quote during the lunch block.</div>
-  </div>
+  <h2>🔭 Market Insights &amp; Trends</h2>
+  <ul class="bullets">
+    <li><strong>Stock-photo searches are heating up locally.</strong> "free stock photos for commercial use" (3,200/mo) re-entered CC's rankings this week alongside Pinterest, Freepik, Kaboompics, and Pixabay appearing in the competitor ring. <span class="sub">Action: refresh the existing CC stock photos blog this week — high-value, low-cost win.</span></li>
+    <li><strong>AI visibility tracking remains blind 4 weeks running.</strong> Ahrefs Brand Radar addon still unavailable; the open Master Task decision is overdue since April 27. <span class="sub">Action: pick the path today — pay for upgrade, swap to alternate tool, or formally retire the metric.</span></li>
+    <li><strong>Veterinary referral channel forming.</strong> Wilson (Royal Vet Imaging) + VMC + Royal Vet Imaging photographer Gus all flowing through one network. <span class="sub">Action: after Friday's Wilson call, build a short "veterinary niche" portfolio page even if it's evergreen.</span></li>
+    <li><strong>Local barber + automotive shops have notably weak websites</strong> per this week's enrichment (custom HTML or aging Wix, DR 0-0.3, low backlink-to-traffic ratios). <span class="sub">Action: bundle the 4 enriched leads into next Tuesday's outreach run.</span></li>
+  </ul>
 </section>
 
 <!-- 17. SEO HEALTH ALERTS -->
 <section class="block">
-  <h2>🚨 SEO Health Alerts</h2>
-  <div class="grid-2">
-    <div class="health-card">
-      <div class="name">Constant Creates</div>
-      <div class="biz">DR 28 · Health Score 78</div>
-      <div class="status">Errors <strong>340 (+2 today)</strong> · Warnings 1,473 (+1) · Notices 1,464 (+1). Top fix: <strong>124 oversized images</strong>. Refdomains spike +29 wow (94 total) — biggest gain on record.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Hallwood</div>
-      <div class="biz">Health Score 92</div>
-      <div class="status">Errors 3 · Warnings 34 · Notices 31. Today: <strong>2 NEW oversized image alerts</strong>. Branded search "hallwood" slipped #4 → #6 — unusual for a branded term.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">VMC (lakewoodranchvet.com)</div>
-      <div class="biz">Tracking via Ahrefs Rank Tracker</div>
-      <div class="status">"Lakewood ranch hospital" jumped <strong>#24 → #16 (+8)</strong>. 5 new first-page entries. One drop to investigate: "lakewood ranch medical center" #15 → #21.</div>
-    </div>
-    <div class="health-card">
-      <div class="name">Jus' Poetic</div>
-      <div class="biz">Health Score 86 · first crawl complete</div>
-      <div class="status">Errors 1 · Warnings 5 · Notices 4. New flag: <strong>1 non-canonical page in sitemap</strong>. Clean as part of Peleta wrap-up.</div>
-    </div>
-  </div>
-  <div class="small-note">Brand Radar (AI visibility) addon unavailable for the 4th consecutive week. Decision overdue (Master Task open since 4/27).</div>
+  <h2>⚠️ SEO Health Alerts</h2>
+  <ul class="bullets">
+    <li>🟡 <strong>Domain Rating flat at 28</strong> for the 4th consecutive week. New refdomains are likely low-authority — link quality matters more than quantity from here.</li>
+    <li>🟡 <strong>Organic keyword count down to 6</strong> (lowest on record, but rate of decline slowing). Two losses this week: "squarespace email" (pos 28), "writing a mission statement" (pos 71).</li>
+    <li>🟡 <strong>Traffic value still $314/wk</strong> vs $6,200/wk pre-April collapse. Stabilizing, not recovering yet.</li>
+    <li>🔵 <strong>AI visibility blind</strong> — Brand Radar 4th week unavailable. Baselines from March 23 are stale.</li>
+    <li>🟢 <strong>Refdomains +29 single-week record</strong> + new pos-2 ranking = first positive momentum signal in a month.</li>
+  </ul>
 </section>
 
 <!-- 18. TOOL INVENTORY -->
 <section class="block">
-  <h2>🧰 Tool Inventory</h2>
-  <div class="grid-2">
-    <div class="item"><div class="title">Ahrefs</div><div class="desc">$29/mo · SEO audits, keywords, backlinks · powers this brief's SEO sections.</div></div>
-    <div class="item"><div class="title">Make.com</div><div class="desc">$10.59/mo · automation backbone for Squarespace + Metricool tools.</div></div>
-    <div class="item"><div class="title">HoneyBook</div><div class="desc">Active · invoicing, contracts, booking. Booking link is the canonical CTA across all content.</div></div>
-    <div class="item"><div class="title">Metricool</div><div class="desc">Active · social analytics + scheduling for CC / VMC / Busy Bee brands.</div></div>
-    <div class="item"><div class="title">Notion</div><div class="desc">Free · CRM, tasks, content pipeline, comms log — the system of record.</div></div>
-    <div class="item"><div class="title">Cowork / Claude</div><div class="desc">Active · 102+ scheduled tasks running.</div></div>
-    <div class="item"><div class="title">Kit (ConvertKit)</div><div class="desc">Active · email sequences + Friday newsletter.</div></div>
-    <div class="item"><div class="title">Squarespace</div><div class="desc">Active · CC + VMC + Hallwood + Jus' Poetic hosting.</div></div>
-    <div class="item"><div class="title">Vercel + GitHub</div><div class="desc">Free · this dashboard auto-deploys here.</div></div>
-    <div class="item"><div class="title">Google Workspace</div><div class="desc">Active · faye@ + hello@ + records.vmc@.</div></div>
-    <div class="item"><div class="title">Recently cancelled</div><div class="desc">Semrush (Apr 15), Slack Pro (Apr 15), Asana, soon SparkLoop (draft ready to send today).</div></div>
-    <div class="item"><div class="title">On hold / unavailable</div><div class="desc">Brand Radar AI visibility addon (4 weeks unavailable — decision overdue).</div></div>
+  <h2>🧰 Tool Inventory <span class="count">Current stack</span></h2>
+  <div class="tool-grid">
+    <div class="tool-card"><div class="nm">Notion</div><div class="role">CRM, task DBs, briefing feed</div></div>
+    <div class="tool-card"><div class="nm">Gmail (faye@ + hello@)</div><div class="role">Drafts-only by rule</div></div>
+    <div class="tool-card"><div class="nm">Google Calendar</div><div class="role">Primary + Social Calendar</div></div>
+    <div class="tool-card"><div class="nm">Ahrefs (Lite plan)</div><div class="role">SEO; Brand Radar unavailable</div></div>
+    <div class="tool-card"><div class="nm">ConvertKit (Kit)</div><div class="role">Email for CC + all clients</div></div>
+    <div class="tool-card"><div class="nm">Metricool</div><div class="role">Social — CC, VMC, Busy Bee</div></div>
+    <div class="tool-card"><div class="nm">Make.com</div><div class="role">Squarespace + Metricool automation</div></div>
+    <div class="tool-card"><div class="nm">Squarespace</div><div class="role">CC + VMC + Jus' Poetic + Hallwood</div></div>
+    <div class="tool-card"><div class="nm">HoneyBook</div><div class="role">Proposals, contracts, scheduling</div></div>
+    <div class="tool-card"><div class="nm">Chrome MCP / Claude</div><div class="role">Web automation, drafting</div></div>
+    <div class="tool-card"><div class="nm">Nano Banana (Gemini CLI)</div><div class="role">AI image gen</div></div>
+    <div class="tool-card"><div class="nm">Sticker Mule</div><div class="role">Sticker pack order (tonight)</div></div>
   </div>
 </section>
 
 <!-- 19. AUTOMATION HEALTH -->
 <section class="block">
   <h2>🤖 Automation Health</h2>
-  <div class="item">
-    <div class="row"><div class="title">102 scheduled tasks running</div><span class="pill done">Healthy</span></div>
-    <div class="desc">All daily, weekly, biweekly briefings + content-pipeline tasks are firing on schedule. This brief is the 8:30 AM ET output of the cc-daily-brief-update task.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Data gaps to resolve</div><span class="pill warning">Recurring</span></div>
-    <div class="desc">Visibility Check pipeline: 0 leads tiered (day 27, escalation 22+ days overdue). CRM Enrichment Weekly: 0 leads enriched (6th consecutive sub-10 run; fresh Outscraper batch overdue). Email Filing Audit: 100+ unlabeled emails in Gmail (5th consecutive week flagged).</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Watch items</div><span class="pill medium">Low severity</span></div>
-    <div class="desc">Nancy Pile-Griffin email 5/11 — mailer-daemon delivery delay (47-hour retry pending). griffinzoo007@gmail.com may be stale; have a backup address ready.</div>
-  </div>
-  <div class="item">
-    <div class="row"><div class="title">Self-improvement log</div><span class="pill medium">Logged</span></div>
-    <div class="desc">Duplicate Email Draft Queue entry for Adam Godwin observed (client-checkin-monitor 5/7 + tuesday-lead-outreach 5/13). Dedup rule applied. No new ideas logged this run.</div>
-  </div>
+  <ul class="bullets">
+    <li>🟢 <strong>Morning pipeline running clean</strong> — gmail-inbox-sort, client-checkin-monitor, upcoming-deadline-warning, draft-reply-tracker, and cc-daily-brief-update all fired in window today.</li>
+    <li>🟢 <strong>CRM enrichment recovered</strong> — 4 leads enriched this week after methodology fix; pool was not actually exhausted.</li>
+    <li>🟡 <strong>Visibility Check pipeline broken 28+ days</strong> — escalation overdue. Recurring "0 leads tiered" entry. Needs a submit-a-real-scan test + webhook verification.</li>
+    <li>🟡 <strong>Gmail label hierarchy drift</strong> — the inbox-sort task's documented taxonomy doesn't match the actual label structure (Nancy under Cold Leads not Warm/Prospective, "Important" label retired, "Not Working With Again" still the parent). 30-run streak of failed label moves. Decision: update SKILL.md or reorganize Gmail.</li>
+    <li>🟡 <strong>Source Task enum gap</strong> — `crm-enrichment-weekly` still missing from the Daily Briefing Feed `Source Task` select. Filed under `daily-seo-lead-audits` again this week.</li>
+    <li>🔵 <strong>No auto-send</strong> rule respected across all 13 email-touching skills as of 2026-04-27.</li>
+  </ul>
 </section>
 
-<div class="footer-note">
-  <div class="quote">"Pushing turns a quiet hesitation into a louder one. The right move is to make the next step smaller."</div>
-  Brief generated 8:30 AM ET, Wednesday May 13, 2026 · cc-daily-brief-update
-</div>
+<footer style="margin-top: 30px; text-align: center; color: var(--text-dim); font-size: 12px;">
+  Constant Creates · Daily Brief · Generated by cc-daily-brief-update · cc-daily-brief.vercel.app
+</footer>
 
 </div>
 </body>
