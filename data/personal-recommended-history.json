@@ -1,32 +1,13 @@
 {
   "history": [
-    {
-      "date": "2026-05-07",
-      "task": "Eat a high-protein meal before noon"
-    },
-    {
-      "date": "2026-05-07",
-      "task": "5-minute desk reset before close of day"
-    },
-    {
-      "date": "2026-05-09",
-      "task": "Apply moisturizer + SPF first thing in the morning"
-    },
-    {
-      "date": "2026-05-09",
-      "task": "Post or repost one Constant Creates marketing piece"
-    },
-    {
-      "date": "2026-05-10",
-      "task": "Drink 32 oz water in the next 2 hours"
-    },
-    {
-      "date": "2026-05-11",
-      "task": "Pick out tomorrow's outfit tonight"
-    },
-    {
-      "date": "2026-05-11",
-      "task": "Text one person you've been meaning to reach out to"
-    }
+    { "date": "2026-05-07", "task": "Eat a high-protein meal before noon" },
+    { "date": "2026-05-07", "task": "5-minute desk reset before close of day" },
+    { "date": "2026-05-09", "task": "Apply moisturizer + SPF first thing in the morning" },
+    { "date": "2026-05-09", "task": "Post or repost one Constant Creates marketing piece" },
+    { "date": "2026-05-10", "task": "Drink 32 oz water in the next 2 hours" },
+    { "date": "2026-05-14", "task": "Pick out tomorrow's outfit tonight" },
+    { "date": "2026-05-15", "task": "Text one person you've been meaning to reach out to" },
+    { "date": "2026-05-17", "task": "10-minute closet pick-up" },
+    { "date": "2026-05-17", "task": "Stretch for 5 minutes between client tasks" }
   ]
 }
