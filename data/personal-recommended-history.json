@@ -1,36 +1,12 @@
 {
   "history": [
-    {
-      "date": "2026-05-26",
-      "task": "Eat a high-protein meal before noon"
-    },
-    {
-      "date": "2026-05-26",
-      "task": "Pick out tomorrow's outfit tonight"
-    },
-    {
-      "date": "2026-05-27",
-      "task": "Drink 32 oz water in the next 2 hours"
-    },
-    {
-      "date": "2026-05-27",
-      "task": "Stretch for 5 minutes between client tasks"
-    },
-    {
-      "date": "2026-05-28",
-      "task": "Post or repost one Constant Creates marketing piece"
-    },
-    {
-      "date": "2026-05-28",
-      "task": "Text one person you've been meaning to reach out to"
-    },
-    {
-      "date": "2026-06-01",
-      "task": "Apply moisturizer + SPF first thing in the morning"
-    },
-    {
-      "date": "2026-06-01",
-      "task": "10-minute closet pick-up"
-    }
+    { "date": "2026-05-26", "task": "Eat a high-protein meal before noon" },
+    { "date": "2026-05-26", "task": "Pick out tomorrow's outfit tonight" },
+    { "date": "2026-05-27", "task": "Drink 32 oz water in the next 2 hours" },
+    { "date": "2026-05-27", "task": "Stretch for 5 minutes between client tasks" },
+    { "date": "2026-05-28", "task": "Post or repost one Constant Creates marketing piece" },
+    { "date": "2026-05-28", "task": "Text one person you've been meaning to reach out to" },
+    { "date": "2026-06-02", "task": "10-minute closet pick-up" },
+    { "date": "2026-06-02", "task": "Apply moisturizer + SPF first thing in the morning" }
   ]
 }
